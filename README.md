@@ -1,2 +1,2 @@
-# WiKi
+# Docs
 WiKi Documentation
