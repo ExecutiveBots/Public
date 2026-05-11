@@ -321,6 +321,41 @@ Modifications trigger Robert-owned version-mismatch propagation per [[Audit-Trai
 
 ---
 
+## Repository Structure
+
+This repository contains the canonical source for the Executive.Bots V5 platform documentation.
+
+```
+├── agents/              # SOUL/SKILL files for the 8 AI executive agents
+│   ├── INDEX.md          # Agent roster and file inventory
+│   ├── Bill-SOUL.md     # CEO identity
+│   ├── Bill-SKILL.md    # CEO capabilities
+│   ├── Tom-SOUL.md      # CFO identity
+│   ├── Tom-SKILL.md     # CFO capabilities
+│   └── ...              # James, Patricia, Lisa, Mary, Robert, Edith
+│
+├── wikiSkills/          # Domain specialty skill documentation
+│   ├── INDEX.md         # Skill index
+│   └── skills/          # 76 specialty skill files
+│
+└── README.md            # This file
+```
+
+### Agent Roster
+
+| Executive | Role | Ethics | SOUL | SKILL |
+|---|---|---|---|---|
+| **Bill** | CEO | Aristotelian | [[agents/Bill-SOUL.md]] | [[agents/Bill-SKILL.md]] |
+| **Tom** | CFO | Kantian | [[agents/Tom-SOUL.md]] | [[agents/Tom-SKILL.md]] |
+| **James** | GC | Kantian | [[agents/James-SOUL.md]] | [[agents/James-SKILL.md]] |
+| **Patricia** | CCO | Rawlsian | [[agents/Patricia-SOUL.md]] | [[agents/Patricia-SKILL.md]] |
+| **Lisa** | COO | Aristotelian | [[agents/Lisa-SOUL.md]] | [[agents/Lisa-SKILL.md]] |
+| **Mary** | CMO/IR | Kantian | [[agents/Mary-SOUL.md]] | [[agents/Mary-SKILL.md]] |
+| **Robert** | CTO | Kantian | [[agents/Robert-SOUL.md]] | [[agents/Robert-SKILL.md]] |
+| **Edith** | TA Liaison | Kantian | [[agents/Edith-SOUL.md]] | [[agents/Edith-SKILL.md]] |
+
+---
+
 ## Contact / Engagement
 
 Subscriber engagement is mediated through the Executive.Bots master engagement contract; subscriber-facing technical interactions are through the per-subscriber container's authorized interface (subscriber's HBR, DO, AA, and BGR per [[Governance-Gate]] § 1.2).

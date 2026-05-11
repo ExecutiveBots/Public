@@ -1,0 +1,25 @@
+# Playwright
+.playwright-mcp/
+playwright-report/
+test-results/
+*.playwright.png
+*.playwright.woff
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
