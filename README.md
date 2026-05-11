@@ -356,6 +356,48 @@ This repository contains the canonical source for the Executive.Bots V5 platform
 
 ---
 
+## Using These Files as Agent Skills
+
+Each SOUL and SKILL file in this repository is a standalone markdown document designed to be installed as an agent skill in AI platforms that support custom skill/persona files (Paperclip, Claude Code, OpenCode, etc.).
+
+### How to Get the Raw File
+
+GitHub's web UI renders markdown as HTML — **do not copy from the rendered page**. Use the raw URL instead:
+
+```
+❌ https://github.com/ExecutiveBots/Public/blob/main/agents/Bill-SKILL.md
+✅ https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md
+```
+
+**Pattern for any file:**
+```
+https://raw.githubusercontent.com/ExecutiveBots/Public/main/{path}/{filename}.md
+```
+
+### Quick Install Examples
+
+```bash
+# Download Bill's CEO SKILL file
+curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md
+
+# Download all agent SKILL files
+curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md
+curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Tom-SKILL.md
+curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/James-SKILL.md
+# ... etc
+
+# Download a specific wikiSkill
+curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/10-K.md
+```
+
+### What to Expect
+
+- **SOUL files** define the agent's identity, character, ethics tradition, and refusal thresholds
+- **SKILL files** define the agent's capabilities, authority scope, peer handoff protocols, and audit trail requirements
+- **wikiSkills** define domain-specific operational knowledge (SEC filings, compliance, finance, legal, marketing)
+
+---
+
 ## Contact / Engagement
 
 Subscriber engagement is mediated through the Executive.Bots master engagement contract; subscriber-facing technical interactions are through the per-subscriber container's authorized interface (subscriber's HBR, DO, AA, and BGR per [Governance-Gate](wikiSkills/skills/Governance-Gate.md) § 1.2).
