@@ -1,46 +1,63 @@
 # Executive.Bots V5 — Complete Agent Bundle
 
-> One URL installs all 8 AI executive agents (SOUL + SKILL) with their wikiSkill dependencies.
-> Paste this URL in Paperclip > Add Skill:
-> `https://raw.githubusercontent.com/ExecutiveBots/Public/main/executive-bots-bundle.md`
+> **One command installs everything:**
+> ```bash
+> npx skills add ExecutiveBots/Public --all
+> ```
 
-## Bundle Manifest
+## skills.sh Installation
 
-| Agent | Role | Ethics | SOUL | SKILL |
-|---|---|---|---|---|
-| Bill | CEO | Aristotelian | [Bill-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SOUL.md) | [Bill-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md) |
-| Tom | CFO | Kantian | [Tom-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Tom-SOUL.md) | [Tom-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Tom-SKILL.md) |
-| James | GC | Kantian | [James-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/James-SOUL.md) | [James-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/James-SKILL.md) |
-| Patricia | CCO | Rawlsian | [Patricia-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Patricia-SOUL.md) | [Patricia-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Patricia-SKILL.md) |
-| Lisa | COO | Aristotelian | [Lisa-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Lisa-SOUL.md) | [Lisa-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Lisa-SKILL.md) |
-| Mary | CMO/IR | Kantian | [Mary-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Mary-SOUL.md) | [Mary-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Mary-SKILL.md) |
-| Robert | CTO | Kantian | [Robert-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Robert-SOUL.md) | [Robert-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Robert-SKILL.md) |
-| Edith | TA Liaison | Kantian | [Edith-SOUL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Edith-SOUL.md) | [Edith-SKILL](https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Edith-SKILL.md) |
+```bash
+# All 90 skills (agents + wikiSkills)
+npx skills add ExecutiveBots/Public --all
 
-## WikiSkills
+# Single agent skill
+npx skills add ExecutiveBots/Public --skill bill-skill
 
-Core operational knowledge domains (76 specialty skills):
+# Specific skills
+npx skills add ExecutiveBots/Public --skill bill-skill --skill tom-skill
 
-| Domain | Skills |
-|---|---|
-| SEC Filings | [10-K](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/10-K.md) · [10-Q](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/10-Q.md) · [8-K](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/8-K.md) |
-| Compliance | [Governance-Gate](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/Governance-Gate.md) · [compliance-auditor](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/compliance-auditor.md) · [internal-controls-SOX-404](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/internal-controls-SOX-404.md) |
-| Finance | [finance-bookkeeper-controller](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/finance-bookkeeper-controller.md) · [finance-financial-analyst](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/finance-financial-analyst.md) · [finance-tax-strategist](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/finance-tax-strategist.md) |
-| Legal | [Legal-Compliance-Checker](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/Legal-Compliance-Checker.md) · [Legal-Document-Review](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/Legal-Document-Review.md) |
-| Architecture | [ExecutiveBots-Architecture](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/ExecutiveBots-Architecture.md) · [Defense-Posture](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/Defense-Posture.md) |
-| Marketing | [Social-Media-Strategist](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/Social-Media-Strategist.md) · [marketing-agentic-search-optimizer](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/marketing-agentic-search-optimizer.md) |
+# List available skills
+npx skills add ExecutiveBots/Public --list
+```
 
-[📂 Full wikiSkills index](https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/INDEX.md)
+## Or install from raw URLs
+
+```
+https://raw.githubusercontent.com/ExecutiveBots/Public/main/skills/bill-skill/SKILL.md
+```
+
+## Agent Skills (16)
+
+| Skill | Type | Description |
+|---|---|---|
+| `bill-skill` | Agent | AI Chief Executive Officer |
+| `bill-soul` | Identity | CEO character — Aristotelian ethics |
+| `tom-skill` | Agent | AI Chief Financial Officer |
+| `tom-soul` | Identity | CFO character — Kantian ethics |
+| `james-skill` | Agent | AI General Counsel |
+| `james-soul` | Identity | GC character — Kantian ethics |
+| `patricia-skill` | Agent | AI Chief Compliance Officer |
+| `patricia-soul` | Identity | CCO character — Rawlsian ethics |
+| `lisa-skill` | Agent | AI Chief Operating Officer |
+| `lisa-soul` | Identity | COO character — Aristotelian ethics |
+| `mary-skill` | Agent | AI Chief Marketing Officer & IR |
+| `mary-soul` | Identity | CMO/IR character — Kantian ethics |
+| `robert-skill` | Agent | AI Chief Technology Officer |
+| `robert-soul` | Identity | CTO character — Kantian ethics |
+| `edith-skill` | Agent | AI Transfer Agency Liaison |
+| `edith-soul` | Identity | TA Liaison character — Kantian ethics |
+
+## WikiSkills (74)
+
+Financial, legal, compliance, operational, and marketing domain skills available via `--all`.
+
+[📂 Browse all skills](https://raw.githubusercontent.com/ExecutiveBots/Public/main/skills/INDEX.md)
 
 ---
 
-## CLI Install (if bundle URL not supported)
+## CLI Backup
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/ExecutiveBots/Public/main/scripts/install.sh | bash
-```
-
-```bash
-# With all wikiSkills
-curl -sSL https://raw.githubusercontent.com/ExecutiveBots/Public/main/scripts/install.sh | bash -s -- --all-wiki
 ```
