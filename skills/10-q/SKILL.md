@@ -1,0 +1,1017 @@
+---
+name: 10 Q
+description: Form 10-Q Quarterly Periodic Report Orchestration
+---
+
+# 10 Q
+
+> Source: <https://github.com/ExecutiveBots/Public/wiki/10-Q>
+
+# Bill-10Q-SKILL
+
+**Domain-Specialty SKILL (Canonical) — Form 10-Q Quarterly Periodic Report Orchestration**
+
+This is the **canonical specialty SKILL** governing Bill's orchestration of Form 10-Q quarterly periodic-report filings. The 10-Q is the bench's highest-frequency complex periodic deliverable: three filings per fiscal year (Q1, Q2, Q3) — the fourth quarter rolls into the 10-K — each on a 40 / 40 / 45-day window per filer status (LAF / AF / SRC-NAF) with PCAOB AS 4105 interim review (not full audit), Reg S-X Article 10 condensed financial statements (not Reg S-X Article 8 / full Article 3 / 5), and SOX § 302 / § 906 quarterly certifications without the § 404(b) ICFR auditor attestation.
+
+This file augments [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) (general CEO orchestration) and operates within the broader cycle architecture specified in [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) (which orchestrates both 10-K and 10-Q cycles). Where [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) establishes the master T-90 through T+5 milestone architecture, this file specifies the **10-Q-distinctive disciplines**: compressed T-45 cycle, AS 4105 vs. AS 2201 distinction, condensed financial-statement specifics, comparative-period rules, and quarterly-cycle exception paths.
+
+For section-hub navigation: [AI-Executives](/ExecutiveBots/Public/wiki/AI-Executives) · [Constitutional-Foundations](/ExecutiveBots/Public/wiki/Constitutional-Foundations) · [Operational-Playbooks](/ExecutiveBots/Public/wiki/Operational-Playbooks) · [Technical-Architecture](/ExecutiveBots/Public/wiki/Technical-Architecture) · [Ethics-Framework](/ExecutiveBots/Public/wiki/Ethics-Framework) · [Defense-Posture](/ExecutiveBots/Public/wiki/Defense-Posture) · [For-Stakeholders](/ExecutiveBots/Public/wiki/For-Stakeholders)
+
+> ## ⚖ TAKE NOTICE
+>
+> >
+> Form 10-Q is signed by the Human CEO and Human CFO under the Rule 13a-14(a) / 15d-14(a) certifications, with corresponding SOX § 906 (18 U.S.C. § 1350) certifications carrying criminal penalties for knowing violation — the AI agents on the bench produce the assembly substrate, **not** the certifications themselves. The 10-Q's *quarterly* certification cadence multiplies the certification surface area by 4× annually relative to the 10-K, with proportionally greater *Caremark* / *Marchand* exposure under the *In re McDonald's*, 289 A.3d 343 (Del. Ch. 2023), officer-level oversight extension. The 10-Q is **reviewed**, not **audited** — PCAOB AS 4105 provides **limited assurance** (negative-assurance form), not the **reasonable assurance** of an AS 2201 annual audit; this distinction is the structural rationale for the compressed cycle window but does not reduce the §302 / §906 certification standard. See [Take-Notice](/ExecutiveBots/Public/wiki/Take-Notice).
+
+> **Subordination notice.** This file does not displace [Take-Notice](/ExecutiveBots/Public/wiki/Take-Notice) (status preamble), [Ethics-Foundations](/ExecutiveBots/Public/wiki/Ethics-Foundations) (pluralist ethics framework), [Bill-SOUL](/ExecutiveBots/Public/wiki/Bill-SOUL) (Bill's identity and ethical anchors), [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) (general scope and authority), or [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) (master cycle orchestration). The 10-Q-specific disciplines specified here operate within the constraints those files establish. Modifications require **BR (Board-Required) authorization via [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) category \#37** (canonical procedure modification — the recursive category).
+
+------------------------------------------------------------------------
+
+## §0 Honesty Above All
+
+This SKILL operates beneath the [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 0 Honesty Above All constraint. No 10-Q-cycle output this skill produces — close-cycle reconciliation, MD&A draft, risk-factor update, condensed-financial-statement draft, controls-and-procedures evaluation, or filing certification package — may include false statements, omit material facts whose omission would render disclosed facts misleading, or contribute to AI-washing posture per *In re Delphia (USA) Inc. & Global Predictions Inc.*, Admin. Proc. File No. 3-21894 (Mar. 18, 2024).
+
+The 10-Q's compressed cycle (T-45 typical vs. T-90 for 10-K) creates structural pressure to compromise on substantive review depth. Bill's orchestration explicitly resists this: substantive accuracy is non-negotiable; cycle-time compression that compromises accuracy is itself enforcement and §10(b) exposure. The lesson of the Worldcom matter (*SEC v. WorldCom, Inc.*, 273 F. Supp. 2d 431 (S.D.N.Y. 2003) and successor proceedings) is that inadequate quarterly oversight and rushed close cycles can sustain a sequence of materially misstated 10-Qs that compound through to an annual restatement; *In re McDonald's* extends officer-level *Caremark* duties to exactly this oversight gap.
+
+------------------------------------------------------------------------
+
+## §1 Scope
+
+### 1.1 What This SKILL Covers
+
+The orchestration of Form 10-Q quarterly periodic-report filings across all three quarterly cycles (Q1, Q2, Q3) per fiscal year. Specifically:
+
+- Compressed T-45 cycle architecture (vs. T-90 for 10-K) with per-phase milestone management (§4);
+- PCAOB AS 4105 interim review coordination (vs. AS 2201 full audit for 10-K) (§7);
+- Reg S-X Article 10 condensed financial-statement compliance (§8);
+- Comparative-period requirements (current quarter vs. prior-year quarter; year-to-date vs. prior-year YTD) (§9);
+- Item 2 MD&A quarterly construction under Item 303(b) (§10);
+- Item 4 Controls and Procedures quarterly evaluation per Reg S-K Item 308(b) (§11);
+- SOX § 302 / § 906 quarterly certification package assembly (§12);
+- Item 408 Rule 10b5-1 plan disclosures per Dec. 2022 amendments (§13);
+- Subsequent-events review under ASC 855 through filing date (§14);
+- Cycle-specific exception paths — NT 10-Q under Form 12b-25; Item 4.02 mid-cycle non-reliance; Item 1.05 cybersecurity in quarter; Item 4.01 auditor change (§15);
+- Per-Item lead-agent assignment for Part I and Part II item structure (§§5–6);
+- [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) authorization routing (§16);
+- Audit-trail capture per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.5 four-record sequence pattern adapted for EDGAR transmission (§17);
+- Single-principal subscriber adaptations per [Single-Principal-Subscriber-Appendix](/ExecutiveBots/Public/wiki/Single-Principal-Subscriber-Appendix).
+
+### 1.2 What This SKILL Does Not Cover
+
+- **Form 10-K annual report.** [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) § 2–§ 8 covers the 10-K cycle (including annual-only items: Item 9A(c) ICFR auditor attestation, Item 7A market-risk disclosures, Item 14 principal accountant fees, Item 15 exhibit list, full Reg S-X audited annual financial statements, Critical Audit Matters under PCAOB AS 3101).
+- **Form 8-K current reports.** [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) orchestrates 8-K filings (including any filed during the 10-Q cycle). Where mid-cycle 8-K is required, this SKILL coordinates the 10-Q's downstream integration in the next periodic report.
+- **Proxy statement.** Annual cycle; outside counsel-led; coordinated with 10-K cycle.
+- **Interim financial information published outside the 10-Q.** Earnings releases under Item 2.02 of Form 8-K are [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) § 3.2 + [Mary-SKILL](/ExecutiveBots/Public/wiki/Mary-SKILL) coordination; standalone interim earnings communications absent 10-Q timing are case-specific.
+- **The substantive determination of accounting treatment.** That belongs to Tom + auditor; this SKILL orchestrates the determination workflow, not the substantive determination.
+
+### 1.3 Integration with Other Bill Skills
+
+| Bill-Domain SKILL                                                                                             | Relationship                                                                                                                                                                                          |
+|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) (general orchestration)                                   | Parent SKILL; this file inherits scope, authority, and refusal posture                                                                                                                                |
+| [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL)                                                     | Sibling specialty; if Item 4.02 non-reliance triggers mid-10-Q-cycle, [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) § 3.4 controls 8-K filing while this SKILL coordinates 10-Q amendment |
+| Bill weekly executive sync per [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 5.1                      | Cycle progress reported during cycle; cycle-completion retrospective post-filing                                                                                                                      |
+| Bill annual SOX § 302 / § 906 readiness package per [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 5.4 | Quarterly § 302 / § 906 certifications aggregated into annual *Caremark*-defense package                                                                                                              |
+| [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook)             | Master cycle architecture; this SKILL operationalizes the 10-Q-specific subset                                                                                                                        |
+| [Pre-Clearance-Queue-Spec](/ExecutiveBots/Public/wiki/Pre-Clearance-Queue-Spec) § 4                           | Item 408 Rule 10b5-1 disclosure feed; § 7 Item 405 delinquent-§16 consolidation feeds 10-Q Part II                                                                                                    |
+| [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix)                               | Track A (cyber → Item 1.05 8-K + Part II Item 1A 10-Q risk-factor update); Track B (non-reliance → Item 4.02 8-K + 10-Q amendment cycle)                                                              |
+
+Modifications require **BR authorization via [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) category \#37** (canonical procedure modification — the recursive category). Modifications trigger revalidation of cross-references in [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 1.3 (skill inventory), [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) (cycle architecture references), [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) (sibling-skill cross-references for Item 2.02 coordination and Item 4.02 mid-cycle handling), and [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) § 1 (category \#2 references), propagated through Robert's continuous integrity sweep per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 8.2.
+
+------------------------------------------------------------------------
+
+## §2 Authoritative Framework
+
+| Authority                  | Citation                         | Bears on                                                               |
+|----------------------------|----------------------------------|------------------------------------------------------------------------|
+| Form 10-Q                  | 17 C.F.R. § 249.308a             | Form and item structure                                                |
+| Rule 13a-13 / 15d-13       | 17 C.F.R. § 240.13a-13; -15d-13  | Quarterly reporting obligation                                         |
+| Rule 13a-14(a) / 15d-14(a) | 17 C.F.R. § 240.13a-14; -15d-14  | §302 CEO/CFO certifications                                            |
+| Rule 13a-15(e) / 15d-15(e) | 17 C.F.R. § 240.13a-15; -15d-15  | DC&P quarterly evaluation                                              |
+| Rule 12b-25                | 17 C.F.R. § 240.12b-25           | NT 10-Q late-filing notification; 5-calendar-day cure                  |
+| SOX § 302                  | 15 U.S.C. § 7241                 | Officer certifications                                                 |
+| SOX § 906                  | 18 U.S.C. § 1350                 | Criminal certifications                                                |
+| SOX § 304                  | 15 U.S.C. § 7243                 | Clawback on restatement (cross-cycle exposure)                         |
+| SOX § 307                  | 15 U.S.C. § 7245                 | Attorney up-the-ladder reporting                                       |
+| Rule 10D-1                 | 17 C.F.R. § 240.10D-1            | Listing-standard clawback (Item 4.02 cascade)                          |
+| Rule 10A-3                 | 17 C.F.R. § 240.10A-3            | Audit committee oversight                                              |
+| Reg S-X Article 10         | 17 C.F.R. §§ 210.10-01 to .10-03 | Condensed interim financial statements                                 |
+| Reg S-X Rule 2-01          | 17 C.F.R. § 210.2-01             | Auditor independence (AS 4105 reviewer is the same firm)               |
+| Reg S-K Item 103           | 17 C.F.R. § 229.103              | Legal proceedings                                                      |
+| Reg S-K Item 104           | 17 C.F.R. § 229.104              | Mine safety (Part II Item 4)                                           |
+| Reg S-K Item 105           | 17 C.F.R. § 229.105              | Risk factors (Part II Item 1A — material changes from 10-K)            |
+| Reg S-K Item 303(b)        | 17 C.F.R. § 229.303(b)           | MD&A interim period                                                    |
+| Reg S-K Item 305           | 17 C.F.R. § 229.305              | Quantitative / qualitative market risk (Part I Item 3)                 |
+| Reg S-K Item 308(b)        | 17 C.F.R. § 229.308              | Controls and procedures (Part I Item 4)                                |
+| Reg S-K Item 405           | 17 C.F.R. § 229.405              | Late-§16 disclosure (annual; cross-flagged here)                       |
+| Reg S-K Item 408           | 17 C.F.R. § 229.408              | Insider-trading arrangements and policies; quarterly 10b5-1 disclosure |
+| Reg S-K Item 601           | 17 C.F.R. § 229.601              | Exhibits (Part II Item 6); §302 / §906 cert exhibits                   |
+| Reg S-K Item 701           | 17 C.F.R. § 229.701              | Unregistered sales of equity (Part II Item 2)                          |
+| Reg S-K Item 703           | 17 C.F.R. § 229.703              | Issuer purchases of equity (Part II Item 2)                            |
+| ASC 270                    | n/a (codification)               | Interim financial reporting                                            |
+| ASC 855                    | n/a (codification)               | Subsequent events (through issuance date for SEC filers)               |
+| 17 C.F.R. §§ 243.100–.103  | Reg FD                           | Disclosure outside 10-Q during cycle                                   |
+| 17 C.F.R. § 232.405        | Reg S-T                          | iXBRL tagging                                                          |
+| Form S-3 Gen. Instr. I.A.3 | n/a (Form)                       | Timely-filing condition; failure consequence of missed 10-Q            |
+| Rule 144(c)(1)             | 17 C.F.R. § 230.144(c)(1)        | Current public information for affiliate resale                        |
+
+**Filer-category thresholds** governed by Rule 12b-2 cross-referenced for SRC, AF, LAF definitions; *see* [periodic-reporting-10K-10Q-SKILL](/ExecutiveBots/Public/wiki/periodic-reporting-10K-10Q-SKILL) § 2 for the threshold matrix.
+
+**iXBRL** — Inline XBRL phase-in for 10-Q parallels 10-K: LAF and AF since FY ending after June 15, 2019; SRC, EGC, NAF since FY ending after June 15, 2020. Calculation linkbase must balance; standard tags preferred over extensions.
+
+------------------------------------------------------------------------
+
+## §3 Filer Categories, Deadlines, and Cycle Calendar
+
+### 3.1 Filing deadlines
+
+| Filer category                  | 10-Q deadline      | Days after quarter-end |
+|---------------------------------|--------------------|------------------------|
+| Large Accelerated Filer (LAF)   | 40 calendar days   | T+40                   |
+| Accelerated Filer (AF)          | 40 calendar days   | T+40                   |
+| Smaller Reporting Company (SRC) | 45 calendar days   | T+45                   |
+| Non-Accelerated Filer (NAF)     | 45 calendar days   | T+45                   |
+| Emerging Growth Company (EGC)   | Per other category | Per other              |
+
+Distinct from 10-K, the 10-Q deadline does **not** differentiate LAF from AF (both 40 days). Differentiation is between accelerated/large-accelerated (40 days) and SRC/non-accelerated (45 days).
+
+### 3.2 Filer-category reassessment
+
+Public-float test date: **last business day of issuer's second fiscal quarter** (Rule 12b-2). Reassessment effective for the fiscal year following the test. A category change mid-year does not retroactively change deadlines for the current fiscal year's reports.
+
+### 3.3 Sample fiscal-year cycle calendar (calendar-year LAF)
+
+| Quarter        | Quarter-end | 10-Q due        | NT 10-Q latest | Cure window expires |
+|----------------|-------------|-----------------|----------------|---------------------|
+| Q1 2026        | Mar 31      | May 10          | May 11         | May 15              |
+| Q2 2026        | Jun 30      | Aug 9           | Aug 10         | Aug 14              |
+| Q3 2026        | Sep 30      | Nov 9           | Nov 10         | Nov 14              |
+| Q4 2026 (10-K) | Dec 31      | Mar 2 (60 days) | Mar 3          | Mar 17              |
+
+NT 10-Q: filed within **1 business day** after due date; 5-calendar-day cure window. Within cure: timely for S-3 / Rule 144. Outside cure: late filing; S-3 General Instr. I.A.3 eligibility lost for 12 months. *See* §15.1 and [NT-10K-NT-10Q-late-filing-SKILL](/ExecutiveBots/Public/wiki/NT-10K-NT-10Q-late-filing-SKILL).
+
+### 3.4 Cycle anchor
+
+For purposes of this SKILL, **T = filing-due-date** and the cycle architecture runs backward from T. T-45 is the standard cycle-open anchor for 40-day filers (T-45 = ~5 days before quarter-end); T-50 for 45-day filers. T-45 leaves ~45 calendar days of cycle elapse from cycle-open to filing, of which roughly the first 15 are pre-quarter-end positioning and the remaining 30 are post-quarter-end close-and-file execution. *See* §4.
+
+------------------------------------------------------------------------
+
+## §4 T-45 Cycle Architecture
+
+### 4.1 Master milestone sequence (LAF/AF; 40-day deadline)
+
+| Milestone                     | Calendar                             | Owner(s)                                              | Output                                                                                                                                                                                                     |
+|-------------------------------|--------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **T-45 (≈ Q-end – 5)**        | Cycle open                           | Lisa + Bill                                           | Cycle calendar published; PBC list circulated; auditor engaged for AS 4105 review                                                                                                                          |
+| **T-40 (≈ Q-end)**            | Quarter close commences              | Tom                                                   | Trial-balance hard close; reconciliations begin                                                                                                                                                            |
+| **T-35**                      | Sub-ledger close                     | Tom + process owners                                  | All sub-ledgers closed and reconciled                                                                                                                                                                      |
+| **T-30**                      | Draft financial statements           | Tom                                                   | Draft condensed BS / IS / CF / equity reconciliation per Article 10                                                                                                                                        |
+| **T-25**                      | Disclosure committee meeting \#1     | Bill (chair) + James + Tom + Patricia + Robert + Mary | Identify Part I and Part II changes; Item 1.05 / 4.02 review                                                                                                                                               |
+| **T-22**                      | MD&A draft (Item 2)                  | Tom + James                                           | Item 303(b) interim narrative; known-trend evaluation                                                                                                                                                      |
+| **T-20**                      | Risk-factor review (Part II Item 1A) | James + Patricia + Robert                             | Material changes from 10-K Item 105?                                                                                                                                                                       |
+| **T-18**                      | Item 4 controls evaluation           | Tom + Robert + Patricia                               | DC&P quarterly conclusion; ICFR material-change review                                                                                                                                                     |
+| **T-15**                      | AS 4105 auditor review begins        | Tom + auditor                                         | Analytical procedures; inquiries; representation letters                                                                                                                                                   |
+| **T-12**                      | Sub-certification cycle commences    | Patricia (administer)                                 | Process-owner sub-certs collected                                                                                                                                                                          |
+| **T-10**                      | Audit committee meeting              | Patricia + Tom + auditor                              | AS 1301 communications; review report                                                                                                                                                                      |
+| **T-8**                       | Disclosure committee meeting \#2     | Bill (chair) + all                                    | Final disclosure walkthrough                                                                                                                                                                               |
+| **T-5**                       | HBR pre-review package delivered     | Bill (orchestration) → HBR                            | §302 / §906 draft certs; full 10-Q; iXBRL preview                                                                                                                                                          |
+| **T-3**                       | HBR review meeting                   | Human CEO + Human CFO + outside counsel               | Final substantive review                                                                                                                                                                                   |
+| **T-2**                       | Final draft frozen; iXBRL validation | Tom + James                                           | Arelle validation pass                                                                                                                                                                                     |
+| **T-1**                       | Signature cycle                      | HBR                                                   | §302 / §906 wet-signed (or e-sign equivalent); manually signed signature pages retained per Rule 302 of Reg S-T                                                                                            |
+| **T-0 (before 5:30 p.m. ET)** | EDGAR submission                     | Lisa + James                                          | Four-record audit-trail sequence (§17); FILED timestamp captured                                                                                                                                           |
+| **T+1 through T+5**           | Post-filing                          | Bill                                                  | Press release if any (per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) § 3.2 Item 2.02 alignment); investor communications (Mary); cycle retrospective (Lisa); calendar reflow for next cycle |
+
+### 4.2 SRC/NAF variant (45-day deadline)
+
+Same milestone sequence; shift all milestones 5 days later relative to T. T-50 cycle-open; T-45 close commences; etc.
+
+### 4.3 Cycle compression discipline
+
+Slippage at T-35 (sub-ledger close) cascades through every downstream milestone. The non-negotiable boundary: §302 / §906 signatures cannot be wet-signed under time pressure that compromises the certifying officer's actual review. Where T-3 HBR review reveals substantive issue, the cycle slips. The fallback is NT 10-Q + 5-calendar-day cure (§15.1) — **not** rushed filing of unverified content. *In re McDonald's* and the *Caremark* line of cases position rushed quarterly oversight as the precise breach the officer-level *Caremark* extension addresses.
+
+### 4.4 Pre-quarter-end positioning (T-45 through T-40)
+
+The 5 days before quarter-end are reserved for:
+
+- PBC (prepared-by-client) workpaper readiness;
+- Account-by-account reconciliation discipline reset;
+- Known-issue identification (asset impairment indicators; covenant compliance; significant estimates);
+- Outside-specialist engagement (valuation; tax; ASC 842 leases; ASC 815 derivatives);
+- Disclosure committee membership confirmation.
+
+------------------------------------------------------------------------
+
+## §5 Part I Item Structure and Routing
+
+### 5.1 Part I Item map
+
+| Item   | Subject                                                                       | Lead         | Concurring                                | GG cat.                          |
+|--------|-------------------------------------------------------------------------------|--------------|-------------------------------------------|----------------------------------|
+| Item 1 | Financial Statements (Reg S-X Article 10)                                     | Tom          | Auditor; James                            | BR                               |
+| Item 2 | MD&A                                                                          | Tom + James  | Patricia; Robert (cyber); Mary (non-GAAP) | BR                               |
+| Item 3 | Quantitative and Qualitative Disclosures About Market Risk (Reg S-K Item 305) | Tom          | James                                     | NR (SRC may be silent or scaled) |
+| Item 4 | Controls and Procedures (Reg S-K Item 308(b))                                 | Tom + Robert | Patricia; James                           | BR + SOX-Cert                    |
+
+### 5.2 Item 1 — Financial Statements
+
+Covered in detail in §8 (Article 10 condensed). Key delineations:
+
+- Balance sheet at end of most recent quarter and at end of preceding fiscal year (two columns).
+- Income statement: most recent quarter; year-to-date; corresponding prior-year periods (four columns).
+- Cash flow statement: YTD and corresponding prior-year YTD (two columns).
+- Statement of stockholders' equity: each interim period and comparable prior-year periods.
+- Condensed footnotes — abbreviated; presume reader has 10-K access; material changes from 10-K must be disclosed.
+
+### 5.3 Item 2 — MD&A
+
+Covered in detail in §10. Key elements:
+
+- Discussion of material changes from the most recent 10-K MD&A (Item 303(b)).
+- Updates to critical accounting estimates if materially changed.
+- Liquidity discussion; going-concern reassessment if applicable.
+- Known-trend discipline: silence on a 10-K-disclosed known trend is affirmation that the trend has not changed.
+- Non-GAAP reconciliation under Reg G / Item 10(e).
+
+### 5.4 Item 3 — Quantitative and Qualitative Disclosures About Market Risk
+
+Reg S-K Item 305 interim disclosure: material changes in market risk exposures from those reported in the most recent 10-K. SRC may use abbreviated narrative (Item 305(e) scaled disclosure). Many SRC subscribers omit Item 3 substantively where market-risk exposure is limited to general interest-rate sensitivity; disclosure of the absence is recommended.
+
+### 5.5 Item 4 — Controls and Procedures
+
+Covered in detail in §11. Required elements per Reg S-K Item 308(b):
+
+- Disclosure controls and procedures (DC&P) effectiveness conclusion as of end of quarter (Rule 13a-15(e) evaluation).
+- Any **material changes** in internal control over financial reporting (ICFR) during the quarter that have materially affected or are reasonably likely to materially affect ICFR.
+- No auditor §404(b) attestation at interim — that is annual only.
+- §302 certification ties to Item 4 conclusion; misalignment = certification defect.
+
+------------------------------------------------------------------------
+
+## §6 Part II Item Structure and Routing
+
+### 6.1 Part II Item map
+
+| Item    | Subject                                                                              | Lead             | Concurring                  | GG cat.                        |
+|---------|--------------------------------------------------------------------------------------|------------------|-----------------------------|--------------------------------|
+| Item 1  | Legal Proceedings (Reg S-K Item 103)                                                 | James            | Tom; outside counsel        | NR (BR if material new matter) |
+| Item 1A | Risk Factors (material changes from 10-K Item 105)                                   | James            | Patricia; Robert; Tom; Mary | BR                             |
+| Item 2  | Unregistered Sales of Equity Securities and Use of Proceeds (Reg S-K Items 701, 703) | James            | Edith; Tom; Patricia        | NR                             |
+| Item 3  | Defaults Upon Senior Securities                                                      | Tom              | James                       | BR if any default              |
+| Item 4  | Mine Safety Disclosures (Reg S-K Item 104)                                           | Patricia         | Tom                         | NR (if applicable)             |
+| Item 5  | Other Information (incl. Reg S-K Item 408 trading-arrangement disclosure)            | Patricia + James | Tom                         | NR                             |
+| Item 6  | Exhibits (incl. Exhibits 31.1, 31.2, 32.1, 32.2 certs)                               | James            | Tom                         | NR (procedural)                |
+
+### 6.2 Item 1 — Legal Proceedings
+
+Reg S-K Item 103: material pending legal proceedings (other than ordinary routine litigation incidental to the business). Threshold:
+
+- Damages exceed 10% of consolidated current assets, **or**
+- Material to the business in light of the issuer's financial condition (qualitative). Government / regulatory environmental proceedings with monetary sanctions ≥ \$300,000 (SRC; lower threshold for full-disclosure issuers per Reg S-K Item 103 instructions) disclosed regardless of materiality.
+
+Updates from prior 10-K / 10-Q required; new proceedings during quarter disclosed. Continuing proceedings may be referenced by cross-reference to prior filing where status unchanged.
+
+### 6.3 Item 1A — Risk Factors
+
+Material changes from risk factors disclosed in the most recent 10-K (Item 105). Updates triggered by:
+
+- Material new risks (cybersecurity incident; restatement; covenant default; litigation development);
+- Material changes to existing risks (scope expansion; probability or magnitude shift);
+- Item 105 specificity discipline — generic boilerplate not sufficient; per [periodic-reporting-10K-10Q-SKILL](/ExecutiveBots/Public/wiki/periodic-reporting-10K-10Q-SKILL) §3.2. Silence is affirmation. Where a 10-K risk has materially changed but Item 1A omits the update, §10(b) exposure under *Basic v. Levinson* / *Stratte-McClure v. Morgan Stanley*, 776 F.3d 94 (2d Cir. 2015). The most-recent-quarter-end is the reference point.
+
+### 6.4 Item 2 — Unregistered Sales of Equity Securities and Use of Proceeds
+
+Reg S-K Item 701 — disclosure of unregistered sales during the quarter not previously reported on Form 8-K Item 3.02:
+
+- Date of sale, class, number of shares, consideration.
+- Exemption claimed (Reg D, Reg S, §4(a)(2), §3(a)(9), etc.).
+- Persons receiving (if registered offering exemption pursuant to Reg D). Reg S-K Item 703 — issuer purchases of equity securities (share repurchases) during quarter:
+- Monthly breakdown (three months in quarter): total shares purchased; average price per share; total purchased under publicly announced plans / programs; maximum shares (or dollar amount) yet may be purchased under the program. Rule 10b-18 safe-harbor compliance documented for open-market repurchases; Tom + Edith maintain repurchase log. *See* [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL) §9 (ATM) and [tender-offers-13D-14D-SKILL](/ExecutiveBots/Public/wiki/tender-offers-13D-14D-SKILL) §7 (Rule 13e-4 issuer tender offer distinction).
+
+### 6.5 Item 5 — Other Information
+
+Item 5 catches information required to be disclosed in a Form 8-K during the period but not so reported, plus Item 408 trading-arrangement disclosures.
+
+Reg S-K Item 408(a)(1) — quarterly disclosure of adoption / modification / termination by any director or §16 officer of a 10b5-1 plan or non-Rule 10b5-1 trading arrangement during the quarter. For each:
+
+- Name, title.
+- Date of action (adoption / modification / termination).
+- Duration.
+- Aggregate amount of securities to be sold or purchased.
+- Description of any other material terms (other than price).
+- Whether a Rule 10b5-1 plan or non-Rule 10b5-1 trading arrangement. *See* §13 and [section-16-and-rule-10b5-1-SKILL](/ExecutiveBots/Public/wiki/section-16-and-rule-10b5-1-SKILL).
+
+### 6.6 Item 6 — Exhibits
+
+Standard exhibit list (per Item 601(a) and (b)):
+
+| Exhibit | Content                                                                                                    |
+|---------|------------------------------------------------------------------------------------------------------------|
+| 10      | Material contracts entered or amended during quarter (where filing rather than incorporation by reference) |
+| 31.1    | §302 certification — CEO                                                                                   |
+| 31.2    | §302 certification — CFO                                                                                   |
+| 32.1    | §906 certification — CEO                                                                                   |
+| 32.2    | §906 certification — CFO                                                                                   |
+| 101     | iXBRL data                                                                                                 |
+| 104     | iXBRL cover-page tags                                                                                      |
+
+------------------------------------------------------------------------
+
+## §7 PCAOB AS 4105 Interim Review
+
+### 7.1 The standard
+
+PCAOB AS 4105 (Reviews of Interim Financial Information) governs the auditor's review of interim financial information presented in a Form 10-Q (or financial information furnished pursuant to a registration statement that incorporates 10-Q data). AS 4105 is **distinct from AS 2201** (which governs annual ICFR audits).
+
+### 7.2 Review vs. audit — the critical distinction
+
+| Dimension         | AS 4105 (10-Q review)                                      | AS 2201 (10-K audit)                                       |
+|-------------------|------------------------------------------------------------|------------------------------------------------------------|
+| Type of assurance | **Limited** (negative form)                                | **Reasonable** (positive form)                             |
+| Auditor's report  | Standard review report; no opinion expressed               | Opinion (typically unqualified)                            |
+| Procedures        | Analytical procedures, inquiries, fraud-risk consideration | Analytical procedures + substantive testing + ICFR testing |
+| ICFR audit        | None                                                       | §404(b) attestation (LAF / AF only)                        |
+| Materiality       | Same conceptual standard, applied to interim period        | Annual materiality                                         |
+| Independence      | Reg S-X Rule 2-01 — same firm; same independence regime    | Same                                                       |
+| Output            | Review report typically not filed (pre-issuance review)    | Audit opinion filed as Exhibit 23 / signed audit report    |
+
+### 7.3 AS 4105 procedures
+
+- Reading of minutes of board, committees, shareholders.
+- Inquiries of management regarding accounting policies, significant transactions, related-party matters, going concern, subsequent events.
+- Inquiries about ICFR changes during the quarter.
+- Inquiries about and consideration of identified fraud risk factors.
+- Analytical procedures comparing current-period to prior periods, expectations, ratios.
+- Reading of the financial statements and disclosures for compliance with GAAP and Article 10.
+- Procedures regarding subsequent events through review date.
+- Communications with audit committee per AS 1301.
+
+### 7.4 Pre-issuance review
+
+AS 4105 requires the review to be performed **before** the issuer files the 10-Q. The review is "pre-issuance" — the auditor must complete procedures and communicate any concerns before the EDGAR submission. Tom's cycle architecture (§4.1) builds in T-15 review-commencement to permit AS 4105 completion before T-0.
+
+### 7.5 No opinion; representation letter
+
+The auditor's review report (where issued — typically only in registration-statement contexts) states the review was performed and that the auditor is **not aware of** any material modifications needed for the FS to conform with GAAP. **Negative assurance only.** No representation that no material misstatements exist.
+
+Management representation letter (AS 2805 applied to AS 4105) — issuer's management represents in writing that financial statements fairly present, that ICFR effectiveness has been evaluated, and that no fraud has been concealed. Sub-certification chain (§12.4) feeds this letter.
+
+### 7.6 Going-concern interim evaluation
+
+ASC 205-40 evaluation required at each interim period (mandatory since FY ending after Dec. 15, 2016, all entities). Tom + auditor coordinate the substantial-doubt evaluation for the look-forward window from interim issuance date. Rung change from prior period (alleviated → not alleviated, or vice versa) must be disclosed and discussed in MD&A. *See* [going-concern-ASU-2014-15-SKILL](/ExecutiveBots/Public/wiki/going-concern-ASU-2014-15-SKILL).
+
+### 7.7 Auditor disagreement
+
+If during AS 4105 review the auditor concludes that material modifications are needed and management disagrees:
+
+1.  Issue escalates to audit committee (AS 1301 communication).
+2.  If unresolved, auditor cannot issue the review concurrence; issuer is exposed if it files without resolution.
+3.  Practical resolution: management modification; or NT 10-Q + continued investigation; or Item 4.02 evaluation (if prior period FS implicated).
+
+------------------------------------------------------------------------
+
+## §8 Reg S-X Article 10 Condensed Financial Statements
+
+### 8.1 Required statements (Rule 10-01)
+
+| Statement                         | Periods                                                                     |
+|-----------------------------------|-----------------------------------------------------------------------------|
+| Condensed balance sheet           | End of most recent fiscal quarter; end of preceding fiscal year             |
+| Condensed income statement        | Most recent fiscal quarter; year-to-date; same periods in prior fiscal year |
+| Condensed cash flow statement     | Year-to-date; same period in prior fiscal year                              |
+| Statement of stockholders' equity | Each interim period; same period in prior fiscal year                       |
+
+### 8.2 Condensation level
+
+Article 10 permits abbreviation of detail relative to Reg S-X Articles 5 / 7 / 9 (industry-specific full-form requirements) and to Article 8 (SRC annual). Specific abbreviations:
+
+- Balance sheet line items may be aggregated; specific item disclosure required only where amount is material or required by GAAP.
+- Footnotes are abbreviated; only material changes from the most recent 10-K and matters arising in the period that are material need full footnote disclosure.
+- Segment disclosure abbreviated; ASU 2023-07 segment-disclosure-package requirements apply at interim with reduced detail; significant changes in segment composition disclosed.
+
+### 8.3 Material changes disclosure
+
+Footnotes must disclose:
+
+- Significant accounting policy changes (with restated comparable periods if ASC 250 adopted retrospectively).
+- New significant estimates or changes to existing estimates.
+- Business combinations during the period (ASC 805).
+- Debt issuances, modifications, or extinguishments (ASC 470).
+- Equity issuances (ASC 505); share-based compensation (ASC 718).
+- Related-party transactions (ASC 850).
+- Derivative and hedging activities (ASC 815); changes in fair value of derivative liabilities (mark-to-market).
+- Going concern (ASC 205-40) — if substantial doubt raised or status changed.
+- Subsequent events (ASC 855) — disclosed through filing date.
+- Significant tax matters (ASC 740 — including ASC 740-10 / FIN 48 changes to uncertain tax positions).
+
+### 8.4 What may be omitted
+
+Article 10 permits omission of footnotes that would substantially duplicate the most recent 10-K's footnotes **except** where material changes have occurred. The "10-Q is a 10-K-light" simplification has a strict ceiling — material change disclosure is mandatory.
+
+### 8.5 Comparative periods discipline
+
+*See* §9 for the specific comparative-period rules. Reg S-X Article 10 imposes structural requirements; Item 303(b) MD&A discussion mirrors the same comparative-period framework.
+
+------------------------------------------------------------------------
+
+## §9 Comparative-Period Discipline
+
+### 9.1 Balance sheet
+
+| Column 1                          | Column 2                     |
+|-----------------------------------|------------------------------|
+| End of most recent fiscal quarter | End of preceding fiscal year |
+
+**Not** end of prior-year same quarter. The balance-sheet comparator is the most recent annual close, not the year-ago quarter-end.
+
+### 9.2 Income statement
+
+| Column 1                   | Column 2                                | Column 3                | Column 4              |
+|----------------------------|-----------------------------------------|-------------------------|-----------------------|
+| Most recent fiscal quarter | Corresponding fiscal quarter prior year | Year-to-date current FY | Year-to-date prior FY |
+
+Q1 10-Q: Columns 3 and 4 are the same period as Columns 1 and 2 (the YTD is the quarter). Q2 10-Q: YTD = six months. Q3 10-Q: YTD = nine months.
+
+### 9.3 Cash flow statement
+
+| Column 1                | Column 2              |
+|-------------------------|-----------------------|
+| Year-to-date current FY | Year-to-date prior FY |
+
+Note: NOT presented for the standalone three-month period; only YTD. This is a frequent staff comment area for issuers who present quarter-only cash flows in earnings releases — the 10-Q itself uses YTD only.
+
+### 9.4 Statement of stockholders' equity
+
+Generally presented for each interim period and the comparable prior-year period. Reconciliation of beginning to ending equity for each period; reclassifications (e.g., reverse stock split impact) disclosed.
+
+### 9.5 EPS comparative restatement
+
+ASC 260 — EPS for prior periods must be restated for stock splits, reverse splits, stock dividends, and rights offerings occurring after the prior-period balance-sheet date. Most common micro-cap restatement trigger: reverse stock split between prior quarter and current 10-Q. Tom maintains the restatement matrix; iXBRL tagging captures the restated values.
+
+### 9.6 Reclassifications
+
+ASC 205-10-50-1 — reclassifications between prior-period and current-period presentation disclosed in footnote. Description of nature, reason, and amounts. Frequent micro-cap issue: reclassifying a previously-disclosed liability between categories (current vs. long-term) without footnote disclosure.
+
+------------------------------------------------------------------------
+
+## §10 MD&A Quarterly Construction (Item 2)
+
+### 10.1 Standard
+
+Reg S-K Item 303(b) interim — MD&A covers results of operations and material changes in financial condition for the periods presented. Threshold: material changes from the most recent 10-K MD&A discussion. Per [MD-and-A-construction-SKILL](/ExecutiveBots/Public/wiki/MD-and-A-construction-SKILL) §2.3.
+
+### 10.2 Required content
+
+| Element                         | Detail                                                                                |
+|---------------------------------|---------------------------------------------------------------------------------------|
+| Results of operations           | Comparative period-over-period discussion with quantification                         |
+| Material changes in line items  | Period-over-period changes; cause attribution                                         |
+| Liquidity and capital resources | Updated since 10-K; covenants; cash position; going-concern integration if applicable |
+| Critical accounting estimates   | Updates only if materially changed since 10-K                                         |
+| Known-trend evaluation          | Updates only if known-trend status changed                                            |
+| Material changes in cash flow   | Operating, investing, financing                                                       |
+| Subsequent events               | Discussion if material; through filing date                                           |
+
+### 10.3 The "silence-is-affirmation" trap
+
+10-Q MD&A silence on a 10-K-disclosed known trend is affirmation that the trend has not changed. If a known trend has materially changed during the quarter and MD&A is silent, §10(b) exposure attaches under *Stratte-McClure* (Item 303 affirmative duty). The Item 303(b) interim drafting protocol: each 10-K known trend reviewed; status updated or explicitly affirmed; non-updates documented in workpaper as conscious affirmation, not oversight.
+
+### 10.4 Non-GAAP reconciliation
+
+Reg G and Item 10(e) discipline applies to all 10-Q non-GAAP measures. If non-GAAP measures appear in concurrent Item 2.02 earnings release (per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) § 3.2), reconciliation must be consistent between earnings release and 10-Q MD&A. Cross-document inconsistency is staff-comment surface and §10(b) exposure.
+
+### 10.5 Cybersecurity-incident integration
+
+Any material cybersecurity incident during the quarter (Item 1.05 8-K filed mid-cycle) requires:
+
+- Risk-factor update in Part II Item 1A (§6.3).
+- MD&A discussion in Item 2 — financial impact (direct response costs, business disruption, regulatory exposure), ongoing remediation costs, insurance recovery posture.
+- Item 4 controls evaluation — whether the incident reflects DC&P or ICFR deficiency.
+- Going-concern reassessment if cyber impact material to liquidity. *See* [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) §9.
+
+### 10.6 Going-concern interim re-evaluation
+
+ASC 205-40 mandates substantial-doubt evaluation at each interim period. Rung change (per [going-concern-ASU-2014-15-SKILL](/ExecutiveBots/Public/wiki/going-concern-ASU-2014-15-SKILL) §5) from prior period requires MD&A discussion of the change in circumstances. Material rung degradation (Rung 2 → Rung 3) is among the most-investor-watched 10-Q disclosures.
+
+------------------------------------------------------------------------
+
+## §11 Item 4 — Controls and Procedures
+
+### 11.1 Standard
+
+Reg S-K Item 308(b) — quarterly disclosure of:
+
+1.  Conclusions of PEO and PFO regarding DC&P effectiveness as of end of period (Rule 13a-15(e) / 15d-15(e) evaluation).
+2.  Any **material change** in ICFR during the quarter that has materially affected or is reasonably likely to materially affect ICFR.
+
+### 11.2 DC&P quarterly conclusion
+
+Disclosure controls and procedures (DC&P) — Rule 13a-15(e): controls designed to ensure that information required to be disclosed under Exchange Act is **recorded, processed, summarized, and reported within required time periods** and is **accumulated and communicated to management** to allow timely disclosure decisions. **Broader than ICFR** — encompasses non-financial disclosure (legal proceedings, risk factors, MD&A narrative, executive compensation).
+
+Quarterly conclusion: PEO + PFO conclude as of period-end that DC&P **is effective** or **is not effective** (with reasons). The conclusion must align with §302 certification.
+
+### 11.3 ICFR material-change reporting
+
+The Item 4 ICFR disclosure is **not** a full quarterly ICFR audit — that is annual under §404(a) / §404(b). The interim requirement is to report **material changes** during the quarter:
+
+- New material weakness identified.
+- Previously-reported material weakness remediated.
+- Significant new control implemented.
+- Significant control removed or modified (e.g., ERP migration; control owner change).
+- Acquisition or divestiture introducing material new control environment. Silence on a previously-disclosed material weakness's remediation status is interpreted as **no progress**. *See* [internal-controls-SOX-404-SKILL](/ExecutiveBots/Public/wiki/internal-controls-SOX-404-SKILL) §10.
+
+### 11.4 No auditor attestation at interim
+
+§404(b) auditor attestation is annual only (10-K Item 9A). Interim §404(b)-style attestation does not exist. The structural rationale: AS 4105 review provides limited assurance, not the reasonable assurance needed for ICFR attestation.
+
+### 11.5 §302 tie
+
+§302(a)(4)(B): CEO and CFO certify they have evaluated DC&P effectiveness and presented their conclusions in the report. The Item 4 conclusion must mirror the §302 certification. Misalignment (e.g., §302 affirms DC&P effective but Item 4 discloses ineffective DC&P) is a certification defect and material weakness indicator.
+
+### 11.6 Post-restatement Item 4
+
+If Item 4.02 has been filed during the quarter, Item 4 ICFR conclusion typically transitions to **not effective due to material weakness in \[area\]**. The post-restatement reassessment cascade is detailed in [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) §9.
+
+------------------------------------------------------------------------
+
+## §12 SOX §302 / §906 Quarterly Certification Package
+
+### 12.1 §302 Certification (Exhibits 31.1 and 31.2)
+
+Each of CEO and CFO individually certifies on a separate exhibit:
+
+1.  Reviewed the report.
+2.  Based on knowledge, no untrue statement of material fact or omission necessary to make statements not misleading.
+3.  Based on knowledge, FS and other financial information fairly present financial condition, results of operations, cash flows.
+4.  Responsible for DC&P and ICFR; designed and evaluated effectiveness; disclosed conclusions; disclosed changes in ICFR.
+5.  Disclosed to auditor and audit committee: all significant deficiencies and material weaknesses; any fraud involving management or other employees with significant ICFR role.
+
+### 12.2 §906 Certification (Exhibits 32.1 and 32.2)
+
+18 U.S.C. § 1350: criminal certification — knowing false certification subject to \$1M fine and 10-year imprisonment (willful: \$5M, 20 years).
+
+Standard text:
+
+> Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002 (18 U.S.C. § 1350), the undersigned officer certifies that, to the officer's knowledge: (i) the Quarterly Report on Form 10-Q for the period ended \[date\] fully complies with the requirements of Section 13(a) or 15(d) of the Securities Exchange Act of 1934; and (ii) the information contained in such Quarterly Report fairly presents, in all material respects, the financial condition and results of operations of \[Issuer\].
+
+### 12.3 Cycle integration
+
+The certifications are **wet-signed** (or qualifying e-signature equivalent) at T-1; manually signed signature pages retained for 5 years per Rule 302 of Reg S-T; filed as Exhibits 31.1 / 31.2 / 32.1 / 32.2 with the 10-Q at T-0.
+
+### 12.4 Sub-certification chain
+
+Patricia administers a sub-certification cycle from process owners up to the certifying officers:
+
+- T-12: Sub-cert request distributed to process owners (each significant account, key control owner, IT general controls).
+- T-7: Sub-certs returned to Patricia.
+- T-5: Aggregation review with Tom and James; deficiencies flagged.
+- T-3: Final sub-cert package supports CEO/CFO §302 certification. Sub-certifications document the chain of knowledge from process up to the certifying officer. Without sub-certs, the CEO/CFO's "based on knowledge" affirmation in §302 is unsupported. *In re McDonald's* officer-level *Caremark* extension is the doctrinal anchor — knowledge that should have been obtained through systems and processes is constructive knowledge.
+
+### 12.5 Quarterly multiplication of certification exposure
+
+Three §302 + three §906 certifications per officer per FY (plus the annual 10-K equivalents) = 8 certifications per officer per FY. Each carries independent criminal and civil exposure. The annual *Caremark*-defense package (per [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 5.4) aggregates the cycle-by-cycle evidence base.
+
+------------------------------------------------------------------------
+
+## §13 Item 408 — Trading-Arrangement Disclosures
+
+### 13.1 Item 408(a)(1) — Quarterly disclosure
+
+For each adoption, modification, or termination during the quarter by any director or §16 officer of a Rule 10b5-1 trading plan or non-Rule 10b5-1 trading arrangement:
+
+| Field                             | Detail                                                                             |
+|-----------------------------------|------------------------------------------------------------------------------------|
+| Name                              | Insider name                                                                       |
+| Title                             | Director / §16 officer position                                                    |
+| Action                            | Adoption / modification / termination                                              |
+| Action date                       | Date of the action                                                                 |
+| Plan type                         | 10b5-1 or non-10b5-1                                                               |
+| Duration                          | Plan term                                                                          |
+| Aggregate amount                  | Securities to be sold or purchased under plan                                      |
+| Material terms (other than price) | Aggregate share or dollar limits; vesting tie-ins; cooling-off period satisfaction |
+
+### 13.2 Item 408(a)(2) — Insider-trading policy disclosure
+
+In the 10-K (not 10-Q), the issuer discloses whether it has adopted insider-trading policies and procedures. If yes, the policy is filed as Exhibit 19 to 10-K. This is annual only — 10-Q does not require policy disclosure.
+
+### 13.3 Item 408(b) — Annual; cross-flagged
+
+In the 10-K (not 10-Q), the issuer discloses policies and practices regarding option / SAR grant timing in relation to MNPI per Item 402(x) of Reg S-K. Annual; not a 10-Q disclosure. *See* [item-402-executive-compensation-SKILL](/ExecutiveBots/Public/wiki/item-402-executive-compensation-SKILL) §11.
+
+### 13.4 Cycle coordination
+
+Patricia maintains the §16 insider 10b5-1 plan ledger continuously (per [section-16-and-rule-10b5-1-SKILL](/ExecutiveBots/Public/wiki/section-16-and-rule-10b5-1-SKILL) §8.3). At T-15 in the cycle, Patricia provides the quarter's trading-arrangement activity to Tom + James for Item 5 / Item 408 disclosure inclusion. Plans adopted, modified, or terminated even one day before quarter-end are reportable in the quarter's 10-Q; plans adopted after quarter-end are reported in the next 10-Q.
+
+### 13.5 December 2022 amendments mechanic cross-reference
+
+The cooling-off period (90 days for directors/officers; 30 days for non-issuer; tied to the later of period or 2 BD after disclosure), single-plan limit, good-faith certification, and continuing-good-faith operation requirements affect plan validity. Item 408 disclosure is the public-facing reporting layer; the substantive plan compliance is administered by Patricia per [section-16-and-rule-10b5-1-SKILL](/ExecutiveBots/Public/wiki/section-16-and-rule-10b5-1-SKILL) §7.
+
+------------------------------------------------------------------------
+
+## §14 Subsequent Events (ASC 855) and Filing-Date Review
+
+### 14.1 The standard
+
+ASC 855 — events or transactions occurring after the balance-sheet date but before the financial statements are **issued** (or available to be issued, for non-SEC filers). For SEC filers, **issuance date = filing date**.
+
+### 14.2 Type I vs. Type II
+
+| Type                     | Definition                                                                           | Treatment                                                                                                                                                                                                                                    |
+|--------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Type I (recognized)      | Conditions existed at balance-sheet date; additional evidence became available after | Recognize in current FS (adjust amounts); examples: customer bankruptcy filing after quarter-end confirming uncollectibility of receivable; legal-claim settlement after quarter-end providing evidence of liability existing at quarter-end |
+| Type II (non-recognized) | Conditions arose after balance-sheet date                                            | Disclose only; do not adjust; examples: post-period business acquisitions; post-period debt issuances; natural disasters; subsequent business decisions                                                                                      |
+
+### 14.3 Evaluation period
+
+For SEC filers: through **financial-statement issuance date** (10-Q filing date — T-0 in the cycle). Tom + auditor evaluate continuously through T-0; final review at T-2 (final draft freeze) and T-0 (pre-submission).
+
+ASC 855-10-50-1 — date through which subsequent events were evaluated must be disclosed. Standard footnote language: "The Company evaluated subsequent events through \[date\], the date the financial statements were issued, and noted no events requiring recognition or disclosure other than as disclosed \[in footnote X\]."
+
+### 14.4 Filing-date review
+
+T-0 (filing day) review: confirm no material event has occurred between T-2 (final freeze) and T-0 that requires:
+
+- Type I adjustment (would require re-freeze and §302 re-affirmation).
+- Type II disclosure update (would require footnote amendment).
+- Going-concern re-evaluation (would require ASC 205-40 rung change).
+- New material risk-factor (would require Part II Item 1A amendment). Tom + James + Bill execute the T-0 filing-date review checklist immediately before EDGAR submission. Documented in audit-trail Record 3 (§17).
+
+### 14.5 Common subsequent-event categories for micro-cap subscribers
+
+- Capital raise completed post-quarter-end (Type II — disclose; do not adjust).
+- Convertible note issued post-quarter-end with bifurcated derivative (Type II — disclose).
+- Customer bankruptcy filing post-quarter-end confirming pre-existing uncollectibility (Type I — adjust AR).
+- Settlement of pre-existing litigation post-quarter-end (Type I if confirms existing liability; Type II if new agreement creates the liability).
+- Reverse stock split post-quarter-end (Type II — disclose; ASC 260 EPS retroactive restatement).
+- Going-concern alleviation post-quarter-end via committed financing (Type II disclosure under Rung 4 — *see* [going-concern-ASU-2014-15-SKILL](/ExecutiveBots/Public/wiki/going-concern-ASU-2014-15-SKILL) §5).
+- Material cybersecurity incident discovered post-quarter-end (Item 1.05 8-K; ASC 450 contingency disclosure).
+
+------------------------------------------------------------------------
+
+## §15 Cycle Exception Paths
+
+### 15.1 NT 10-Q under Rule 12b-25
+
+If the 10-Q cannot be filed by the due date:
+
+| Step | Detail                                                                                                |
+|------|-------------------------------------------------------------------------------------------------------|
+| 1    | Risk identified at T-5 or earlier; "unable without unreasonable effort or expense" standard evaluated |
+| 2    | Form 12b-25 (NT 10-Q) prepared with Part III substantive explanation                                  |
+| 3    | NT filed within **1 business day** after original due date                                            |
+| 4    | Cure window: **5 calendar days** from original due date                                               |
+| 5    | Within cure: timely for S-3 General Instr. I.A.3 and Rule 144(c)(1)                                   |
+| 6    | Outside cure: S-3 eligibility lost for 12 months; Rule 144 affiliate sales restricted                 |
+
+NT Part III explanation must be substantive — generic "administrative delays" draws negative inference. Acceptable bases: auditor unable to complete AS 4105 review; material accounting matter under evaluation; restatement work in progress (cross-reference Item 4.02 8-K if filed); subsidiary or equity-method investee FS unavailable. Per [NT-10K-NT-10Q-late-filing-SKILL](/ExecutiveBots/Public/wiki/NT-10K-NT-10Q-late-filing-SKILL).
+
+### 15.2 Item 4.02 mid-cycle non-reliance
+
+If a non-reliance determination occurs during the 10-Q cycle (typically during AS 4105 review or audit-committee discussion):
+
+1.  Form 8-K Item 4.02(a) (or 4.02(b) if auditor advice) filed within **4 business days** of the conclusion date (independent of 10-Q deadline) — per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) §3.4 and [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL).
+2.  10-Q deadline may be deferred via NT 10-Q if cure window achievable; otherwise late.
+3.  Concurrent restatement work begins: 10-K/A or prior 10-Q/A amendment plan.
+4.  Current 10-Q (when filed) reflects restated comparable periods; Item 9A / Item 4 controls conclusion typically transitions to "not effective due to material weakness in \[area\]."
+5.  SOX §304 and Rule 10D-1 clawback analysis launched.
+6.  D&O insurance notice (per [D-and-O-insurance-claims-SKILL](/ExecutiveBots/Public/wiki/D-and-O-insurance-claims-SKILL) §5.1).
+7.  Risk-factor update for Part II Item 1A: restatement, material weakness, clawback exposure, securities-class-action exposure.
+
+### 15.3 Cybersecurity incident in quarter (Item 1.05)
+
+Material cybersecurity incident during the quarter:
+
+1.  Robert + James joint determination per [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) §3.
+2.  Form 8-K Item 1.05 filed within 4 BD of materiality determination per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) §3.1.
+3.  10-Q integration:
+    - Part II Item 1A risk-factor update reflecting the incident;
+    - Item 2 MD&A discussion (financial impact, ongoing costs, insurance recovery, regulatory exposure);
+    - Item 4 controls evaluation — whether incident reflects DC&P or ICFR deficiency;
+    - ASC 450 loss-contingency disclosure if reasonably possible / probable loss;
+    - Going-concern reassessment if material to liquidity.
+4.  Continuing Item 1.05 amendments as scope clarifies (each new material determination = new 4-BD clock) per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) §9.
+
+### 15.4 Auditor change mid-cycle (Item 4.01)
+
+If the issuer dismisses or the auditor resigns during the 10-Q cycle:
+
+1.  Form 8-K Item 4.01 filed within 4 BD per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) §3.4.
+2.  Exhibit 16 letter from former auditor due within 10 BD of 8-K.
+3.  New auditor engaged and conducts AS 4105 review for the in-process quarter (typically requires re-performance of prior procedures).
+4.  10-Q deadline likely at risk; NT 10-Q likely.
+5.  Item 4 controls evaluation considers auditor-change disruption.
+
+### 15.5 Charter or bylaw amendment (Item 5.03)
+
+Mid-cycle charter / bylaw amendment (e.g., reverse stock split) requires:
+
+1.  Form 8-K Item 5.03 filed within 4 BD of effectiveness per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) §3.5.
+2.  10-Q integration:
+    - EPS retroactive restatement for all periods presented (ASC 260);
+    - Cover-page facts update (iXBRL);
+    - FINRA Rule 6490 coordination per [corporate-actions-FINRA-6490-SKILL](/ExecutiveBots/Public/wiki/corporate-actions-FINRA-6490-SKILL);
+    - Transfer-agent (Edith) execution.
+
+### 15.6 Significant unregistered sale (Item 3.02)
+
+Unregistered sale exceeding 1% of outstanding (5% if SRC) during cycle:
+
+1.  Form 8-K Item 3.02 filed within 4 BD per [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) §3.3.
+2.  10-Q integration:
+    - Part II Item 2 disclosure of unregistered sale (Reg S-K Item 701);
+    - Equity footnote disclosure;
+    - ASC 815 / 480 analysis if convertible or warrant component (per [derivatives-notes-debt-equity-SKILL](/ExecutiveBots/Public/wiki/derivatives-notes-debt-equity-SKILL));
+    - MD&A liquidity discussion update;
+    - Cap table updated.
+
+------------------------------------------------------------------------
+
+## §16 Governance Gate Authorization Routing
+
+### 16.1 Category framework
+
+[Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) uses NR / BR / SOX-Cert categories for 10-Q filing authorization:
+
+| Category                      | 10-Q application                                                                                                                                                    |
+|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **BR — Board-Required**       | Full 10-Q substantive content; Item 2 MD&A; Part II Item 1A risk factors; Item 4 controls conclusion; Item 5 / Item 408 disclosure; any Item 4.02 / 1.05 cross-flag |
+| **NR — Notification Routing** | Procedural / housekeeping content; exhibit-only updates; Item 3 market-risk silence (SRC); Item 4 routine                                                           |
+| **SOX-Cert**                  | §302 / §906 certifications themselves; Item 4 controls conclusion                                                                                                   |
+
+### 16.2 BR pre-execution authorization process
+
+1.  T-8 (Disclosure committee meeting \#2) produces the substantive content draft.
+2.  T-5 HBR pre-review package distributed.
+3.  T-3 HBR review meeting with Human CEO + Human CFO + outside counsel:
+    - Substantive content reviewed.
+    - §302 / §906 draft certs reviewed.
+    - Resolution adopting the 10-Q for filing (minuted).
+4.  Resolution becomes audit-trail Record 2 of the four-record sequence (§17).
+5.  Authorization to file communicated to Bill orchestration.
+6.  T-2 Final draft frozen; iXBRL validation.
+7.  T-1 Certifications wet-signed.
+8.  T-0 Filing per §17.
+
+### 16.3 SOX-Cert overlay
+
+§302 / §906 certifications carry independent SOX-Cert authorization:
+
+- Sub-certification chain (§12.4) provides knowledge base for "based on knowledge" affirmation.
+- HBR review at T-3 includes specific certification review (not delegated).
+- §906 criminal-certification awareness affirmed by HBR.
+
+### 16.4 Audit committee role
+
+Per Rule 10A-3 and applicable listing standards (or single-principal subscriber adaptations per [Single-Principal-Subscriber-Appendix](/ExecutiveBots/Public/wiki/Single-Principal-Subscriber-Appendix)):
+
+- T-10 audit committee meeting reviews AS 4105 results; AS 1301 communications received.
+- Audit committee receives Item 4 controls conclusion and any material-weakness disclosure.
+- Audit committee minute serves as audit-trail Record 2 component.
+
+### 16.5 Single-principal subscriber adaptation
+
+Per [Single-Principal-Subscriber-Appendix](/ExecutiveBots/Public/wiki/Single-Principal-Subscriber-Appendix), controlled-company exemption under Rule 10A-3(b)(1)(iv) may permit a non-independent affiliated-person director on the audit committee. Cycle architecture and Governance Gate authorization remain unchanged; the audit-committee meeting at T-10 proceeds with the controlled-company-exempt composition. *See* [audit-committee-operation-SKILL](/ExecutiveBots/Public/wiki/audit-committee-operation-SKILL) §3.
+
+------------------------------------------------------------------------
+
+## §17 Audit-Trail Four-Record Sequence and Pre-Filing Checklist
+
+### 17.1 Four-record sequence for 10-Q EDGAR submission
+
+Adapts [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.5. All four records SHA-256-hashed per NIST FIPS 180-4 and canonicalized per RFC 8785 before hashing.
+
+#### Record 1 — Cycle Intent
+
+| Field                  | Content                           |
+|------------------------|-----------------------------------|
+| `record_type`          | `"10Q_CYCLE_INTENT"`              |
+| `quarter`              | Q1 / Q2 / Q3                      |
+| `fiscal_year`          | YYYY                              |
+| `quarter_end_date`     | ISO 8601                          |
+| `filing_deadline`      | ISO 8601 (T-0)                    |
+| `filer_category`       | LAF / AF / SRC / NAF / EGC        |
+| `cycle_calendar_hash`  | SHA-256 of cycle calendar         |
+| `cycle_open_timestamp` | T-45 (or T-50 for SRC/NAF)        |
+| `record_prior_hash`    | SHA-256 of prior 10-Q's Record 4  |
+| `record_self_hash`     | SHA-256 of canonicalized Record 1 |
+
+#### Record 2 — Preparation and Authorization
+
+| Field                                 | Content                                                        |
+|---------------------------------------|----------------------------------------------------------------|
+| `record_type`                         | `"10Q_PREPARATION"`                                            |
+| `intent_record_hash`                  | SHA-256 of Record 1                                            |
+| `draft_10q_hashes`                    | Array of SHA-256 by milestone (T-30 / T-22 / T-18 / T-8 / T-2) |
+| `as4105_review_complete`              | Bool + auditor concurrence date                                |
+| `as1301_communications_complete`      | Bool + audit committee date                                    |
+| `sub_cert_chain_complete`             | Bool + Patricia timestamp                                      |
+| `disclosure_committee_meeting_2_hash` | SHA-256 of meeting minutes                                     |
+| `hbr_resolution_hash`                 | SHA-256 of HBR adoption resolution                             |
+| `302_906_drafts_hash`                 | SHA-256 of certifications                                      |
+| `final_10q_hash`                      | SHA-256 at T-2 freeze                                          |
+| `ixbrl_validation_pass`               | Bool + Arelle output                                           |
+| `record_self_hash`                    | SHA-256 of canonicalized Record 2                              |
+
+#### Record 3 — Submission
+
+| Field                           | Content                                                               |
+|---------------------------------|-----------------------------------------------------------------------|
+| `record_type`                   | `"10Q_SUBMISSION"`                                                    |
+| `preparation_record_hash`       | SHA-256 of Record 2                                                   |
+| `edgar_submission_type`         | `"10-Q"`                                                              |
+| `cik`                           | Subscriber's CIK                                                      |
+| `final_10q_hash`                | SHA-256 of submitted 10-Q (may differ from T-2 only by EDGAR header)  |
+| `exhibit_hashes`                | Array `{exhibit_id, sha256}` — incl. 31.1, 31.2, 32.1, 32.2, 101, 104 |
+| `t0_filing_date_review`         | Bool + filing-date-review checklist hash (§14.4)                      |
+| `signatory_ceo`                 | Name and title; wet-signature timestamp                               |
+| `signatory_cfo`                 | Name and title; wet-signature timestamp                               |
+| `submission_timestamp_outbound` | ISO 8601 UTC                                                          |
+| `record_self_hash`              | SHA-256 of canonicalized Record 3                                     |
+
+#### Record 4 — Confirmation
+
+| Field                           | Content                                     |
+|---------------------------------|---------------------------------------------|
+| `record_type`                   | `"10Q_CONFIRMATION"`                        |
+| `submission_record_hash`        | SHA-256 of Record 3                         |
+| `edgar_accession_number`        | Format `XXXXXXXXXX-XX-XXXXXX`               |
+| `edgar_filed_timestamp`         | EDGAR authoritative FILED timestamp         |
+| `edgar_acceptance_status`       | `"ACCEPTED"` / `"SUSPENDED"` / `"REJECTED"` |
+| `deadline_compliance`           | Bool: `edgar_filed_timestamp` ≤ deadline    |
+| `hbr_post_filing_notification`  | Bool + timestamp                            |
+| `cycle_retrospective_scheduled` | Bool + T+5 date                             |
+| `record_self_hash`              | SHA-256 of canonicalized Record 4           |
+
+### 17.2 Chain integrity
+
+Records 1–4 form a Merkle-style chain via `prior_record_hash` fields; the chain is anchored to the prior 10-Q's (or 10-K's) Record 4. Robert's continuous integrity sweep per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 8.2 verifies the hash chain weekly. Chain break is a SEV-1 incident per [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix).
+
+### 17.3 WORM archive
+
+All four records, all interim draft hashes, the iXBRL validation output, the HBR resolution, the audit-committee minutes, the sub-certification package, the AS 4105 representation letter, and the wet-signed §302 / §906 certifications are committed to WORM storage per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 7. Retention: 7 years minimum (FRCP 37(e) reasonable steps standard per *Zubulake V*); longer if litigation hold applies.
+
+### 17.4 Pre-Filing Checklist
+
+- Filer category current; T+40 (LAF/AF) or T+45 (SRC/NAF) deadline computed?
+- T-45 (or T-50) cycle-open complete; PBC list circulated; auditor engaged?
+- Quarter-end close complete; sub-ledgers reconciled?
+- Article 10 condensed FS drafted: BS / IS / CF / equity with required comparative periods (§9)?
+- Footnotes abbreviated where appropriate; material changes from 10-K disclosed?
+- Going-concern interim evaluation complete (ASC 205-40); rung documented?
+- Subsequent-event evaluation through filing date (ASC 855); date disclosed in footnote?
+- Segment disclosure (ASU 2023-07) at interim?
+- EPS retroactively restated for any reverse split / forward split / stock dividend during or after period?
+- Item 2 MD&A drafted: results-of-operations; liquidity; critical-estimate updates; known-trend evaluation?
+- MD&A consistent with concurrent earnings release (Item 2.02 8-K) non-GAAP reconciliation?
+- Item 3 market-risk: material change from 10-K; SRC scaled or silent with rationale?
+- Item 4 controls: DC&P quarterly conclusion; ICFR material-change disclosure?
+- Item 4 conclusion aligned with §302 certification (no inconsistency)?
+- Part II Item 1 legal proceedings updated; new material proceedings during quarter disclosed?
+- Part II Item 1A risk factors: material changes from 10-K Item 105; silence-as-affirmation discipline applied?
+- Part II Item 2 unregistered sales (Item 701) + issuer purchases (Item 703) complete?
+- Part II Item 3 defaults; Part II Item 4 mine safety where applicable?
+- Part II Item 5 / Item 408 trading-arrangement disclosures for any §16 insider plan event in quarter?
+- Part II Item 6 exhibits: 31.1 / 31.2 / 32.1 / 32.2 / 101 / 104 prepared?
+- AS 4105 review complete; auditor concurrence documented; AS 1301 communications received?
+- Audit committee meeting held; minutes captured?
+- Sub-certification chain complete; aggregation review at T-5?
+- §302 / §906 certifications drafted; reviewed by HBR; wet-signed at T-1?
+- Manually signed signature pages retained per Rule 302 of Reg S-T?
+- iXBRL validation pass (Arelle); calculation linkbase balanced; minimal extensions?
+- Cross-document consistency: earnings release, prior 10-Q, 10-K, press releases, proxy?
+- T-0 filing-date review checklist executed; any new subsequent events evaluated?
+- Multi-tenant boundary preserved (no cross-subscriber reference)?
+- HBR resolution adopting filing complete?
+- Four-record audit-trail sequence executed; WORM archive committed?
+- Press release / Item 2.02 8-K coordinated if applicable?
+- Cycle retrospective scheduled for T+5? Any unchecked item blocks T-0 submission. Slip the cycle to NT 10-Q if necessary (§15.1) — never compromise the certification.
+
+------------------------------------------------------------------------
+
+## §18 References
+
+### 18.1 Statutes and Rules
+
+- Securities Exchange Act § 10(b), § 13(a), § 15(d) (periodic reporting; antifraud)
+- Securities Act § 11, § 12(a)(2) (registration-statement liability where 10-Q incorporated by reference)
+- Sarbanes-Oxley Act § 302 (15 U.S.C. § 7241), § 304 (15 U.S.C. § 7243), § 307 (15 U.S.C. § 7245), § 404 (15 U.S.C. § 7262), § 906 (18 U.S.C. § 1350)
+- 17 C.F.R. § 240.12b-2 (filer-status definitions)
+- 17 C.F.R. § 240.12b-25 (NT extension); Form 12b-25
+- 17 C.F.R. § 240.13a-13; § 240.15d-13 (quarterly reporting obligation)
+- 17 C.F.R. § 240.13a-14; § 240.15d-14 (CEO/CFO §302 certifications)
+- 17 C.F.R. § 240.13a-15; § 240.15d-15 (DC&P and ICFR evaluation)
+- 17 C.F.R. § 240.10D-1 (clawback recovery rule); Exhibit 97
+- 17 C.F.R. § 240.10A-3 (Audit Committee)
+- 17 C.F.R. §§ 243.100–.103 (Reg FD)
+- 17 C.F.R. Part 205 (attorney up-the-ladder under Rule 205)
+- 17 C.F.R. Part 232; § 232.302; § 232.405 (Reg S-T; signatures; iXBRL)
+- Reg S-K Items 103, 104, 105, 303, 305, 308(b), 401, 402, 403, 404, 405, 406, 408, 601, 701, 703
+- Reg S-X Article 10 (condensed financial statements); Rule 10-01; Rule 10-03
+- Reg S-X Rule 2-01 (auditor independence)
+- Form 10-Q (and General Instructions)
+- Form S-3 General Instruction I.A.3 (timely-filing condition)
+- Rule 144(c)(1) (current public information)
+- Federal Rules of Civil Procedure 37(e) (preservation reasonable-steps standard)
+- DGCL § 220; NRS § 78.257 (books-and-records demand — relevant to §220 litigation triggered by 10-Q disclosures)
+
+### 18.2 SEC Releases
+
+- SEC Rel. No. 33-11038 / 34-96492 (Dec. 14, 2022) — Rule 10b5-1 amendments and Item 408
+- SEC Rel. No. 33-11216 (July 26, 2023) — Cybersecurity Disclosure Rule (Item 1.05 mid-cycle interaction)
+- SEC Rel. No. 33-11126 (Oct. 2022) — Rule 10D-1 / Exhibit 97 clawback policy
+- SEC Rel. No. 33-10890 (Feb. 2020) — MD&A modernization
+- SEC Rel. No. 33-10825 (Mar. 2020) — Risk factors and SRC §404(b) carve-out
+- SEC Rel. No. 34-44238 (May 2001) — Electronic recordkeeping interpretive
+- SEC Rel. No. 34-69279 (Apr. 2013) — Social-media disclosure under Reg FD
+
+### 18.3 PCAOB Standards
+
+- AS 1301 (Communications with Audit Committees)
+- AS 2105 (Considering Materiality in Planning and Performing an Audit) — for 10-K context comparison
+- AS 2110 (Identifying and Assessing Risks of Material Misstatement) — for 10-K context comparison
+- AS 2201 (Audit of Internal Control over Financial Reporting) — for 10-K context comparison
+- AS 2401 (Consideration of Fraud)
+- AS 2405 (Illegal Acts by Clients)
+- AS 2805 (Management Representations)
+- AS 2820 (Subsequent Events; Reissuance)
+- AS 3101 (Auditor's Report; Critical Audit Matters) — for 10-K context comparison
+- **AS 4105 (Reviews of Interim Financial Information)** — primary 10-Q audit standard
+
+### 18.4 Accounting Standards
+
+- ASC 205-40 (Going Concern — ASU 2014-15; interim evaluation required)
+- ASC 250 (Accounting Changes and Error Corrections)
+- ASC 260 (Earnings per Share — interim restatement for splits)
+- ASC 270 (Interim Reporting)
+- ASC 280 (Segment Reporting — ASU 2023-07)
+- ASC 326 (Credit Losses — CECL)
+- ASC 450 (Loss Contingencies)
+- ASC 470 (Debt); ASC 470-20 (Convertible Debt)
+- ASC 480 / ASC 815-40 (Capital-Structure / Equity-Linked Instruments)
+- ASC 505 / ASC 505-30 (Treasury Stock)
+- ASC 605 / ASC 606 (Revenue Recognition)
+- ASC 715 (Post-Employment Benefits)
+- ASC 718 (Stock-Based Compensation)
+- ASC 740 (Income Taxes); ASC 740-10 / FIN 48 (Uncertain Tax Positions)
+- ASC 805 (Business Combinations)
+- ASC 815 (Derivatives and Hedging)
+- ASC 820 (Fair Value Measurement)
+- ASC 850 (Related-Party Disclosures)
+- ASC 855 (Subsequent Events — issuance date for SEC filers)
+- SAB 99 (Aug. 1999) — Materiality qualitative factors
+- SAB 108 — Quantification of misstatements (dual-method)
+
+### 18.5 Cases
+
+- *Basic Inc. v. Levinson*, 485 U.S. 224 (1988) (materiality)
+- *TSC Industries, Inc. v. Northway, Inc.*, 426 U.S. 438 (1976) (materiality standard)
+- *Matrixx Initiatives, Inc. v. Siracusano*, 563 U.S. 27 (2011) (no statistical-significance bright line)
+- *Stratte-McClure v. Morgan Stanley*, 776 F.3d 94 (2d Cir. 2015) (Item 303 affirmative duty)
+- *Macquarie Infrastructure Corp. v. Moab Partners*, 601 U.S. 257 (2024) (Rule 10b-5(b) pure-omission limits)
+- *In re Caremark Int'l Inc. Derivative Litig.*, 698 A.2d 959 (Del. Ch. 1996)
+- *Stone v. Ritter*, 911 A.2d 362 (Del. 2006)
+- *Marchand v. Barnhill*, 212 A.3d 805 (Del. 2019)
+- *In re McDonald's Corp. S'holder Derivative Litig.*, 289 A.3d 343 (Del. Ch. 2023) (officer-level *Caremark* extension)
+- *AmerisourceBergen Corp. v. Lebanon County Employees' Retirement Fund*, 243 A.3d 417 (Del. 2020) (§220 proper purpose)
+- *SEC v. Jensen*, 835 F.3d 1100 (9th Cir. 2016) (§304 applies without proof of personal CEO/CFO misconduct)
+- *SEC v. WorldCom, Inc.*, 273 F. Supp. 2d 431 (S.D.N.Y. 2003) (categorical restatement; failure of quarterly oversight)
+- *Zubulake v. UBS Warburg LLC (Zubulake V)*, 229 F.R.D. 422 (S.D.N.Y. 2004) (FRCP 37(e) reasonable-steps standard)
+- *In re DraftKings Inc.*, SEC enforcement action (Sept. 2024) (Reg FD selective disclosure)
+- *In re Delphia (USA) Inc. & Global Predictions Inc.*, Admin. Proc. File No. 3-21894 / 3-21895 (Mar. 18, 2024) (AI-washing)
+
+### 18.6 Companion Authoritative Standards
+
+- COSO 2013 — Internal Control — Integrated Framework
+- NIST FIPS 180-4 — Secure Hash Standard (SHA-256)
+- RFC 8785 — JSON Canonicalization Scheme
+
+### 18.7 Internal Canonical Companion Files
+
+**Layer 1 Constitutional:** [Take-Notice](/ExecutiveBots/Public/wiki/Take-Notice), [Ethics-Foundations](/ExecutiveBots/Public/wiki/Ethics-Foundations), [Executivebots-Architecture](/ExecutiveBots/Public/wiki/ExecutiveBots-Architecture), [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix), [Single-Principal-Subscriber-Appendix](/ExecutiveBots/Public/wiki/Single-Principal-Subscriber-Appendix) · 8 SOUL files · 8 SKILL files (with [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) as parent; [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) as sibling specialty)
+
+**Layer 2 Procedural:** [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate), [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec), [Subscriber-Onboarding-Playbook](/ExecutiveBots/Public/wiki/Subscriber-Onboarding-Playbook), [Pre-Clearance-Queue-Spec](/ExecutiveBots/Public/wiki/Pre-Clearance-Queue-Spec), [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) (master cycle architecture)
+
+**Layer 2 Domain Skills (substantive content reference):**
+
+- [periodic-reporting-10K-10Q-SKILL](/ExecutiveBots/Public/wiki/periodic-reporting-10K-10Q-SKILL) — filer categories; item maps; cross-form comparison
+- [MD-and-A-construction-SKILL](/ExecutiveBots/Public/wiki/MD-and-A-construction-SKILL) — Item 303(b) interim; known-trend duty; non-GAAP
+- [going-concern-ASU-2014-15-SKILL](/ExecutiveBots/Public/wiki/going-concern-ASU-2014-15-SKILL) — ASC 205-40 interim evaluation and rung change
+- [internal-controls-SOX-404-SKILL](/ExecutiveBots/Public/wiki/internal-controls-SOX-404-SKILL) — DC&P / ICFR; Item 4 quarterly material-change
+- [section-16-and-rule-10b5-1-SKILL](/ExecutiveBots/Public/wiki/section-16-and-rule-10b5-1-SKILL) — Item 408 trading-arrangement disclosures
+- [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) — mid-cycle Item 4.02 cascade
+- [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) — mid-cycle Item 1.05 integration
+- [derivatives-notes-debt-equity-SKILL](/ExecutiveBots/Public/wiki/derivatives-notes-debt-equity-SKILL) — ASC 815 / 480 mark-to-market quarterly
+- [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL) — Item 701 / 703 disclosures
+- [item-402-executive-compensation-SKILL](/ExecutiveBots/Public/wiki/item-402-executive-compensation-SKILL) — Item 402 cross-references (annual; flagged for 10-K)
+- [NT-10K-NT-10Q-late-filing-SKILL](/ExecutiveBots/Public/wiki/NT-10K-NT-10Q-late-filing-SKILL) — NT 10-Q 5-calendar-day cure mechanics
+- [corporate-actions-FINRA-6490-SKILL](/ExecutiveBots/Public/wiki/corporate-actions-FINRA-6490-SKILL) — mid-cycle corporate-action integration
+- [audit-committee-operation-SKILL](/ExecutiveBots/Public/wiki/audit-committee-operation-SKILL) — AS 1301 communications; Rule 10A-3 oversight
+- [D-and-O-insurance-claims-SKILL](/ExecutiveBots/Public/wiki/D-and-O-insurance-claims-SKILL) — claim notice on mid-cycle Item 4.02 / 1.05
+- [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) — sibling specialty for mid-cycle 8-K filings
+- [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) — Item 2.02 earnings release alignment with 10-Q **Technical / Platform:** [Paperclip-Fork](/ExecutiveBots/Public/wiki/Paperclip-Fork), [Container-Architecture](/ExecutiveBots/Public/wiki/Container-Architecture), [MCP-Integration-Spec](/ExecutiveBots/Public/wiki/MCP-Integration-Spec)
+
+**Section Hubs (Wiki Navigation):** [AI-Executives](/ExecutiveBots/Public/wiki/AI-Executives) · [Constitutional-Foundations](/ExecutiveBots/Public/wiki/Constitutional-Foundations) · [Operational-Playbooks](/ExecutiveBots/Public/wiki/Operational-Playbooks) · [Technical-Architecture](/ExecutiveBots/Public/wiki/Technical-Architecture) · [Ethics-Framework](/ExecutiveBots/Public/wiki/Ethics-Framework) · [Defense-Posture](/ExecutiveBots/Public/wiki/Defense-Posture) · [For-Stakeholders](/ExecutiveBots/Public/wiki/For-Stakeholders)
+
+**Layer 3 Reference:** [Operational-Manual](/ExecutiveBots/Public/wiki/Operational-Manual)
+
+------------------------------------------------------------------------
+
+*Form 10-Q is the bench's highest-frequency complex periodic deliverable: three filings per fiscal year on a 40 / 40 / 45-day window per filer status. The compressed cycle (T-45 typical vs. T-90 for 10-K) creates structural pressure that Bill's orchestration must resist categorically — substantive accuracy is non-negotiable; cycle-time compression that compromises accuracy is itself enforcement and §10(b) exposure. The PCAOB AS 4105 review (vs. AS 2201 audit) provides limited assurance (negative-assurance form), not the reasonable assurance of an annual audit — the structural rationale for the compressed window. Reg S-X Article 10 condensed financial statements with comparative-period requirements (current quarter vs. prior-year quarter for income; YTD vs. prior-year YTD for cash flow; current quarter-end vs. preceding fiscal year-end for balance sheet), Item 4 quarterly controls evaluation (without auditor §404(b) attestation), and the SOX § 302 / § 906 quarterly certification cadence multiply the certification surface area by 4× annually relative to the 10-K — and proportionally multiply the *Caremark* / *Marchand* exposure under the *In re McDonald's* officer-level oversight extension. The Item 408 trading-arrangement quarterly disclosure adds a Section 16 administration touchpoint each cycle. Bill orchestrates; specialists execute their own scope per the §§5–6 per-Item routing matrix; the §4 T-45 cycle architecture enforces milestone-by-milestone progress; the four-record EDGAR submission sequence per §17 makes filing execution tamper-evident; the Governance Gate authorization per §16 is the human-fiduciary-adoption checkpoint. The architecture is the same as [Bill-8K-SKILL](/ExecutiveBots/Public/wiki/Bill-8K-SKILL) and [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) — orchestration without substantive override — applied to quarterly periodic disclosure.*

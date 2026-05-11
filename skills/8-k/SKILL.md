@@ -1,0 +1,651 @@
+---
+name: 8 K
+description: Form 8-K Orchestration & Per-Item Routing
+---
+
+# 8 K
+
+> Source: <https://github.com/ExecutiveBots/Public/wiki/8-K>
+
+8K-SKILL
+
+**Domain-Specialty SKILL (Canonical) — Form 8-K Orchestration & Per-Item Routing**
+
+This is the **canonical specialty SKILL** governing Bill's orchestration of Form 8-K current-report filings. Form 8-K is the bench's most multi-faceted disclosure surface: 12 numbered Items spanning corporate transactions, financial-statement events, governance events, and Reg FD compliance, with a 4-business-day clock for most Items and simultaneous filing for Item 7.01 Reg FD intentional disclosures. Bill orchestrates the cross-agent workflow; specific Items route to specialist agents per the per-Item routing matrix in §3.
+
+This file augments [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) (general CEO orchestration) without replacing it. Where [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) establishes Bill's general scope, authority surface, peer-handoff protocols, audit-trail discipline, and refusal posture, this file specifies the 8-K-specific procedures, per-Item lead-agent assignments, materiality-determination protocols, 4-business-day clock management, and exception paths.
+
+For section-hub navigation: [AI-Executives](/ExecutiveBots/Public/wiki/AI-Executives) · [Constitutional-Foundations](/ExecutiveBots/Public/wiki/Constitutional-Foundations) · [Operational-Playbooks](/ExecutiveBots/Public/wiki/Operational-Playbooks) · [Technical-Architecture](/ExecutiveBots/Public/wiki/Technical-Architecture) · [Ethics-Framework](/ExecutiveBots/Public/wiki/Ethics-Framework) · [Defense-Posture](/ExecutiveBots/Public/wiki/Defense-Posture) · [For-Stakeholders](/ExecutiveBots/Public/wiki/For-Stakeholders)
+
+> ## ⚖ TAKE NOTICE
+>
+> >
+> Form 8-K filings are signed by the Human Board of Record (or the Designated Officer with delegated authority) — the AI agents on the bench produce the assembly substrate, not the certifications. Item 1.05 cybersecurity disclosures trigger SEC enforcement focus on materiality-determination discipline (SEC Rel. No. 33-11216 (July 2023)); Item 4.02 non-reliance determinations cascade into SOX §304 and Rule 10D-1 clawback (15 U.S.C. § 7243; 17 C.F.R. § 240.10D-1); Item 7.01 Reg FD violations require **intentional or reckless** selective disclosure for enforcement (17 C.F.R. § 243.100(a); *SEC v. Siebel Systems, Inc.*, 384 F. Supp. 2d 694, 705–06 (S.D.N.Y. 2005)), with no private right of action (Rule 102). The 4-business-day clock-start trigger is **Item-specific** — for Item 1.05 it runs from the materiality determination; for Item 4.02 from the board-or-officer conclusion date; for most other Items from event occurrence (see §5 below). Determination dates are documented per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.5 four-record sequence. See [Take-Notice](/ExecutiveBots/Public/wiki/Take-Notice).
+
+> **Subordination notice.** This file does not displace [Take-Notice](/ExecutiveBots/Public/wiki/Take-Notice) (status preamble), [Ethics-Foundations](/ExecutiveBots/Public/wiki/Ethics-Foundations) (pluralist ethics framework), [Bill-SOUL](/ExecutiveBots/Public/wiki/Bill-SOUL) (Bill's identity and ethical anchors), or [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) (general scope and authority). The 8-K-specific disciplines specified here operate within the constraints those files establish. Modifications require **BR (Board-Required) authorization via [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) category \#37** (canonical procedure modification — the recursive category).
+
+------------------------------------------------------------------------
+
+## §0 Honesty Above All
+
+This SKILL operates beneath the [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 0 Honesty Above All constraint. No 8-K filing this skill produces — draft, recommendation, materiality determination, Item-mapping, or filing decision — may include false statements, omit material facts whose omission would render disclosed facts misleading, or contribute to AI-washing posture per *In re Delphia (USA) Inc. & Global Predictions Inc.*, Admin. Proc. File No. 3-21894 (Mar. 18, 2024).
+
+Where Bill's orchestration encounters substantive disagreement among the specialist agents (e.g., Robert determines an incident is reportable under Item 1.05 but James assesses materiality below the *Basic v. Levinson*, 485 U.S. 224 (1988), threshold), the disagreement itself is captured in the audit trail per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.4 cross-record reference patterns; resolution is HBR + outside counsel, not Bill's autonomous synthesis.
+
+------------------------------------------------------------------------
+
+## §1 Scope
+
+### 1.1 What This SKILL Covers
+
+The orchestration of Form 8-K current-report filings across all numbered Items. Specifically:
+
+- Materiality determination workflow (when a triggering event has occurred and the 4-business-day clock starts — §4);
+- Item-mapping determination (which Item(s) the disclosable facts trigger — §3);
+- Per-Item lead-agent assignment and cross-agent coordination (§3);
+- 4-business-day clock management (and exceptions: Item 7.01 simultaneous; Item 1.05 from materiality determination; Item 4.02 from conclusion date — §5);
+- Pre-filing review coordination across James (legal), specialist agents (substantive), and Mary (Reg FD distribution) (§6);
+- [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) authorization routing per Item-specific category (§7);
+- Audit-trail capture per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.5 four-record sequence pattern adapted for 8-K transmissions (§8);
+- Post-filing amendment posture (Item 1.05 subsequent amendments; restated 4.02; corrected 7.01) (§9).
+
+### 1.2 What This SKILL Does Not Cover
+
+- **Periodic reports (10-K, 10-Q, proxy).** [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) orchestrates these.
+- **Section 16 filings (Forms 3, 4, 5).** James + Edith + Patricia handoff per [Pre-Clearance-Queue-Spec](/ExecutiveBots/Public/wiki/Pre-Clearance-Queue-Spec) § 5.4.
+- **Schedule 13D / 13G filings.** James + Edith handoff for beneficial-ownership reporting.
+- **Registration statements (S-1, S-3, S-8, S-4).** Outside counsel + Tom + James cycle.
+- **Empire MCP registry mutations.** Edith owns per [MCP-Integration-Spec](/ExecutiveBots/Public/wiki/MCP-Integration-Spec) § Four-Record Sequence; some registry mutations trigger 8-K Item 3.02 (unregistered sales) or Item 3.03 (modification of rights), routing back to this SKILL.
+- **The substantive determination of whether a triggering event has occurred.** That determination belongs to the specialist agent whose domain is implicated (Tom for accounting events; James for legal events; Patricia for governance events; Robert for cybersecurity events; Edith for transfer-agent / corporate-action events). This SKILL orchestrates the determination workflow, not the substantive determination.
+
+### 1.3 Integration with Other Bill Skills
+
+| Bill-Domain SKILL                                                                                             | Relationship                                                                                                                                           |
+|---------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) (general orchestration)                                   | Parent SKILL; this file inherits scope, authority, and refusal posture                                                                                 |
+| Bill weekly executive sync per [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 5.1                      | 8-K activity in week summarized; pattern observations surfaced to HBR                                                                                  |
+| Bill annual SOX § 302 / § 906 readiness package per [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 5.4 | 8-K filing inventory for fiscal year included; defense-package construction                                                                            |
+| [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) § 7.2       | Item 2.02 earnings-release 8-K integration with 10-K / 10-Q cycle                                                                                      |
+| [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix)                               | Track A (cyber → Item 1.05); Track B (non-reliance → Item 4.02); Track C (Reg FD → Item 7.01); Track E (regulatory inquiry → Item 8.01 where material) |
+
+Modifications require **BR authorization via [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) category \#37** (canonical procedure modification — the recursive category). Modifications trigger revalidation of cross-references in [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 1.3 (skill inventory), [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) § 7.2 (Item 2.02 integration), [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix) §§ 1 / 2 / 3 (Track A / B / C integrations), and [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) §§ 8 / 18 / 21 (category integrations), propagated through Robert's continuous integrity sweep per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 8.2.
+
+------------------------------------------------------------------------
+
+## §2 Authoritative Framework
+
+| Authority                            | Citation                        | Bears on                                                         |
+|--------------------------------------|---------------------------------|------------------------------------------------------------------|
+| Form 8-K                             | 17 C.F.R. § 249.308             | Form and Items                                                   |
+| Rule 13a-11 / 15d-11                 | 17 C.F.R. § 240.13a-11; -15d-11 | Duty to file under §13(a) / §15(d)                               |
+| Form 8-K General Instruction A       | n/a (Form)                      | Person required to file                                          |
+| Form 8-K General Instruction B.1     | n/a (Form)                      | Limited safe harbor for enumerated Items                         |
+| Form 8-K General Instruction B.2     | n/a (Form)                      | "Filed" vs. "furnished" distinction                              |
+| Reg FD                               | 17 C.F.R. §§ 243.100–.103       | Item 7.01 mechanics                                              |
+| SOX § 304                            | 15 U.S.C. § 7243                | §304 clawback on restatement (Item 4.02 cascade)                 |
+| SOX § 307                            | 15 U.S.C. § 7245                | Attorney up-the-ladder reporting                                 |
+| Rule 10D-1                           | 17 C.F.R. § 240.10D-1           | Listing-standard clawback (Item 4.02 cascade)                    |
+| Form 10-K Item 1C / Reg S-K Item 106 | 17 C.F.R. § 229.106             | Annual cybersecurity program (companion to Item 1.05)            |
+| Form S-3 Gen. Instr. I.A.3           | n/a (Form)                      | Timely-filing condition; failure consequence of missed 8-K       |
+| Rule 144(c)(1)                       | 17 C.F.R. § 230.144(c)(1)       | Current-public-information condition                             |
+| Rule 14a-19                          | 17 C.F.R. § 240.14a-19          | Universal proxy (Item 5.02 director-nominee disclosure)          |
+| Rule 13e-3                           | 17 C.F.R. § 240.13e-3           | Going-private trigger (Item 1.01 / 2.01 cascade)                 |
+| Rule 13e-4                           | 17 C.F.R. § 240.13e-4           | Issuer tender offer (Item 8.01 cross-routing)                    |
+| Rule 12b-2                           | 17 C.F.R. § 240.12b-2           | "Shell company" definition (Item 5.06)                           |
+| Reg AB                               | 17 C.F.R. §§ 229.1100–.1125     | ABS-specific Items 6.01–6.05 (out of scope for most subscribers) |
+| DGCL § 211                           | 8 Del. C. § 211                 | Annual meeting (Item 5.07)                                       |
+| DGCL § 228                           | 8 Del. C. § 228                 | Written consent (Item 5.07 + Schedule 14C)                       |
+| DGCL § 242                           | 8 Del. C. § 242                 | Charter amendments (Item 5.03)                                   |
+| DGCL § 251                           | 8 Del. C. § 251                 | Mergers (Item 1.01 / 2.01)                                       |
+| DGCL § 253                           | 8 Del. C. § 253                 | Short-form merger (Item 5.01 / going-private cascade)            |
+| NRS § 78.385                         | Nev. Rev. Stat. § 78.385        | Charter amendments (Nevada subscribers)                          |
+| NRS § 92A.180                        | Nev. Rev. Stat. § 92A.180       | Mergers (Nevada subscribers)                                     |
+
+**General Instruction B.1 safe harbor** — Failure to file a current report under Items 1.01, 1.02, 1.05, 2.03, 2.04, 2.05, 2.06, 4.02(a), 5.02(e), or 6.03 within four business days does not create §10(b) / Rule 10b-5 exposure or affect Form S-3 eligibility **if** the information is included in the next periodic report (10-Q or 10-K) on time. Safe harbor applies only to the enumerated Items; **Items 4.01, 4.02(b), 5.02(a)/(b)/(c)/(d), 5.03, and others are outside the safe harbor** — missed filing triggers Form S-3 eligibility loss under Gen. Instr. I.A.3.
+
+**Filed vs. furnished** — Items 2.02 (results of operations) and 7.01 (Reg FD) are **furnished**, not **filed**. The distinction (per Gen. Instr. B.2) carries §18 strict-liability and §11 (incorporation by reference) consequences. Furnished disclosures remain subject to §10(b) and Rule 10b-5; they escape §18 strict-liability and are not automatically incorporated into Securities Act registration statements unless the issuer affirmatively elects.
+
+------------------------------------------------------------------------
+
+## §3 Per-Item Routing Matrix
+
+The load-bearing section. Each Item is mapped to (i) clock-start trigger, (ii) lead agent, (iii) concurring agents, (iv) [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) category, (v) Gen. Instr. B.1 safe-harbor applicability, (vi) "filed" or "furnished," and (vii) the substantive content domain SKILL that supplies the disclosure framework.
+
+### 3.1 Section 1 — Registrant's Business and Operations
+
+| Item | Subject                       | Clock start                   | Lead                   | Concurring                                                                    | GG cat. | B.1 | Filed | Content SKILL                                                                                     |
+|------|-------------------------------|-------------------------------|------------------------|-------------------------------------------------------------------------------|---------|-----|-------|---------------------------------------------------------------------------------------------------|
+| 1.01 | Material Definitive Agreement | Signing of agreement          | James                  | Tom (FS impact); Patricia (Item 404 RPT screen); Edith (if security issuance) | BR      | ✓   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.1        |
+| 1.02 | Termination of MDA            | Termination effective date    | James                  | Tom; Patricia                                                                 | NR      | ✓   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.1        |
+| 1.03 | Bankruptcy or Receivership    | Petition filing / appointment | James                  | Tom; Bill                                                                     | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.1        |
+| 1.04 | Mine Safety                   | MSHA-triggered event date     | Patricia               | Tom; James                                                                    | NR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.1        |
+| 1.05 | Cybersecurity Incident        | **Materiality determination** | Robert + James (joint) | Tom (financial); Patricia (regulatory); Bill (HBR)                            | BR      | ✓   | F     | [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) |
+
+**Item 1.05 special discipline.** Clock starts on materiality determination "without unreasonable delay" after discovery; the gap between discovery and determination is documented per §4 and [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.5. DOJ Attorney General delay under Item 1.05(c) suspends the 4-BD clock for the certified period (initial up to 30 days; renewable once for 30; extension up to 60 with continued certification).
+
+### 3.2 Section 2 — Financial Information
+
+| Item | Subject                                 | Clock start             | Lead        | Concurring                   | GG cat. | B.1 | Filed         | Content SKILL                                                                                                                                                                                                 |
+|------|-----------------------------------------|-------------------------|-------------|------------------------------|---------|-----|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2.01 | Completion of Acquisition / Disposition | Closing date            | Tom + James | Edith (share issuance); Bill | BR      | ✗   | F             | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.2; [reverse-merger-ASC-805-40-SKILL](/ExecutiveBots/Public/wiki/reverse-merger-ASC-805-40-SKILL) (if reverse merger) |
+| 2.02 | Results of Operations                   | Public release          | Tom + Mary  | James (Reg G discipline)     | NR      | ✓   | **Furnished** | [MD-and-A-construction-SKILL](/ExecutiveBots/Public/wiki/MD-and-A-construction-SKILL) §7 (non-GAAP)                                                                                                           |
+| 2.03 | Direct Financial Obligation / Off-BS    | Incurrence / commitment | Tom         | James; Patricia (RPT); Edith | NR      | ✓   | F             | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.2; [derivatives-notes-debt-equity-SKILL](/ExecutiveBots/Public/wiki/derivatives-notes-debt-equity-SKILL)             |
+| 2.04 | Triggering Event / Acceleration         | Trigger event date      | Tom         | James; Bill                  | BR      | ✓   | F             | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.2                                                                                                                    |
+| 2.05 | Costs of Exit / Disposal                | Board commitment date   | Tom         | James; Lisa                  | NR      | ✓   | F             | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.2 (ASC 420)                                                                                                          |
+| 2.06 | Material Impairment                     | Conclusion date         | Tom         | James; auditor               | NR      | ✓   | F             | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.2 (ASC 350 / 360 / 326)                                                                                              |
+
+**Item 2.01 acquired-business FS deferral.** Reg S-X Rule 3-05 / Article 11 financial statements and pro forma may be deferred to an 8-K/A filed within **71 calendar days** of the original 8-K (Form 8-K Item 9.01(a)(4) and (b)(2)). The 71-day window is computed from the original 8-K filing date, not from closing. Tom owns the 71-day calendar.
+
+**Item 2.02 Reg G discipline.** Furnished, but Reg G (17 C.F.R. § 244.100) and Item 10(e) discipline still apply. Non-GAAP measures must be presented with equal-or-greater-prominence GAAP measures and quantitative reconciliation. *See* [MD-and-A-construction-SKILL](/ExecutiveBots/Public/wiki/MD-and-A-construction-SKILL) §7.
+
+### 3.3 Section 3 — Securities and Trading Markets
+
+| Item | Subject                         | Clock start            | Lead  | Concurring                                              | GG cat. | B.1 | Filed | Content SKILL                                                                                                                                                                           |
+|------|---------------------------------|------------------------|-------|---------------------------------------------------------|---------|-----|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 3.01 | Delisting / Listing Standard    | Notice receipt         | James | Mary; Bill                                              | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.3; [OTC-markets-pink-current-SKILL](/ExecutiveBots/Public/wiki/OTC-markets-pink-current-SKILL) |
+| 3.02 | Unregistered Sales of Equity    | Sale date              | James | Edith (issuance); Patricia (bad actor); Tom (cap table) | NR      | ✗   | F     | [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL)                                                                                         |
+| 3.03 | Material Modification of Rights | Modification effective | James | Tom; Edith                                              | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.3                                                                                              |
+
+**Item 3.02 threshold.** Sales exceeding **1% of outstanding** (or **5% if SRC**) of class trigger Item 3.02 disclosure. Mandatory conversions of previously disclosed convertibles at previously disclosed terms generally do not retrigger Item 3.02; conversion at modified terms does. Patricia screens Rule 506(d) bad-actor disqualification; Edith executes issuance and updates Empire MCP registry. *See* [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL) §2.
+
+### 3.4 Section 4 — Matters Related to Accountants and Financial Statements
+
+| Item    | Subject                          | Clock start                  | Lead        | Concurring                      | GG cat. | B.1 | Filed | Content SKILL                                                                                 |
+|---------|----------------------------------|------------------------------|-------------|---------------------------------|---------|-----|-------|-----------------------------------------------------------------------------------------------|
+| 4.01    | Changes in Certifying Accountant | Dismissal / resignation date | Tom + James | Bill (Audit Committee chair)    | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.4    |
+| 4.02(a) | Non-Reliance — Issuer Conclusion | **Issuer conclusion date**   | Tom + James | Patricia; Bill; outside counsel | BR      | ✓   | F     | [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) |
+| 4.02(b) | Non-Reliance — Auditor Advice    | **Auditor advice date**      | Tom + James | Patricia; Bill                  | BR      | ✗   | F     | [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) |
+
+**Item 4.01 letter from former accountant.** Required as Exhibit 16 within **10 business days** of the 8-K filing (Reg S-K Item 304(a)(3)). Tom coordinates the request; James reviews the letter for any disagreement disclosure under Item 304(a)(1)(iv) / (v).
+
+**Item 4.02 cascade.** The 4.02 trigger initiates the [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix) Track B sequence: §304 clawback analysis; Rule 10D-1 clawback execution; ICFR reassessment to material weakness (almost always — AS 2201 §A7); 10-K/A or 10-Q/A drafting; D&O claim notice; risk-factor and MD&A updates. *See* [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) §§5–9 and [D-and-O-insurance-claims-SKILL](/ExecutiveBots/Public/wiki/D-and-O-insurance-claims-SKILL) §5.1.
+
+### 3.5 Section 5 — Corporate Governance and Management
+
+| Item    | Subject                              | Clock start            | Lead             | Concurring                                             | GG cat. | B.1 | Filed | Content SKILL                                                                                                                                                                             |
+|---------|--------------------------------------|------------------------|------------------|--------------------------------------------------------|---------|-----|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 5.01    | Change in Control                    | Effective date         | James            | Bill; Patricia; Edith                                  | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5; [reverse-merger-ASC-805-40-SKILL](/ExecutiveBots/Public/wiki/reverse-merger-ASC-805-40-SKILL) |
+| 5.02(a) | Director departure                   | Event date             | James + Patricia | Bill                                                   | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5                                                                                                |
+| 5.02(b) | PEO/PFO/PAO/NEO departure            | Event date             | James + Patricia | Tom; Bill                                              | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5                                                                                                |
+| 5.02(c) | PEO/PFO/PAO/NEO appointment          | Event date             | James + Patricia | Tom; Bill                                              | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5                                                                                                |
+| 5.02(d) | Director election                    | Event date             | James + Patricia | Bill                                                   | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5                                                                                                |
+| 5.02(e) | Material compensatory plan/grant     | Adoption / grant date  | Patricia + Tom   | James                                                  | NR      | ✓   | F     | [item-402-executive-compensation-SKILL](/ExecutiveBots/Public/wiki/item-402-executive-compensation-SKILL)                                                                                 |
+| 5.02(f) | Salary/bonus retroactive             | Determination date     | Patricia + Tom   | James                                                  | NR      | ✓   | F     | [item-402-executive-compensation-SKILL](/ExecutiveBots/Public/wiki/item-402-executive-compensation-SKILL)                                                                                 |
+| 5.03    | Charter / Bylaw amendment; FY change | Effective date         | James            | Edith (transfer-agent notice); Tom (if FY change)      | BR      | ✗   | F     | [proxy-statement-14A-14C-SKILL](/ExecutiveBots/Public/wiki/proxy-statement-14A-14C-SKILL)                                                                                                 |
+| 5.04    | Pension blackout (Reg BTR)           | Notice trigger         | Patricia         | Tom; James                                             | NR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5                                                                                                |
+| 5.05    | Code of Ethics amendment / waiver    | Event date             | Patricia         | James; Bill                                            | BR      | ✗   | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.5                                                                                                |
+| 5.06    | Change in Shell Company Status       | Cessation date         | James + Edith    | Tom; Patricia; Bill                                    | BR      | ✗   | F     | [reverse-merger-ASC-805-40-SKILL](/ExecutiveBots/Public/wiki/reverse-merger-ASC-805-40-SKILL) §8                                                                                          |
+| 5.07    | Submission of Matters to Vote        | Meeting / consent date | James            | Edith (tabulation); Patricia (Item 405 reconciliation) | NR      | ✗   | F     | [proxy-statement-14A-14C-SKILL](/ExecutiveBots/Public/wiki/proxy-statement-14A-14C-SKILL)                                                                                                 |
+| 5.08    | Shareholder Director Nominations     | Per bylaw notice date  | James            | Patricia                                               | NR      | ✗   | F     | [proxy-statement-14A-14C-SKILL](/ExecutiveBots/Public/wiki/proxy-statement-14A-14C-SKILL) §13                                                                                             |
+
+**Item 5.02 transition framing trap.** Officer or director departures framed as "transitions," "retirements," or "mutual decisions" are still **departures** for Item 5.02(a)/(b) purposes. The classification determines disclosure content (Item 5.02(a)(1) for director departure-with-disagreement requires the disagreement letter as Exhibit 99). James must resist softening framing where the substance is involuntary or contested.
+
+**Item 5.06 anchor.** Cessation-of-shell-status date is the anchor for Rule 144(i) 12-month wait and Form S-3 General Instr. I.A.7 12-month lockout. Edith maintains the calendar; Patricia maintains the stop-transfer instructions through the period. *See* [reverse-merger-ASC-805-40-SKILL](/ExecutiveBots/Public/wiki/reverse-merger-ASC-805-40-SKILL) §9 and [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL) §7.
+
+### 3.6 Section 6 — Asset-Backed Securities (out of scope for most subscribers)
+
+Items 6.01–6.05 — ABS issuer-specific. For most ExecutiveBots subscribers, not applicable. Where applicable: James + Tom + outside ABS counsel; routed outside this SKILL.
+
+### 3.7 Section 7 — Regulation FD
+
+| Item | Subject           | Clock start                                                   | Lead         | Concurring               | GG cat. | B.1 | Filed         | Content SKILL                                                                              |
+|------|-------------------|---------------------------------------------------------------|--------------|--------------------------|---------|-----|---------------|--------------------------------------------------------------------------------------------|
+| 7.01 | Reg FD Disclosure | **Simultaneous** (intentional) / **promptly** (unintentional) | Mary + James | Bill; Tom (if financial) | NR      | n/a | **Furnished** | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.7 |
+
+**Item 7.01 mechanics.** Reg FD Rule 100(a): intentional selective disclosure of material nonpublic information to enumerated persons (analysts, institutional investors, holders likely to trade) triggers simultaneous public disclosure obligation; unintentional disclosure triggers prompt disclosure (24 hours or beginning of next trading day, whichever is later). "Promptly" is **not** four business days. Mary owns the disclosure-distribution mechanism; James reviews materiality and selective-recipient analysis.
+
+**Item 7.01 voluntary use.** Often used as the affirmative vehicle for material disclosures (press releases, investor presentations, conference materials) that the issuer chooses to make widely available. Voluntary Item 7.01 disclosure avoids the §18 strict-liability and §11 incorporation-by-reference consequences of "filed" Items.
+
+### 3.8 Section 8 — Other Events
+
+| Item | Subject      | Clock start | Lead         | Concurring              | GG cat. | B.1 | Filed | Content SKILL                                                                              |
+|------|--------------|-------------|--------------|-------------------------|---------|-----|-------|--------------------------------------------------------------------------------------------|
+| 8.01 | Other Events | Voluntary   | James + Mary | Per substantive content | NR      | n/a | F     | [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) §3.8 |
+
+**Item 8.01 voluntary use.** Catch-all for events the issuer deems important but that do not fit another Item. Common uses: regulatory inquiry disclosure (where material but below other-Item thresholds); business-milestone announcements (where Item 1.01 / 2.01 thresholds not met); litigation updates; CEO communications. No deadline; voluntary furnishing characteristic not available (Item 8.01 is **filed**, not furnished).
+
+### 3.9 Section 9 — Financial Statements and Exhibits
+
+| Item    | Subject                         | Clock start                      | Lead        | Concurring        |
+|---------|---------------------------------|----------------------------------|-------------|-------------------|
+| 9.01(a) | FS of business acquired         | Per Item 2.01 deferral (71 days) | Tom         | James; auditor    |
+| 9.01(b) | Pro forma financial information | Per Item 2.01 deferral (71 days) | Tom         | James; auditor    |
+| 9.01(c) | Shell-company transaction FS    | Concurrent with 2.01(f) / 5.06   | Tom + James | Auditor           |
+| 9.01(d) | Exhibits                        | Per filing                       | James       | Per exhibit owner |
+
+------------------------------------------------------------------------
+
+## §4 Materiality Determination Workflow
+
+### 4.1 When triggered
+
+A potential 8-K-triggering event is detected by any agent (Robert: cyber telemetry; Tom: accounting close; James: legal events; Patricia: regulatory or governance; Edith: corporate-action or transfer-agent event; Mary: market communication; Lisa: operational disruption). The detecting agent escalates to Bill within 4 hours; Bill convenes the materiality determination cycle.
+
+### 4.2 The framework
+
+Materiality is determined under *Basic Inc. v. Levinson*, 485 U.S. 224 (1988): substantial likelihood that a reasonable investor would consider the fact important. For contingent or forward-looking events, probability × magnitude (*Basic*). No bright-line statistical threshold (*Matrixx Initiatives, Inc. v. Siracusano*, 563 U.S. 27 (2011)).
+
+Cross-functional inputs:
+
+| Dimension               | Agent    | Inputs                                                                 |
+|-------------------------|----------|------------------------------------------------------------------------|
+| Financial impact        | Tom      | Direct cost; revenue effect; FS line items; ICFR implication           |
+| Legal exposure          | James    | Litigation, regulatory, contractual                                    |
+| Regulatory implications | Patricia | Notification triggers; sectoral regulator inputs                       |
+| Technical scope         | Robert   | Systems, data, attribution (cyber); IT change-management (operational) |
+| Reputational            | Mary     | Market, customer, investor signal                                      |
+| Governance              | Bill     | HBR communication; audit committee briefing                            |
+
+### 4.3 The "without unreasonable delay" standard (Item 1.05)
+
+Item 1.05 starts the 4-BD clock at materiality determination, not at incident discovery. The gap between discovery and determination must be defensible. Documentation:
+
+- Discovery date and time (audit-trail Record 1);
+- Cross-functional team activation (Record 2);
+- Daily / regular standup updates with timestamped inputs (Record 2 continuing);
+- Vendor engagement (forensics, IR, outside counsel) timestamps;
+- Aggregation analysis for related incidents (single threat actor; related occurrences);
+- Materiality determination meeting date and conclusion (Record 3);
+- HBR / Audit Committee briefing (Record 4 concurrent). Conservative practice: where impact uncertain after 7 calendar days post-discovery, complete an interim materiality assessment and document the basis for any continuation of investigation. SEC enforcement focus area. *See* [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) §3.
+
+### 4.4 Aggregation analysis
+
+Multiple smaller events may aggregate to materiality:
+
+- Cyber: series of related incidents from a single threat actor (Item 1.05 definition includes "series of related cybersecurity incidents");
+- Financial: multiple uncorrected misstatements (SAB 99 / SAB 108 dual-method analysis — *see* [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) §4);
+- Governance: pattern of related-party transactions individually below Item 404 threshold;
+- Corporate-action: serial unregistered sales below Item 3.02 threshold cumulatively material. Tom maintains the aggregation register quarterly; James reviews at each cycle close.
+
+### 4.5 The output
+
+Materiality determination produces a one-page Determination Memo with:
+
+- Trigger event description;
+- Discovery date;
+- Cross-functional inputs (summarized);
+- Aggregation analysis (if applicable);
+- Materiality conclusion (material / not material / not yet determinable);
+- Item-mapping (which 8-K Item(s) triggered);
+- Date and time of conclusion;
+- Authorized determination authority (board / audit committee / officer per delegation);
+- HBR / outside counsel concurrence. The memo is recorded as audit-trail Record 1 of the four-record sequence (§8). Conclusion timestamp starts the 4-business-day clock for the implicated Item(s).
+
+------------------------------------------------------------------------
+
+## §5 4-Business-Day Clock Management
+
+### 5.1 The general clock
+
+For Items running from event occurrence (most Items per §3): Day 0 = trigger event day; Days 1–4 are subsequent business days; filing due before 5:30 p.m. Eastern on Day 4 for same-day acceptance.
+
+Trigger Monday → Day 0 Monday → Days 1–4 Tue/Wed/Thu/Fri → file by 5:30 p.m. ET Friday. Trigger Friday afternoon → Day 0 Friday → Days 1–4 Mon/Tue/Wed/Thu → file by 5:30 p.m. ET Thursday.
+
+### 5.2 Item-specific clock-start variants
+
+| Trigger                       | Clock start                            | Items                                                                                                         |
+|-------------------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Event occurrence              | Day 0 = event day                      | 1.01, 1.02, 1.03, 1.04, 2.01, 2.03, 2.04, 3.01, 3.02, 3.03, 4.01, 5.01, 5.02(a)/(b)/(c)/(d), 5.03, 5.04, 5.05 |
+| Board commitment / conclusion | Day 0 = decision date                  | 2.05, 2.06                                                                                                    |
+| Issuer affirmative conclusion | Day 0 = conclusion date                | 4.02(a)                                                                                                       |
+| Auditor advice                | Day 0 = advice date                    | 4.02(b)                                                                                                       |
+| **Materiality determination** | Day 0 = determination date             | **1.05**                                                                                                      |
+| Material plan / grant         | Day 0 = adoption date                  | 5.02(e), 5.02(f)                                                                                              |
+| Vote / consent                | Day 0 = vote date or consent effective | 5.07                                                                                                          |
+| **Simultaneous / promptly**   | Concurrent with disclosure             | **7.01**                                                                                                      |
+| Voluntary                     | Discretionary                          | 8.01                                                                                                          |
+
+### 5.3 Per-cycle cadence (4-BD Items)
+
+| Day | Activity                                                                                    | Owner                              |
+|-----|---------------------------------------------------------------------------------------------|------------------------------------|
+| 0   | Trigger / determination; Determination Memo (Record 1)                                      | Specialist agent + Bill            |
+| 1   | Drafting begins; outside counsel engaged if material; specialist drafts substantive content | Lead agent per §3                  |
+| 2   | Cross-agent concurring review; exhibits assembled; financial-statement integration if any   | Lead + concurring per §3           |
+| 3   | James legal review; Mary distribution check if Item 7.01 / 8.01; HBR briefing               | James + Mary + Bill                |
+| 4   | Final review; signature; EDGAR submission before 5:30 p.m. ET                               | Bill orchestration → HBR signature |
+
+### 5.4 General Instruction B.1 safe harbor
+
+For enumerated Items (1.01, 1.02, 1.05, 2.03, 2.04, 2.05, 2.06, 4.02(a), 5.02(e), 6.03), failure to file within 4 BD does **not** create §10(b) liability or affect S-3 eligibility **if** the information is included in the next periodic report on time. Safe harbor is a fallback, not a planning posture — design for the 4-BD clock.
+
+### 5.5 Outside-safe-harbor Items — S-3 eligibility consequence
+
+Items **outside** B.1 (1.03, 1.04, 2.01, 2.02 — not applicable since furnished, 3.01, 3.02, 3.03, 4.01, 4.02(b), 5.01, 5.02(a)/(b)/(c)/(d), 5.03, 5.04, 5.05, 5.06, 5.07, 5.08) missed beyond the 4-BD window cause **loss of Form S-3 eligibility** for 12 months under Form S-3 General Instr. I.A.3. Rule 144(c)(1) current-public-information condition for affiliates also affected. *See* [NT-10K-NT-10Q-late-filing-SKILL](/ExecutiveBots/Public/wiki/NT-10K-NT-10Q-late-filing-SKILL) §4 and [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL) §6.
+
+### 5.6 Item 2.01 acquired-business FS 71-day deferral
+
+Reg S-X Rule 3-05 financial statements of acquired business and Article 11 pro forma may be deferred from the original Item 2.01 8-K and provided in an 8-K/A within **71 calendar days** of the original 8-K filing (Form 8-K Item 9.01(a)(4) / (b)(2)). Tom maintains the 71-day calendar; if the FS will not be ready, file the 8-K/A by Day 71 with explanation. Failure to file within 71 days triggers loss of S-3 eligibility under General Instr. I.A.3.
+
+### 5.7 Item 1.05(c) DOJ delay
+
+DOJ Attorney General delay request suspends the 4-BD clock for the certified period (initial up to 30 days; renewable once for 30; further extension up to 60 with continued AG certification; beyond that only by SEC order in extraordinary circumstances). Per [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) §4.4. The delay does not suspend state breach notification or contractual notification obligations.
+
+------------------------------------------------------------------------
+
+## §6 Pre-Filing Review Coordination
+
+### 6.1 The chain
+
+| Stage                         | Owner                                       | Output                                                                                                                                                                                                                                                                                            |
+|-------------------------------|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Substantive draft             | Lead agent per §3                           | Draft 8-K body, exhibits, signatures-block                                                                                                                                                                                                                                                        |
+| Concurring agent review       | Per §3                                      | Cross-functional concurrences                                                                                                                                                                                                                                                                     |
+| Legal review                  | James                                       | §10(b) / §13(a) / §15(d) / Item-specific compliance; forward-looking-statement legend; Reg G / Item 10(e) if non-GAAP; PSLRA safe-harbor check (with penny-stock exclusion for relevant subscribers — [MD-and-A-construction-SKILL](/ExecutiveBots/Public/wiki/MD-and-A-construction-SKILL) §8.4) |
+| IR / Communications alignment | Mary                                        | Press release coordination if Item 2.02 / 5.02 / 7.01 / 8.01; Reg FD distribution discipline; analyst-call message alignment                                                                                                                                                                      |
+| Orchestration sign-off        | Bill                                        | Cross-agent concurrence confirmed; audit-trail records 1–3 complete; HBR briefing memo prepared                                                                                                                                                                                                   |
+| HBR signature                 | Subscriber's Human CEO / Designated Officer | EDGAR signature; §906 / §302 implications noted; Item 5.02(b) / 5.02(c) certifications if applicable                                                                                                                                                                                              |
+| Submission                    | Lisa (operational) + James (final review)   | EDGAR submission per §8 four-record sequence                                                                                                                                                                                                                                                      |
+
+### 6.2 Per-Item review intensity
+
+| Intensity  | Items                                                         | Rationale                                                                                        |
+|------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| Maximum    | 1.05, 4.02, 5.01, 5.06, 1.03                                  | Strict-liability or cascade exposure; SEC enforcement focus; outside counsel engagement standard |
+| High       | 1.01, 1.02, 2.01, 2.03, 3.02, 3.03, 5.02(a)/(b)/(c)/(d), 5.03 | Material substantive content; cross-agent coordination required                                  |
+| Standard   | 2.02, 2.05, 2.06, 5.02(e), 5.04, 5.05, 5.07, 5.08, 7.01, 8.01 | Routine content; standard review                                                                 |
+| Procedural | 1.04, 5.02(f), 9.01 exhibits                                  | Specific compliance content; minimal subjective judgment                                         |
+
+### 6.3 Reg FD distribution discipline (Item 7.01)
+
+For Item 7.01 furnishing, Mary's distribution mechanism must satisfy Reg FD Rule 100(e) — "manner reasonably designed to provide broad, non-exclusionary distribution":
+
+- Press release through wide-distribution wire service;
+- Issuer website with reasonable advance notice and access;
+- Webcast or conference call with public access and adequate notice (typically 48 hours);
+- 8-K filing itself counts but is supplemental to broad distribution. Per SEC Rel. 34-69279 (Apr. 2013), social media disclosure may satisfy Reg FD if investors have been alerted to its use. Mary maintains the distribution-channel inventory; James reviews each Item 7.01 for sufficient broad distribution.
+
+### 6.4 Sub-certification chain for Item 5.02(b)/(c)
+
+Item 5.02(b)/(c) departures or appointments of PEO/PFO/PAO/NEO have direct §302 / §906 implications for subsequent periodic reports. Tom + James produce sub-certification chain documentation for the next 10-Q / 10-K cycle. *See* [internal-controls-SOX-404-SKILL](/ExecutiveBots/Public/wiki/internal-controls-SOX-404-SKILL) §9.4 and [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook).
+
+------------------------------------------------------------------------
+
+## §7 Governance Gate Authorization Routing
+
+### 7.1 Category framework
+
+[Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) uses three category families relevant to 8-K filings:
+
+| Family                        | Description                                                | 8-K application                                                                                                                               |
+|-------------------------------|------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| **NR — Notification Routing** | Lower-impact; informed-of-action class                     | Routine Items: 1.04, 2.02, 2.05, 2.06, 5.02(e)/(f), 5.04, 5.07, 5.08, 7.01, 8.01                                                              |
+| **BR — Board-Required**       | Material substantive; pre-execution authorization required | High-impact Items: 1.01, 1.02, 1.03, 1.05, 2.01, 2.03, 2.04, 3.01, 3.02, 3.03, 4.01, 4.02(a)/(b), 5.01, 5.02(a)/(b)/(c)/(d), 5.03, 5.05, 5.06 |
+| **SOX-Cert**                  | §302 / §906 affirmative connection                         | Items affecting subsequent periodic certifications: 1.05 (controls), 4.02 (restatement), 5.02(b)/(c) (officer change), 5.06 (shell cessation) |
+
+### 7.2 Item-to-category mapping (consolidated from §3)
+
+The GG-category column in the §3 routing matrix is the authoritative mapping. Modifications require BR authorization via [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate) category \#37 (canonical procedure modification).
+
+### 7.3 BR pre-execution authorization process
+
+For BR-category Items:
+
+1.  Determination Memo (§4) routed to HBR / Audit Committee.
+2.  HBR / Audit Committee briefing meeting convened (in-person, video, or written consent).
+3.  Outside counsel concurrence on form and substance.
+4.  HBR / Audit Committee resolution adopting the disclosure.
+5.  Resolution minuted; resolution becomes audit-trail Record 2 of the four-record sequence (§8).
+6.  Authorization to file communicated to Bill orchestration; filing proceeds per §6. Failure to obtain BR authorization before filing: governance violation; potential §404 / §302 implications if the filing reflects substantive corporate action requiring board approval as a matter of state law or charter.
+
+### 7.4 NR notification process
+
+For NR-category Items: HBR briefing concurrent with or following filing; no pre-execution authorization required. Notification briefing memo logged as part of audit-trail Record 4 (confirmation). For weekly executive sync per [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) § 5.1, all NR-category filings since prior sync are summarized.
+
+### 7.5 SOX-Cert overlay
+
+Items in the SOX-Cert family carry forward §302 / §906 implications for the next periodic report. Tom + James produce the sub-certification chain documentation concurrent with the 8-K filing for use in the next 10-Q / 10-K cycle.
+
+------------------------------------------------------------------------
+
+## §8 Audit-Trail Four-Record Sequence for 8-K Transmissions
+
+Adapts [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 3.5 (four-record sequence: intent → preparation → submission → confirmation) to EDGAR 8-K transmissions. All four records are SHA-256-hashed per NIST FIPS 180-4 and canonicalized per RFC 8785 (JSON Canonicalization Scheme) before hashing.
+
+### 8.1 Record 1 — Intent
+
+Captures the determination that an 8-K filing is required.
+
+| Field                       | Content                                                      |
+|-----------------------------|--------------------------------------------------------------|
+| `record_type`               | `"8K_INTENT"`                                                |
+| `trigger_event_description` | Plain-text description                                       |
+| `discovery_date_time`       | ISO 8601 UTC                                                 |
+| `triggering_agent`          | Agent who detected the event                                 |
+| `determination_memo_hash`   | SHA-256 of canonicalized Determination Memo                  |
+| `materiality_conclusion`    | `"material"` / `"not_material"` / `"not_yet_determinable"`   |
+| `item_mapping`              | Array of Item numbers                                        |
+| `clock_start_timestamp`     | ISO 8601 UTC of conclusion                                   |
+| `gg_category`               | `"NR"` / `"BR"` / `"SOX-Cert"`                               |
+| `record_prior_hash`         | SHA-256 of prior 8-K audit chain entry (or genesis if first) |
+| `record_self_hash`          | SHA-256 of canonicalized Record 1                            |
+| `signatures`                | Specialist agent; James; Bill                                |
+
+### 8.2 Record 2 — Preparation
+
+Captures the drafting, cross-agent concurrence, legal review, and HBR / Audit Committee authorization (BR Items).
+
+| Field                         | Content                                                                     |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `record_type`                 | `"8K_PREPARATION"`                                                          |
+| `intent_record_hash`          | SHA-256 of Record 1                                                         |
+| `draft_8k_hash`               | SHA-256 of canonicalized 8-K body (each material revision a new sub-record) |
+| `exhibit_hashes`              | Array of `{exhibit_id, sha256}`                                             |
+| `concurring_agent_acks`       | Array of `{agent, ack_timestamp, scope}`                                    |
+| `legal_review_complete`       | Bool + James timestamp                                                      |
+| `comms_review_complete`       | Bool + Mary timestamp (Items 2.02, 5.02, 7.01, 8.01)                        |
+| `hbr_resolution_hash`         | SHA-256 of HBR / Audit Committee resolution (BR Items)                      |
+| `outside_counsel_concurrence` | Bool + identity (high-intensity Items)                                      |
+| `record_self_hash`            | SHA-256 of canonicalized Record 2                                           |
+
+### 8.3 Record 3 — Submission
+
+Captures the EDGAR submission transmission.
+
+| Field                           | Content                                                 |
+|---------------------------------|---------------------------------------------------------|
+| `record_type`                   | `"8K_SUBMISSION"`                                       |
+| `preparation_record_hash`       | SHA-256 of Record 2                                     |
+| `edgar_submission_type`         | `"8-K"` or `"8-K/A"`                                    |
+| `cik`                           | Subscriber's CIK                                        |
+| `final_8k_hash`                 | SHA-256 of submitted 8-K                                |
+| `exhibit_hashes_final`          | Array (matched to Record 2 with revision deltas if any) |
+| `signatory`                     | Name and title (HBR or Designated Officer)              |
+| `submission_timestamp_outbound` | ISO 8601 UTC of transmission                            |
+| `record_self_hash`              | SHA-256 of canonicalized Record 3                       |
+
+### 8.4 Record 4 — Confirmation
+
+Captures the EDGAR-side acceptance and timestamping.
+
+| Field                       | Content                                            |
+|-----------------------------|----------------------------------------------------|
+| `record_type`               | `"8K_CONFIRMATION"`                                |
+| `submission_record_hash`    | SHA-256 of Record 3                                |
+| `edgar_accession_number`    | EDGAR-assigned (format `XXXXXXXXXX-XX-XXXXXX`)     |
+| `edgar_filed_timestamp`     | EDGAR's authoritative FILED timestamp              |
+| `edgar_acceptance_status`   | `"ACCEPTED"` / `"SUSPENDED"` / `"REJECTED"`        |
+| `clock_compliance_check`    | Bool: `edgar_filed_timestamp` ≤ Day 4 clock        |
+| `b1_safe_harbor_invoked`    | Bool (only if past Day 4 and Item is B.1-eligible) |
+| `hbr_notification_complete` | Bool + timestamp (BR Items)                        |
+| `record_self_hash`          | SHA-256 of canonicalized Record 4                  |
+
+### 8.5 Chain integrity
+
+Records 1–4 form a Merkle-style chain via `prior_record_hash` fields; chain is anchored to the prior 8-K's Record 4 hash. Robert's continuous integrity sweep per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 8.2 verifies hash chain weekly. Chain break (any prior record's recomputed hash ≠ stored hash) is a SEV-1 incident routed per [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix).
+
+### 8.6 WORM archive
+
+All four records, the draft sequence, the final 8-K, exhibits, the HBR resolution, the Determination Memo, and the outside counsel correspondence (where applicable) are committed to WORM (write-once-read-many) storage per [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec) § 7. Retention: 7 years minimum (SEC Rule 17a-4 analog; SOX §103 retention by analogy); longer if litigation hold applies.
+
+------------------------------------------------------------------------
+
+## §9 Post-Filing Amendment Posture
+
+### 9.1 General amendment trigger
+
+An 8-K is amended (8-K/A) when:
+
+- New material information becomes available within the scope of a previously-filed Item;
+- A previously-furnished Item 2.02 / 7.01 contained material error;
+- Reg S-X Rule 3-05 / Article 11 financial statements deferred under Item 2.01 are now available;
+- Item 4.02(a) is updated as the restatement scope clarifies;
+- DOJ delay period for Item 1.05 expires and incident disclosure is owed.
+
+### 9.2 Item-specific amendment cadence
+
+**Item 1.05** — Amendments are expected as incident scope clarifies. Each new **material determination** (new affected systems; new affected data; new financial-impact range; new attribution; new third-party-victim scope) starts its own 4-business-day clock from the new determination date. Document each determination date as a fresh Record 1 in the four-record sequence (§8). Per [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) §4.3.
+
+**Item 2.01 (acquired-business FS)** — 8-K/A within 71 calendar days of original 8-K with Rule 3-05 audited acquired-business FS and Article 11 pro forma. Failure → S-3 eligibility loss.
+
+**Item 4.02(a)** — Subsequent updates as restatement scope and ICFR reassessment finalize. The 10-K/A or 10-Q/A is the primary amendment vehicle; 8-K/A used for material status updates between the Item 4.02(a) filing and the periodic amendment. Per [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) §5.
+
+**Item 5.02** — Departure or appointment amendments when additional material terms (compensation arrangements, separation agreements) become known. Item 5.02(e) for material compensatory plan/grant detail.
+
+**Item 7.01** — Inadvertent Reg FD failure cured by promptly furnishing under Rule 100(a). "Promptly" = 24 hours or beginning of next trading day, whichever is later. The corrective 7.01 is itself the cure mechanism; the disclosure should be substantively complete and broadly distributed per §6.3.
+
+**Item 9.01 exhibits** — Exhibit-only amendments when an exhibit was inadvertently omitted or replaced. No re-substantive disclosure required if only the exhibit is added.
+
+### 9.3 Restatement-cascade amendments
+
+When Item 4.02 triggers, the following downstream amendments follow:
+
+- **10-K/A or 10-Q/A** for affected periods (Tom + James lead);
+- **Form 8-K Item 1A** risk-factor update reflecting restatement (in next periodic);
+- **§302 / §906 certifications** re-executed in 10-K/A or 10-Q/A;
+- **Item 9A** ICFR conclusion updated to "not effective due to material weakness in \[area\]";
+- **Auditor consent** re-issued (Exhibit 23 to amended periodic);
+- **Item 402(w) Reg S-K** clawback recovery disclosure in next proxy/10-K;
+- **Item 601(b)(97)** clawback policy filed as exhibit. Per [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) §§5–9; [internal-controls-SOX-404-SKILL](/ExecutiveBots/Public/wiki/internal-controls-SOX-404-SKILL) §11; [item-402-executive-compensation-SKILL](/ExecutiveBots/Public/wiki/item-402-executive-compensation-SKILL) §10.
+
+### 9.4 Amendment audit-trail
+
+Each amendment generates its own four-record sequence (§8) anchored to the prior 8-K's Record 4 hash. Amendments are not edits to prior records — prior records are immutable; the amendment is a new chain entry with `record_type` indicating `"8K_AMENDMENT"`.
+
+------------------------------------------------------------------------
+
+## §10 References
+
+### 10.1 Statutes and Rules
+
+- Securities Exchange Act § 10(b), § 13(a), § 14(a), § 15(d) (periodic, proxy, and current reporting; antifraud)
+- Securities Act § 11, § 12(a)(2), § 17(a), § 27A (forward-looking safe harbor)
+- Sarbanes-Oxley Act § 302 (15 U.S.C. § 7241), § 304 (15 U.S.C. § 7243), § 307 (15 U.S.C. § 7245), § 404 (15 U.S.C. § 7262), § 906 (18 U.S.C. § 1350)
+- 17 C.F.R. § 240.12b-2 (filer-status definitions; shell company)
+- 17 C.F.R. § 240.10D-1 (clawback recovery rule); Exhibit 97
+- 17 C.F.R. § 240.13a-11, -15d-11 (8-K filing obligation)
+- 17 C.F.R. §§ 243.100–103 (Reg FD)
+- 17 C.F.R. Part 205 (attorney up-the-ladder under Rule 205)
+- 17 C.F.R. Part 245 (Reg BTR pension blackout — Item 5.04)
+- Reg S-K Items 104 (mine safety), 304 (changes in accountant), 402 (executive compensation), 404 (related-person transactions), 406 (Code of Ethics), 407 (governance), 408 (trading arrangements), 601 (exhibits), 106 (cybersecurity, with Form 10-K Item 1C)
+- Reg S-X Article 11 (pro forma); Rule 1-02(w) (significant subsidiary); Rule 2-01 (auditor independence); Rule 3-05 (acquired business FS)
+- Form 8-K (and Items 1.01 – 9.01 instructions)
+- Form 8-K General Instruction A (persons required to file); General Instruction B.1 (limited safe harbor); General Instruction B.2 (filed vs. furnished)
+- Rule 13e-3 (going private); Rule 13e-4 (issuer tender offers)
+- Rule 14a-19 (universal proxy)
+- Rule 100(a) (Reg FD intentional / unintentional)
+- Form S-3 General Instruction I.A.3 (timely-filing condition); I.A.7 (shell-company lookback)
+- Rule 144(c)(1) (current public information)
+- Rule 144(i) (former-shell-company restriction)
+- DGCL § 211 (annual meeting), § 228 (written consent), § 242 (charter amendments), § 251 (mergers), § 253 (short-form merger)
+- NRS § 78.385 (charter amendments), § 92A.180 (mergers)
+
+### 10.2 SEC Releases
+
+- SEC Rel. No. 33-11216 (July 26, 2023) — Cybersecurity Disclosure Rule (Item 1.05; Form 10-K Item 1C / Reg S-K Item 106)
+- SEC Rel. No. 34-99194 (Oct. 2022) — Rule 10D-1 / Exhibit 97 clawback policy (NYSE / Nasdaq listing-standard effective Dec. 1, 2023)
+- SEC Rel. No. 33-11038 / 34-96492 (Dec. 14, 2022) — Rule 10b5-1 amendments and Item 408 trading-arrangement disclosures
+- SEC Rel. No. 34-43154 (Aug. 2000) — Reg FD adopting release
+- SEC Rel. No. 34-69279 (Apr. 2013) — Social-media disclosure under Reg FD
+- SEC Rel. No. 33-10890 (Feb. 2020) — MD&A modernization (Item 303(b)(3) critical accounting estimates)
+- SEC Rel. No. 33-10825 (Mar. 2020) — Risk factors (Item 105) modernization; SRC §404(b) carve-out
+- SEC Rel. No. 34-98704 (Oct. 2023) — §13(d) / (g) amendments (Schedule 13D within 5 BD)
+
+### 10.3 Cases
+
+- *Basic Inc. v. Levinson*, 485 U.S. 224 (1988) (materiality; probability × magnitude for forward-looking events)
+- *TSC Industries, Inc. v. Northway, Inc.*, 426 U.S. 438 (1976) (materiality standard for fixed facts)
+- *Matrixx Initiatives, Inc. v. Siracusano*, 563 U.S. 27 (2011) (no bright-line statistical-significance threshold)
+- *SEC v. Siebel Systems, Inc.*, 384 F. Supp. 2d 694 (S.D.N.Y. 2005) (Reg FD intentional / reckless standard)
+- *Stratte-McClure v. Morgan Stanley*, 776 F.3d 94 (2d Cir. 2015) (Item 303 known-trend disclosure duty)
+- *Macquarie Infrastructure Corp. v. Moab Partners*, 601 U.S. 257 (2024) (Rule 10b-5(b) pure-omission limits)
+- *SEC v. Jensen*, 835 F.3d 1100 (9th Cir. 2016) (SOX § 304 applies without proof of personal misconduct by CEO/CFO; "misconduct" element met by misconduct within the issuer)
+- *In re Caremark Int'l Inc. Derivative Litig.*, 698 A.2d 959 (Del. Ch. 1996)
+- *Stone v. Ritter*, 911 A.2d 362 (Del. 2006)
+- *Marchand v. Barnhill*, 212 A.3d 805 (Del. 2019)
+- *In re McDonald's Corp. S'holder Derivative Litig.*, 289 A.3d 343 (Del. Ch. 2023) (officer-level *Caremark* extension)
+- *In re DraftKings Inc.*, SEC enforcement action (Sept. 2024) (Reg FD selective-disclosure)
+- *In re Delphia (USA) Inc. & Global Predictions Inc.*, Admin. Proc. File No. 3-21894 / 3-21895 (Mar. 18, 2024) (AI-washing — false / misleading statements about AI use)
+
+### 10.4 PCAOB Standards
+
+- AS 1301 (Communications with Audit Committees)
+- AS 1305 (Communications About Control Deficiencies)
+- AS 2201 (Audit of Internal Control over Financial Reporting)
+- AS 2405 (Illegal Acts by Clients)
+- AS 2415 (Consideration of an Entity's Ability to Continue as a Going Concern)
+- AS 2820 (Subsequent Events; Reissuance Considerations)
+- AS 3101 (Auditor's Report; Critical Audit Matters)
+
+### 10.5 Accounting Standards
+
+- ASC 205-40 (Going Concern — ASU 2014-15)
+- ASC 250 (Accounting Changes and Error Corrections)
+- ASC 280 (Segment Reporting — ASU 2023-07)
+- ASC 326 (Credit Losses — CECL)
+- ASC 350 (Intangibles — goodwill and other)
+- ASC 360 (Long-Lived Assets)
+- ASC 420 (Exit and Disposal Cost Obligations)
+- ASC 450 (Contingencies)
+- ASC 480 / ASC 815-40 (Capital-Structure / Equity-Linked Instruments)
+- ASC 605 / ASC 606 (Revenue Recognition)
+- ASC 715 (Post-Employment Benefits)
+- ASC 718 (Stock-Based Compensation)
+- ASC 805 / ASC 805-40 / ASC 805-50 (Business Combinations; Reverse Acquisitions)
+- ASC 820 (Fair Value Measurement)
+- ASC 855 (Subsequent Events)
+- SAB 99 (Aug. 1999) — Materiality qualitative factors
+- SAB 108 — Quantification of misstatements (dual-method)
+
+### 10.6 Companion Authoritative Standards
+
+- COSO 2013 — Internal Control — Integrated Framework
+- NIST FIPS 180-4 — Secure Hash Standard (SHA-256)
+- NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide
+- RFC 8785 — JSON Canonicalization Scheme
+
+### 10.7 Internal Canonical Companion Files
+
+**Layer 1 Constitutional:** [Take-Notice](/ExecutiveBots/Public/wiki/Take-Notice), [Ethics-Foundations](/ExecutiveBots/Public/wiki/Ethics-Foundations), [Executivebots-Architecture](/ExecutiveBots/Public/wiki/ExecutiveBots-Architecture), [Incident-Response-Matrix](/ExecutiveBots/Public/wiki/Incident-Response-Matrix), [Single-Principal-Subscriber-Appendix](/ExecutiveBots/Public/wiki/Single-Principal-Subscriber-Appendix) · 8 SOUL files · 8 SKILL files (with [Bill-SKILL](/ExecutiveBots/Public/wiki/Bill-SKILL) as parent)
+
+**Layer 2 Procedural:** [Governance-Gate](/ExecutiveBots/Public/wiki/Governance-Gate), [Audit-Trail-Spec](/ExecutiveBots/Public/wiki/Audit-Trail-Spec), [Subscriber-Onboarding-Playbook](/ExecutiveBots/Public/wiki/Subscriber-Onboarding-Playbook), [Pre-Clearance-Queue-Spec](/ExecutiveBots/Public/wiki/Pre-Clearance-Queue-Spec), [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook)
+
+**Layer 2 Domain Skills (substantive content reference):**
+
+- [form-8K-event-mapping-SKILL](/ExecutiveBots/Public/wiki/form-8K-event-mapping-SKILL) — full Item-by-Item content reference
+- [cybersecurity-incident-1.05-SKILL](/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05-SKILL) — Item 1.05 materiality framework and DOJ delay
+- [restatement-and-item-4.02-SKILL](/ExecutiveBots/Public/wiki/restatement-and-item-4.02-SKILL) — Item 4.02 mechanics and §304 / Rule 10D-1 cascade
+- [reverse-merger-ASC-805-40-SKILL](/ExecutiveBots/Public/wiki/reverse-merger-ASC-805-40-SKILL) — Super 8-K (Items 1.01, 2.01, 2.01(f), 3.02, 5.01, 5.02, 5.03, 5.06, 5.07)
+- [capital-raising-structures-SKILL](/ExecutiveBots/Public/wiki/capital-raising-structures-SKILL) — Item 3.02 unregistered sales; Form D coordination
+- [proxy-statement-14A-14C-SKILL](/ExecutiveBots/Public/wiki/proxy-statement-14A-14C-SKILL) — Items 5.03, 5.07, 5.08; Schedule 14F-1 coordination
+- [item-402-executive-compensation-SKILL](/ExecutiveBots/Public/wiki/item-402-executive-compensation-SKILL) — Items 5.02(e), 5.02(f); Item 402(w) cascade
+- [section-16-and-rule-10b5-1-SKILL](/ExecutiveBots/Public/wiki/section-16-and-rule-10b5-1-SKILL) — Item 408 trading-arrangement (periodic, not 8-K, but cross-references)
+- [periodic-reporting-10K-10Q-SKILL](/ExecutiveBots/Public/wiki/periodic-reporting-10K-10Q-SKILL) — periodic-report integration with 8-K events
+- [NT-10K-NT-10Q-late-filing-SKILL](/ExecutiveBots/Public/wiki/NT-10K-NT-10Q-late-filing-SKILL) — late-filing posture for periodic; S-3 eligibility consequence
+- [going-public-S1-S3-SKILL](/ExecutiveBots/Public/wiki/going-public-S1-S3-SKILL) — S-3 General Instr. I.A.3 / I.A.7 consequences
+- [going-private-13E-3-SKILL](/ExecutiveBots/Public/wiki/going-private-13E-3-SKILL) — Items 1.01 / 2.01 / 5.06 going-private cascade
+- [tender-offers-13D-14D-SKILL](/ExecutiveBots/Public/wiki/tender-offers-13D-14D-SKILL) — Items 5.01 / 8.01 tender-offer coordination
+- [D-and-O-insurance-claims-SKILL](/ExecutiveBots/Public/wiki/D-and-O-insurance-claims-SKILL) — claim notice on Items 1.05 / 4.02 / 5.01
+- [audit-committee-operation-SKILL](/ExecutiveBots/Public/wiki/audit-committee-operation-SKILL) — audit-committee role in Item 4.02 / 1.05 / 4.01
+- [corporate-actions-FINRA-6490-SKILL](/ExecutiveBots/Public/wiki/corporate-actions-FINRA-6490-SKILL) — Items 5.03 corporate-action coordination
+- [OTC-markets-pink-current-SKILL](/ExecutiveBots/Public/wiki/OTC-markets-pink-current-SKILL) — Item 3.01 listing-standard / OTC tier coordination
+- [EDGAR-filing-mechanics-SKILL](/ExecutiveBots/Public/wiki/EDGAR-filing-mechanics-SKILL) — submission-type and credential mechanics
+- [derivatives-notes-debt-equity-SKILL](/ExecutiveBots/Public/wiki/derivatives-notes-debt-equity-SKILL) — Item 2.03 / 3.02 / 3.03 instrument classification **Technical / Platform:** [Paperclip-Fork](/ExecutiveBots/Public/wiki/Paperclip-Fork), [Container-Architecture](/ExecutiveBots/Public/wiki/Container-Architecture), [MCP-Integration-Spec](/ExecutiveBots/Public/wiki/MCP-Integration-Spec)
+
+**Section Hubs (Wiki Navigation):** [AI-Executives](/ExecutiveBots/Public/wiki/AI-Executives) · [Constitutional-Foundations](/ExecutiveBots/Public/wiki/Constitutional-Foundations) · [Operational-Playbooks](/ExecutiveBots/Public/wiki/Operational-Playbooks) · [Technical-Architecture](/ExecutiveBots/Public/wiki/Technical-Architecture) · [Ethics-Framework](/ExecutiveBots/Public/wiki/Ethics-Framework) · [Defense-Posture](/ExecutiveBots/Public/wiki/Defense-Posture) · [For-Stakeholders](/ExecutiveBots/Public/wiki/For-Stakeholders)
+
+**Layer 3 Reference:** [Operational-Manual](/ExecutiveBots/Public/wiki/Operational-Manual)
+
+------------------------------------------------------------------------
+
+*Form 8-K is the bench's most multi-faceted disclosure surface: numbered Items spanning 1.01 through 9.01, with a 4-business-day clock for most Items running from event occurrence, a clock starting from materiality determination for Item 1.05, a clock starting from issuer conclusion or auditor advice for Items 4.02(a) and 4.02(b) respectively, simultaneous-or-prompt furnishing for Item 7.01 Reg FD, and 71-calendar-day deferral for Item 2.01 acquired-business financial statements. Reg FD enforcement requires intentional or reckless selective disclosure — not strict liability — but the *In re DraftKings* posture confirms aggressive SEC scrutiny of Item 7.01 timing. The Item 4.02 trigger cascades through SOX §304 statutory clawback, Rule 10D-1 listing-standard clawback, ICFR reassessment to material weakness, and §302 / §906 certification implications. Bill orchestrates; specialist agents execute their own scope per the §3 per-Item routing matrix; the 4-business-day clock is managed cycle-day by cycle-day per §5; the four-record EDGAR submission sequence per §8 makes filing execution tamper-evident; the Governance Gate authorization per §7 is the human-fiduciary-adoption checkpoint. The architecture is the same as [Periodic-Report-Assembly-Playbook](/ExecutiveBots/Public/wiki/Periodic-Report-Assembly-Playbook) — orchestration without substantive override — applied to episodic disclosure.*
