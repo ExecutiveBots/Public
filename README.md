@@ -2,6 +2,12 @@
 
 **Eight-Agent AI Executive Bench for U.S. Public-Company Subscribers**
 
+[![skills.sh](https://skills.sh/b/ExecutiveBots/Public)](https://skills.sh/ExecutiveBots/Public)
+
+> ```bash
+> npx skills add ExecutiveBots/Public --all
+> ```
+
 ---
 
 ## What This Wiki Is
