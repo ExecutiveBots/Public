@@ -1,3 +1,5 @@
+> ⚠️ **Migrated to skills.sh** — These agent files are now available as installable skills at [`../skills/`](../skills/). Install with `npx skills add ExecutiveBots/Public --all`. Files in this directory remain as original source reference.
+
 # ExecutiveBots — Executive SOUL & SKILL Documents
 
 **Fetched:** 2026-05-11
