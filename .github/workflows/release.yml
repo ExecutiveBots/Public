@@ -17,39 +17,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get changed files since last tag
+      - name: Generate release changelog
         id: changelog
         run: |
           previous_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-          if [ -z "$previous_tag" ]; then
-            changes=$(git log --pretty=format:"%s" HEAD)
+          if [ -z "${previous_tag}" ]; then
+            changes=$(git log --pretty=format:"- %s" HEAD)
           else
-            changes=$(git log "$previous_tag..HEAD" --pretty=format:"%s")
+            changes=$(git log --pretty=format:"- %s" "${previous_tag}..HEAD")
           fi
-          echo "changes<<EOF" >> $GITHUB_OUTPUT
-          echo "$changes" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Generate changelog
-        id: generate-changelog
-        run: |
-          tag=${GITHUB_REF#refs/tags/}
-          version=${tag#v}
-
-          # Build a simple changelog from conventional commits
-          changes="${{ steps.changelog.outputs.changes }}"
-          changelog="## Changes
-
-$changes
-
-## How to Upgrade
-
-See the [migration guide](./docs/migration) for upgrade instructions.
-"
-
-          echo "body<<EOF" >> $GITHUB_OUTPUT
-          echo "$changelog" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          {
+            echo "body<<EOF"
+            echo "## Changes"
+            echo ""
+            echo "${changes}"
+            echo ""
+            echo "## How to Upgrade"
+            echo ""
+            echo "See the [migration guide](./docs/migration) for upgrade instructions."
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
@@ -58,6 +45,6 @@ See the [migration guide](./docs/migration) for upgrade instructions.
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: ${{ steps.generate-changelog.outputs.body }}
+          body: ${{ steps.changelog.outputs.body }}
           draft: false
           prerelease: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') || contains(github.ref, 'rc') }}
