@@ -1,0 +1,82 @@
+# ExecutiveBots Public Wiki — Markdown Mirror
+
+**Fetched:** 2026-05-11
+**Source:** https://github.com/ExecutiveBots/Public/wiki/
+**Total pages:** 74
+
+## Pages
+
+- [10 K](./10-K.md) — 123481 bytes
+- [10 Q](./10-Q.md) — 92985 bytes
+- [8 K](./8-K.md) — 76953 bytes
+- [AI Executives](./AI-Executives.md) — 15140 bytes
+- [Analytics Reporter](./Analytics-Reporter.md) — 16854 bytes
+- [Audit Trail Spec](./Audit-Trail-Spec.md) — 8876 bytes
+- [Constitutional Foundations](./Constitutional-Foundations.md) — 8975 bytes
+- [Customer Service](./Customer-Service.md) — 20471 bytes
+- [D and O insurance claims](./D-and-O-insurance-claims.md) — 28069 bytes
+- [Defense Posture](./Defense-Posture.md) — 16579 bytes
+- [Document Generator](./Document-Generator.md) — 2702 bytes
+- [EDGAR filing mechanics](./EDGAR-filing-mechanics.md) — 17430 bytes
+- [Ethics Foundations](./Ethics-Foundations.md) — 22264 bytes
+- [Ethics Framework](./Ethics-Framework.md) — 7272 bytes
+- [Executive Summary Generator](./Executive-Summary-Generator.md) — 9501 bytes
+- [ExecutiveBots Architecture](./ExecutiveBots-Architecture.md) — 8250 bytes
+- [For Stakeholders](./For-Stakeholders.md) — 5110 bytes
+- [Governance Gate](./Governance-Gate.md) — 22064 bytes
+- [HR Onboarding](./HR-Onboarding.md) — 25263 bytes
+- [Incident Response Matrix](./Incident-Response-Matrix.md) — 7819 bytes
+- [Legal Compliance Checker](./Legal-Compliance-Checker.md) — 28503 bytes
+- [Legal Document Review](./Legal-Document-Review.md) — 25970 bytes
+- [MD and A construction](./MD-and-A-construction.md) — 31306 bytes
+- [NT 10K NT 10Q late filing](./NT-10K-NT-10Q-late-filing.md) — 19590 bytes
+- [OTC markets pink current](./OTC-markets-pink-current.md) — 19379 bytes
+- [Operational Manual](./Operational-Manual.md) — 7155 bytes
+- [Operational Playbooks](./Operational-Playbooks.md) — 9790 bytes
+- [Periodic Report Assembly Playbook](./Periodic-Report-Assembly-Playbook.md) — 5602 bytes
+- [Pre Clearance Queue Spec](./Pre-Clearance-Queue-Spec.md) — 11423 bytes
+- [Sales Account Strategist](./Sales-Account-Strategist.md) — 15424 bytes
+- [Sales Deal Strategist](./Sales-Deal-Strategist.md) — 14156 bytes
+- [Sales Outbound Strategist](./Sales-Outbound-Strategist.md) — 11693 bytes
+- [Sales Outreach](./Sales-Outreach.md) — 22117 bytes
+- [Sales Pipeline Analyst](./Sales-Pipeline-Analyst.md) — 19347 bytes
+- [Sales Proposal Strategist](./Sales-Proposal-Strategist.md) — 14790 bytes
+- [Single Principal Subscriber Appendix](./Single-Principal-Subscriber-Appendix.md) — 9199 bytes
+- [Social Media Strategist](./Social-Media-Strategist.md) — 7709 bytes
+- [Subscriber Onboarding Playbook](./Subscriber-Onboarding-Playbook.md) — 6133 bytes
+- [Take Notice](./Take-Notice.md) — 23040 bytes
+- [TikTok Strategist](./TikTok-Strategist.md) — 7843 bytes
+- [Twitter Engager](./Twitter-Engager.md) — 8037 bytes
+- [accounts payable agent](./accounts-payable-agent.md) — 7467 bytes
+- [audit committee operation](./audit-committee-operation.md) — 27337 bytes
+- [branding](./branding.md) — 2439 bytes
+- [canvans](./canvans.md) — 12353 bytes
+- [capital raising structures](./capital-raising-structures.md) — 37705 bytes
+- [compliance auditor](./compliance-auditor.md) — 7602 bytes
+- [corporate actions FINRA 6490](./corporate-actions-FINRA-6490.md) — 16455 bytes
+- [cybersecurity incident 1.05](./cybersecurity-incident-1.05.md) — 32950 bytes
+- [derivatives notes debt equity](./derivatives-notes-debt-equity.md) — 92839 bytes
+- [docx](./docx.md) — 21587 bytes
+- [finance bookkeeper controller](./finance-bookkeeper-controller.md) — 15928 bytes
+- [finance financial analyst](./finance-financial-analyst.md) — 14042 bytes
+- [finance fpa analyst](./finance-fpa-analyst.md) — 17300 bytes
+- [finance investment researcher](./finance-investment-researcher.md) — 16398 bytes
+- [finance tax strategist](./finance-tax-strategist.md) — 14306 bytes
+- [going concern ASU 2014 15](./going-concern-ASU-2014-15.md) — 28226 bytes
+- [going private 13E 3](./going-private-13E-3.md) — 26861 bytes
+- [going public S1 S3](./going-public-S1-S3.md) — 36460 bytes
+- [internal controls SOX 404](./internal-controls-SOX-404.md) — 34382 bytes
+- [item 402 executive compensation](./item-402-executive-compensation.md) — 31981 bytes
+- [marketing agentic search optimizer](./marketing-agentic-search-optimizer.md) — 16974 bytes
+- [marketing linkedin content creator](./marketing-linkedin-content-creator.md) — 14114 bytes
+- [marketing podcast strategist](./marketing-podcast-strategist.md) — 18547 bytes
+- [marketing reddit community builder](./marketing-reddit-community-builder.md) — 7866 bytes
+- [pdf](./pdf.md) — 8912 bytes
+- [pptx](./pptx.md) — 10427 bytes
+- [proxy statement 14A 14C](./proxy-statement-14A-14C.md) — 27619 bytes
+- [restatement and item 4.02](./restatement-and-item-4.02.md) — 33548 bytes
+- [reverse merger ASC 805 40](./reverse-merger-ASC-805-40.md) — 39600 bytes
+- [section 16 and rule 10b5 1](./section-16-and-rule-10b5-1.md) — 32808 bytes
+- [support finance tracker](./support-finance-tracker.md) — 20632 bytes
+- [tender offers 13D 14D](./tender-offers-13D-14D.md) — 28142 bytes
+- [xlsx](./xlsx.md) — 11850 bytes
