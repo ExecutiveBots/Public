@@ -1,0 +1,8 @@
+# Default owners for all files
+* @ExecutiveBots/admins
+
+# Agent-specific files
+/agents/ @ExecutiveBots/agents-team
+
+# Wiki skills
+/wikiSkills/ @ExecutiveBots/wiki-team

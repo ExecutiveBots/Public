@@ -1,0 +1,70 @@
+name: Feature Request
+
+description: Suggest a new feature or improvement for the ExecutiveBots V5 platform
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+
+        Thanks for proposing a new feature. Please fill out this form to help us evaluate and implement your suggestion.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: |
+        Describe the problem you are trying to solve.
+        Why is this feature needed? What pain point does it address?
+      placeholder: |
+        I am frustrated by [problem] because [impact]...
+        Currently, I have to [workaround]...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: |
+        Describe the solution you would like.
+        What should happen? How should it work?
+      placeholder: |
+        A solution I envision is [description]...
+        This would [expected outcome]...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: |
+        Describe any alternative solutions or features you've considered.
+        Why did you not choose those alternatives?
+      placeholder: |
+        I considered [alternative 1] but [reason for not using]...
+        I also considered [alternative 2] but [reason]...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context or screenshots about the feature request here.
+        Include links to relevant documentation or discussions.
+      placeholder: |
+        Additional context, screenshots, or links...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: governance-impact
+    attributes:
+      label: Governance Impact
+      options:
+        - label: This feature may require Governance-Gate category #37 authorization
+          required: false

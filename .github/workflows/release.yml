@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate release changelog
+        id: changelog
+        run: |
+          previous_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          if [ -z "${previous_tag}" ]; then
+            changes=$(git log --pretty=format:"- %s" HEAD)
+          else
+            changes=$(git log --pretty=format:"- %s" "${previous_tag}..HEAD")
+          fi
+          {
+            echo "body<<EOF"
+            echo "## Changes"
+            echo ""
+            echo "${changes}"
+            echo ""
+            echo "## How to Upgrade"
+            echo ""
+            echo "See the [migration guide](./docs/migration) for upgrade instructions."
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.changelog.outputs.body }}
+          draft: false
+          prerelease: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') || contains(github.ref, 'rc') }}

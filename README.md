@@ -8,11 +8,11 @@
 
 This wiki is the **canonical documentary substrate** for the Executive.Bots V5 platform — an eight-agent AI executive bench deployed per-subscriber on isolated containers (Paperclip fork on DigitalOcean Kubernetes Service), serving U.S. public reporting issuers. The wiki documents the platform's architecture, governance framework, technical substrate, defense posture, and compliance mappings in operational detail.
 
-Every page is constituted under a constitutional hierarchy ([[Take-Notice]] → [[Ethics-Foundations]] → [[Executivebots-Architecture]] → individual SKILL scope rules → individual SOUL operational tests). Modifications to canonical files require **BR (Board-Required) authorization via [[Governance-Gate]] category #37** — the recursive category that governs modification of the canonical procedure documents themselves.
+Every page is constituted under a constitutional hierarchy ([Take-Notice](wikiSkills/skills/Take-Notice.md) → [Ethics-Foundations](wikiSkills/skills/Ethics-Foundations.md) → [Executivebots-Architecture](wikiSkills/skills/ExecutiveBots-Architecture.md) → individual SKILL scope rules → individual SOUL operational tests). Modifications to canonical files require **BR (Board-Required) authorization via [Governance-Gate](wikiSkills/skills/Governance-Gate.md) category #37** — the recursive category that governs modification of the canonical procedure documents themselves.
 
 > ## ⚖ TAKE NOTICE
 >
-> The eight AI agents on the Executive.Bots V5 bench produce work-product preparation substrate; the **Human Board of Record** is the fiduciary signatory for every material corporate action. No agent holds fiduciary capacity, holds professional licensure, or produces opinions of record. Outside counsel, independent auditor, registered transfer agent, and the Human Board hold those positions. See [[Take-Notice]].
+> The eight AI agents on the Executive.Bots V5 bench produce work-product preparation substrate; the **Human Board of Record** is the fiduciary signatory for every material corporate action. No agent holds fiduciary capacity, holds professional licensure, or produces opinions of record. Outside counsel, independent auditor, registered transfer agent, and the Human Board hold those positions. See [Take-Notice](wikiSkills/skills/Take-Notice.md).
 
 ---
 
@@ -28,41 +28,41 @@ Every page is constituted under a constitutional hierarchy ([[Take-Notice]] → 
 
 ### I'm a prospective subscriber
 
-Start here: [[Home]] → [[For-Stakeholders]] → [[Take-Notice]] → [[Subscriber-Onboarding-Playbook]] → [[Single-Principal-Subscriber-Appendix]] (if applicable).
+Start here: [Home](#) → [For-Stakeholders](wikiSkills/skills/For-Stakeholders.md) → [Take-Notice](wikiSkills/skills/Take-Notice.md) → [Subscriber-Onboarding-Playbook](wikiSkills/skills/Subscriber-Onboarding-Playbook.md) → [Single-Principal-Subscriber-Appendix](wikiSkills/skills/Single-Principal-Subscriber-Appendix.md) (if applicable).
 
 The deployment-readiness review covers: HBR composition; AC composition (where established); DO designations; AA chain; BGR composition; outside professional engagements; subscriber-additive ethics tradition petition (if applicable); single-principal flag determination.
 
 ### I'm a subscriber's outside counsel
 
-Start here: [[Home]] → [[Defense-Posture]] → [[Take-Notice]] → [[Ethics-Foundations]] § 11.5.6 outside-counsel disclosure cascade → [[Single-Principal-Subscriber-Appendix]] (if applicable) → [[Governance-Gate]] § 5 recusal doctrine → [[Audit-Trail-Spec]] § 7 retrieval API.
+Start here: [Home](#) → [Defense-Posture](wikiSkills/skills/Defense-Posture.md) → [Take-Notice](wikiSkills/skills/Take-Notice.md) → [Ethics-Foundations](wikiSkills/skills/Ethics-Foundations.md) § 11.5.6 outside-counsel disclosure cascade → [Single-Principal-Subscriber-Appendix](wikiSkills/skills/Single-Principal-Subscriber-Appendix.md) (if applicable) → [Governance-Gate](wikiSkills/skills/Governance-Gate.md) § 5 recusal doctrine → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 7 retrieval API.
 
-For specific defense surfaces: [[Incident-Response-Matrix]] § 5 (Wells / SEC inquiry); [[Audit-Trail-Spec]] § 9 (FRCP 37(e) litigation hold); [[Defense-Posture]] § Caremark / Marchand (operationalization).
+For specific defense surfaces: [Incident-Response-Matrix](wikiSkills/skills/Incident-Response-Matrix.md) § 5 (Wells / SEC inquiry); [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 9 (FRCP 37(e) litigation hold); [Defense-Posture](wikiSkills/skills/Defense-Posture.md) § Caremark / Marchand (operationalization).
 
 ### I'm a subscriber's outside audit firm
 
-Start here: [[Home]] → [[Audit-Trail-Spec]] § 6 access control → [[Audit-Trail-Spec]] § 7 retrieval API → [[Audit-Trail-Spec]] § 8 integrity verification → [[Periodic-Report-Assembly-Playbook]] § 5 audit coordination → [[Bill-10K-SKILL]] § 7 PCAOB AS 2201 + AS 3101 + AS 2405 coordination.
+Start here: [Home](#) → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 6 access control → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 7 retrieval API → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 8 integrity verification → [Periodic-Report-Assembly-Playbook](wikiSkills/skills/Periodic-Report-Assembly-Playbook.md) § 5 audit coordination → [Bill-10K-SKILL](wikiSkills/skills/10-K.md) § 7 PCAOB AS 2201 + AS 3101 + AS 2405 coordination.
 
-For interim reviews: [[Bill-10Q-SKILL]] § 7 PCAOB AS 4105 coordination.
+For interim reviews: [Bill-10Q-SKILL](wikiSkills/skills/10-Q.md) § 7 PCAOB AS 4105 coordination.
 
 ### I'm a regulatory examiner (SEC, FINRA, state regulator)
 
-Start here: [[Home]] → [[Take-Notice]] → [[Executivebots-Architecture]] → [[Audit-Trail-Spec]] (full file) → [[Defense-Posture]] → [[Technical-White-Paper-V3]] for comprehensive synthesis.
+Start here: [Home](#) → [Take-Notice](wikiSkills/skills/Take-Notice.md) → [Executivebots-Architecture](wikiSkills/skills/ExecutiveBots-Architecture.md) → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) (full file) → [Defense-Posture](wikiSkills/skills/Defense-Posture.md) → [Technical-White-Paper-V3](#) for comprehensive synthesis.
 
-For specific concerns: [[Incident-Response-Matrix]] § 5 (regulatory inquiry handling); [[Audit-Trail-Spec]] § 7 retrieval API for record production; [[Audit-Trail-Spec]] § 8 integrity verification capability.
+For specific concerns: [Incident-Response-Matrix](wikiSkills/skills/Incident-Response-Matrix.md) § 5 (regulatory inquiry handling); [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 7 retrieval API for record production; [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 8 integrity verification capability.
 
 ### I'm a technical evaluator / DevOps / SRE
 
-Start here: [[Home]] → [[Technical-Architecture]] → [[Paperclip-Fork]] → [[Container-Architecture]] → [[MCP-Integration-Spec]] → [[Audit-Trail-Spec]] §§ 1-5 (storage and integrity mechanics).
+Start here: [Home](#) → [Technical-Architecture](#) → [Paperclip-Fork](#) → [Container-Architecture](#) → [MCP-Integration-Spec](#) → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) §§ 1-5 (storage and integrity mechanics).
 
-For deployment specifics: [[Subscriber-Onboarding-Playbook]] technical phases.
+For deployment specifics: [Subscriber-Onboarding-Playbook](wikiSkills/skills/Subscriber-Onboarding-Playbook.md) technical phases.
 
 ### I'm an institutional investor / analyst doing diligence
 
-Start here: [[Home]] → [[Technical-White-Paper-V3]] (Parts I-X comprehensive synthesis) → [[Defense-Posture]] → [[Take-Notice]].
+Start here: [Home](#) → [Technical-White-Paper-V3](#) (Parts I-X comprehensive synthesis) → [Defense-Posture](wikiSkills/skills/Defense-Posture.md) → [Take-Notice](wikiSkills/skills/Take-Notice.md).
 
 ### I'm a member of the Human Board of Record
 
-Start here: [[Home]] → [[Take-Notice]] → [[Bill-SKILL]] (Bill is your direct interface) → [[Governance-Gate]] (the authorization surface for every material action) → [[Audit-Trail-Spec]] § 10 *Caremark* defense substrate → [[Defense-Posture]] § Caremark / Marchand.
+Start here: [Home](#) → [Take-Notice](wikiSkills/skills/Take-Notice.md) → [Bill-SKILL](agents/Bill-SKILL.md) (Bill is your direct interface) → [Governance-Gate](wikiSkills/skills/Governance-Gate.md) (the authorization surface for every material action) → [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 10 *Caremark* defense substrate → [Defense-Posture](wikiSkills/skills/Defense-Posture.md) § Caremark / Marchand.
 
 ---
 
@@ -72,21 +72,21 @@ Start here: [[Home]] → [[Take-Notice]] → [[Bill-SKILL]] (Bill is your direct
 
 | File | Purpose |
 |---|---|
-| [[Home]] | Wiki landing; section-hub navigation |
-| [[_Sidebar]] | Persistent wiki sidebar navigation |
+| [Home](#) | Wiki landing; section-hub navigation |
+| [_Sidebar](#) | Persistent wiki sidebar navigation |
 | **README.md (this file)** | Repository-level entry point |
 
 ### Tier 1 — Constitutional (Layer 1 Root Canonicals)
 
-The five files that constitute the platform's foundational architecture. Modifications to these files trigger downstream propagation across every dependent file via Robert's continuous integrity sweep per [[Audit-Trail-Spec]] § 8.2.
+The five files that constitute the platform's foundational architecture. Modifications to these files trigger downstream propagation across every dependent file via Robert's continuous integrity sweep per [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 8.2.
 
 | File | Subject | Status |
 |---|---|---|
-| [[Take-Notice]] | Status preamble; what the bench is and is not; subscriber-cascade disclosure language | v2.0 ✅ |
-| [[Ethics-Foundations]] | Pluralist ethics framework (Aristotelian / Kantian / Rawlsian); subscriber-additive tradition petition workflow | v2.0 ✅ |
-| [[Executivebots-Architecture]] | Eight-agent composition; two-tier compute; reporting structure; ethics-tradition assignments | v2.0 ✅ |
-| [[Incident-Response-Matrix]] | Six tracks (cyber / financial-error / Reg FD / whistleblower / regulatory inquiry / operational); five SEV levels | v2.0 ✅ |
-| [[Single-Principal-Subscriber-Appendix]] | Adaptations for subscribers where one natural person holds CEO + Chairman + sole director + controlling holder | v2.0 ✅ |
+| [Take-Notice](wikiSkills/skills/Take-Notice.md) | Status preamble; what the bench is and is not; subscriber-cascade disclosure language | v2.0 ✅ |
+| [Ethics-Foundations](wikiSkills/skills/Ethics-Foundations.md) | Pluralist ethics framework (Aristotelian / Kantian / Rawlsian); subscriber-additive tradition petition workflow | v2.0 ✅ |
+| [Executivebots-Architecture](wikiSkills/skills/ExecutiveBots-Architecture.md) | Eight-agent composition; two-tier compute; reporting structure; ethics-tradition assignments | v2.0 ✅ |
+| [Incident-Response-Matrix](wikiSkills/skills/Incident-Response-Matrix.md) | Six tracks (cyber / financial-error / Reg FD / whistleblower / regulatory inquiry / operational); five SEV levels | v2.0 ✅ |
+| [Single-Principal-Subscriber-Appendix](wikiSkills/skills/Single-Principal-Subscriber-Appendix.md) | Adaptations for subscribers where one natural person holds CEO + Chairman + sole director + controlling holder | v2.0 ✅ |
 
 ### Tier 1 — Constitutional (Per-Agent SOUL / SKILL)
 
@@ -94,14 +94,14 @@ Eight SOUL files (agent identity) plus eight SKILL files (agent capability), str
 
 | Agent | Title | SOUL | SKILL |
 |---|---|---|---|
-| **Bill** | AI Chief Executive Officer | [[Bill-SOUL]] | [[Bill-SKILL]] (+ specialty SKILLs below) |
-| **Tom** | AI Chief Financial Officer | [[Tom-SOUL]] | [[Tom-SKILL]] |
-| **James** | AI General Counsel | [[James-SOUL]] | [[James-SKILL]] |
-| **Patricia** | AI Chief Compliance Officer | [[Patricia-SOUL]] | [[Patricia-SKILL]] |
-| **Lisa** | AI Chief Operating Officer | [[Lisa-SOUL]] | [[Lisa-SKILL]] |
-| **Mary** | AI Chief Marketing Officer / IR | [[Mary-SOUL]] | [[Mary-SKILL]] |
-| **Robert** | AI Chief Technology Officer | [[Robert-SOUL]] | [[Robert-SKILL]] |
-| **Edith** | AI Transfer Agency Liaison | [[Edith-SOUL]] | [[Edith-SKILL]] |
+| **Bill** | AI Chief Executive Officer | [Bill-SOUL](agents/Bill-SOUL.md) | [Bill-SKILL](agents/Bill-SKILL.md) (+ specialty SKILLs below) |
+| **Tom** | AI Chief Financial Officer | [Tom-SOUL](agents/Tom-SOUL.md) | [Tom-SKILL](agents/Tom-SKILL.md) |
+| **James** | AI General Counsel | [James-SOUL](agents/James-SOUL.md) | [James-SKILL](agents/James-SKILL.md) |
+| **Patricia** | AI Chief Compliance Officer | [Patricia-SOUL](agents/Patricia-SOUL.md) | [Patricia-SKILL](agents/Patricia-SKILL.md) |
+| **Lisa** | AI Chief Operating Officer | [Lisa-SOUL](agents/Lisa-SOUL.md) | [Lisa-SKILL](agents/Lisa-SKILL.md) |
+| **Mary** | AI Chief Marketing Officer / IR | [Mary-SOUL](agents/Mary-SOUL.md) | [Mary-SKILL](agents/Mary-SKILL.md) |
+| **Robert** | AI Chief Technology Officer | [Robert-SOUL](agents/Robert-SOUL.md) | [Robert-SKILL](agents/Robert-SKILL.md) |
+| **Edith** | AI Transfer Agency Liaison | [Edith-SOUL](agents/Edith-SOUL.md) | [Edith-SKILL](agents/Edith-SKILL.md) |
 
 #### Bill Domain-Specialty SKILLs
 
@@ -109,9 +109,9 @@ Bill's general orchestration is augmented by domain-specialty SKILLs for the ben
 
 | Specialty SKILL | Subject | Status |
 |---|---|---|
-| [[Bill-8K-SKILL]] | Form 8-K orchestration across all 12 Items (1.01–9.01); episodic disclosure | v1.0 ✅ |
-| [[Bill-10Q-SKILL]] | Form 10-Q quarterly orchestration; T-45 cycle; PCAOB AS 4105 review | v1.0 ✅ |
-| [[Bill-10K-SKILL]] | Form 10-K annual orchestration; T-90 cycle; PCAOB AS 2201 audit + ICFR attestation; Item 402(v) pay-vs-performance | v1.0 ✅ |
+| [Bill-8K-SKILL](wikiSkills/skills/8-K.md) | Form 8-K orchestration across all 12 Items (1.01–9.01); episodic disclosure | v1.0 ✅ |
+| [Bill-10Q-SKILL](wikiSkills/skills/10-Q.md) | Form 10-Q quarterly orchestration; T-45 cycle; PCAOB AS 4105 review | v1.0 ✅ |
+| [Bill-10K-SKILL](wikiSkills/skills/10-K.md) | Form 10-K annual orchestration; T-90 cycle; PCAOB AS 2201 audit + ICFR attestation; Item 402(v) pay-vs-performance | v1.0 ✅ |
 
 ### Tier 2 — Procedural (Layer 2 Operational Specifications)
 
@@ -119,32 +119,32 @@ Five procedural specifications operationalize the platform's load-bearing discip
 
 | File | Subject | Status |
 |---|---|---|
-| [[Governance-Gate]] | 54-category authorization matrix; five auth roles (HBR / AC / DO / AA / BGR); four auth classes (PAWP / SA / DA / BR); queue mechanics | v2.0 ✅ |
-| [[Audit-Trail-Spec]] | Three-layer WORM (hot / warm / cold); SHA-256 hash chains; per-(subscriber, agent) chain isolation; 7-year retention; *Caremark* defense substrate | v2.0 ✅ |
-| [[Subscriber-Onboarding-Playbook]] | Day -14 to Day 30 deployment sequence; 9 phases; subscriber-config capture | v1.0 (v2.0 sync pending) |
-| [[Pre-Clearance-Queue-Spec]] | Patricia's six-check workflow; Edith-Patricia handoff; *Panuwat* shadow-trading screen; Rule 10b5-1 plan administration | v2.0 ✅ |
-| [[Periodic-Report-Assembly-Playbook]] | Master T-90 to T+5 cycle architecture for both 10-K and 10-Q | v2.0 ✅ |
+| [Governance-Gate](wikiSkills/skills/Governance-Gate.md) | 54-category authorization matrix; five auth roles (HBR / AC / DO / AA / BGR); four auth classes (PAWP / SA / DA / BR); queue mechanics | v2.0 ✅ |
+| [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) | Three-layer WORM (hot / warm / cold); SHA-256 hash chains; per-(subscriber, agent) chain isolation; 7-year retention; *Caremark* defense substrate | v2.0 ✅ |
+| [Subscriber-Onboarding-Playbook](wikiSkills/skills/Subscriber-Onboarding-Playbook.md) | Day -14 to Day 30 deployment sequence; 9 phases; subscriber-config capture | v1.0 (v2.0 sync pending) |
+| [Pre-Clearance-Queue-Spec](wikiSkills/skills/Pre-Clearance-Queue-Spec.md) | Patricia's six-check workflow; Edith-Patricia handoff; *Panuwat* shadow-trading screen; Rule 10b5-1 plan administration | v2.0 ✅ |
+| [Periodic-Report-Assembly-Playbook](wikiSkills/skills/Periodic-Report-Assembly-Playbook.md) | Master T-90 to T+5 cycle architecture for both 10-K and 10-Q | v2.0 ✅ |
 
 ### Technical / Platform
 
 | File | Subject |
 |---|---|
-| [[Paperclip-Fork]] | Upstream Paperclip + fork divergence discipline |
-| [[Container-Architecture]] | Per-subscriber DOKS namespaces; nine-layer cross-subscriber isolation matrix; Vault / Qdrant / PostgreSQL / Spaces / Temporal stack |
-| [[MCP-Integration-Spec]] | Empire Stock Transfer canonical MCP pattern; four-record sequence; seven-step generalization template |
+| [Paperclip-Fork](#) | Upstream Paperclip + fork divergence discipline |
+| [Container-Architecture](#) | Per-subscriber DOKS namespaces; nine-layer cross-subscriber isolation matrix; Vault / Qdrant / PostgreSQL / Spaces / Temporal stack |
+| [MCP-Integration-Spec](#) | Empire Stock Transfer canonical MCP pattern; four-record sequence; seven-step generalization template |
 
 ### Tier 3 — Integrated Reference
 
 | File | Subject |
 |---|---|
-| [[Operational-Manual]] | Single comprehensive integrated reference covering all of the above |
-| [[Technical-White-Paper-V3]] | Public-facing comprehensive technical synthesis (10 Parts + 3 Appendices) |
+| [Operational-Manual](wikiSkills/skills/Operational-Manual.md) | Single comprehensive integrated reference covering all of the above |
+| [Technical-White-Paper-V3](#) | Public-facing comprehensive technical synthesis (10 Parts + 3 Appendices) |
 
 ### Section Hubs (Wiki Navigation)
 
 Topical entry points organizing files by concern:
 
-[[AI-Executives]] · [[Constitutional-Foundations]] · [[Operational-Playbooks]] · [[Technical-Architecture]] · [[Ethics-Framework]] · [[Defense-Posture]] · [[For-Stakeholders]]
+[AI-Executives](wikiSkills/skills/AI-Executives.md) · [Constitutional-Foundations](wikiSkills/skills/Constitutional-Foundations.md) · [Operational-Playbooks](wikiSkills/skills/Operational-Playbooks.md) · [Technical-Architecture](#) · [Ethics-Framework](wikiSkills/skills/Ethics-Framework.md) · [Defense-Posture](wikiSkills/skills/Defense-Posture.md) · [For-Stakeholders](wikiSkills/skills/For-Stakeholders.md)
 
 ---
 
@@ -156,11 +156,11 @@ Five Western-canon failure surfaces of a U.S. public reporting issuer (CEO synth
 
 ### Pluralist Ethics Framework (§ Why This Skew)
 
-Five Kantian-dominant agents (Tom, James, Mary, Robert, Edith), two Aristotelian-dominant (Bill, Lisa), one Rawlsian-dominant (Patricia). The skew is calibrated to failure-mode profile: categorical / per se / strict-liability obligations (§ 302/§ 906; Reg FD; SOX § 802; share-registry truth) call for Kantian-dominant traditions; *phronesis*-typed synthesis (Bill) and habituated cadence (Lisa) call for Aristotelian; procedural-justice-typed compliance administration (Patricia) calls for Rawlsian. All agents operate beneath §0 Honesty Above All and beneath [[Take-Notice]] status preamble; no tradition can authorize false statements, fiduciary-capacity claims, or licensure misrepresentation.
+Five Kantian-dominant agents (Tom, James, Mary, Robert, Edith), two Aristotelian-dominant (Bill, Lisa), one Rawlsian-dominant (Patricia). The skew is calibrated to failure-mode profile: categorical / per se / strict-liability obligations (§ 302/§ 906; Reg FD; SOX § 802; share-registry truth) call for Kantian-dominant traditions; *phronesis*-typed synthesis (Bill) and habituated cadence (Lisa) call for Aristotelian; procedural-justice-typed compliance administration (Patricia) calls for Rawlsian. All agents operate beneath §0 Honesty Above All and beneath [Take-Notice](wikiSkills/skills/Take-Notice.md) status preamble; no tradition can authorize false statements, fiduciary-capacity claims, or licensure misrepresentation.
 
 ### Multi-Tenant Strict Isolation (§ Why Per-Subscriber Containers)
 
-Cross-subscriber isolation enforced at nine architectural layers per [[Container-Architecture]] § Cross-Subscriber Isolation:
+Cross-subscriber isolation enforced at nine architectural layers per [Container-Architecture](#) § Cross-Subscriber Isolation:
 
 1. Network (Kubernetes NetworkPolicy)
 2. Service Identity (mTLS)
@@ -176,11 +176,11 @@ The cost (3-12× resource envelope vs. logically-separated multi-tenant) is amor
 
 ### Hash-Chained Audit Trail (§ Why SHA-256 + Per-Agent Chains)
 
-SHA-256 (FIPS 180-4) over canonical JSON (RFC 8785) per [[Audit-Trail-Spec]] § 3. Per-(subscriber, agent) chain isolation contains failure: an integrity break in one agent's chain does not propagate to others; the break is detectable as chain discontinuity in the affected agent. Three-layer WORM (hot DOKS PostgreSQL / warm Spaces standard / cold Spaces with object-lock compliance mode) supports 7-year retention per 17 C.F.R. § 240.17a-4(b)(4) with 17 C.F.R. § 240.17a-4(f) "non-rewriteable, non-erasable" enforcement.
+SHA-256 (FIPS 180-4) over canonical JSON (RFC 8785) per [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 3. Per-(subscriber, agent) chain isolation contains failure: an integrity break in one agent's chain does not propagate to others; the break is detectable as chain discontinuity in the affected agent. Three-layer WORM (hot DOKS PostgreSQL / warm Spaces standard / cold Spaces with object-lock compliance mode) supports 7-year retention per 17 C.F.R. § 240.17a-4(b)(4) with 17 C.F.R. § 240.17a-4(f) "non-rewriteable, non-erasable" enforcement.
 
 ### Governance Gate (§ Why a 54-Category Matrix)
 
-Every action is either within an agent's autonomous envelope (per agent SKILL §1) or in the [[Governance-Gate]] § 1 matrix. There is no third path. The 54-category structure with four authorization classes (PAWP / SA / DA / BR) and five authorization roles (HBR / AC / DO / AA / BGR) eliminates the procedural ambiguity that produces *Caremark* vulnerabilities.
+Every action is either within an agent's autonomous envelope (per agent SKILL §1) or in the [Governance-Gate](wikiSkills/skills/Governance-Gate.md) § 1 matrix. There is no third path. The 54-category structure with four authorization classes (PAWP / SA / DA / BR) and five authorization roles (HBR / AC / DO / AA / BGR) eliminates the procedural ambiguity that produces *Caremark* vulnerabilities.
 
 ---
 
@@ -188,13 +188,13 @@ Every action is either within an agent's autonomous envelope (per agent SKILL §
 
 | Surface | Operationalization |
 |---|---|
-| ***Caremark / Marchand*** information-systems prong | [[Audit-Trail-Spec]] § 10 + [[Defense-Posture]] § Caremark / Marchand |
-| Wells submission | [[Incident-Response-Matrix]] § 5.1 + [[Audit-Trail-Spec]] § 7 retrieval API |
-| DGCL § 220 / NRS § 78.257 books-and-records demand | [[Incident-Response-Matrix]] § 5.2 + [[Audit-Trail-Spec]] § 7 |
-| FRCP 37(e) litigation hold | [[Audit-Trail-Spec]] § 9 (*Zubulake V* reasonable-steps standard) |
-| AI-washing (*In re Delphia*) | [[Take-Notice]] § 3 disclosure-cascade template + [[Defense-Posture]] § AI-Washing |
-| SOX § 304 / Rule 10D-1 clawback | [[Incident-Response-Matrix]] § 2.3 + [[Bill-8K-SKILL]] § 3.4 + [[Bill-10K-SKILL]] § 8.2 |
-| Reg FD selective-disclosure (*In re DraftKings*) | [[James-SKILL]] § 2.2 filter + [[Bill-8K-SKILL]] § 3.7 |
+| ***Caremark / Marchand*** information-systems prong | [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 10 + [Defense-Posture](wikiSkills/skills/Defense-Posture.md) § Caremark / Marchand |
+| Wells submission | [Incident-Response-Matrix](wikiSkills/skills/Incident-Response-Matrix.md) § 5.1 + [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 7 retrieval API |
+| DGCL § 220 / NRS § 78.257 books-and-records demand | [Incident-Response-Matrix](wikiSkills/skills/Incident-Response-Matrix.md) § 5.2 + [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 7 |
+| FRCP 37(e) litigation hold | [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 9 (*Zubulake V* reasonable-steps standard) |
+| AI-washing (*In re Delphia*) | [Take-Notice](wikiSkills/skills/Take-Notice.md) § 3 disclosure-cascade template + [Defense-Posture](wikiSkills/skills/Defense-Posture.md) § AI-Washing |
+| SOX § 304 / Rule 10D-1 clawback | [Incident-Response-Matrix](wikiSkills/skills/Incident-Response-Matrix.md) § 2.3 + [Bill-8K-SKILL](wikiSkills/skills/8-K.md) § 3.4 + [Bill-10K-SKILL](wikiSkills/skills/10-K.md) § 8.2 |
+| Reg FD selective-disclosure (*In re DraftKings*) | [James-SKILL](agents/James-SKILL.md) § 2.2 filter + [Bill-8K-SKILL](wikiSkills/skills/8-K.md) § 3.7 |
 
 ---
 
@@ -251,7 +251,7 @@ ASC 205-40 + ASU 2014-15 (going concern); ASC 250 (error corrections); ASC 260 (
 | **Heavy** | Standard + 50% across both tiers | Mid-cap subscribers with higher throughput |
 | **Enterprise** | PRIME 4× / RELAY 2× vs. Standard | Large-cap subscribers; multi-jurisdiction; complex MCP integrations |
 
-Tier assignment per [[Subscriber-Onboarding-Playbook]] Phase 2 (assessment and configuration).
+Tier assignment per [Subscriber-Onboarding-Playbook](wikiSkills/skills/Subscriber-Onboarding-Playbook.md) Phase 2 (assessment and configuration).
 
 ---
 
@@ -277,14 +277,14 @@ Section Hubs: 7 / 7 ✅
 
 | Tier | Authorization |
 |---|---|
-| Tier 1 root canonicals (5 files) | [[Governance-Gate]] category #37 BR |
-| Tier 1 SOUL / SKILL (16 files + Bill domain-specialty SKILLs) | [[Governance-Gate]] category #37 BR |
-| Tier 2 procedural (5 files) | [[Governance-Gate]] category #37 BR |
+| Tier 1 root canonicals (5 files) | [Governance-Gate](wikiSkills/skills/Governance-Gate.md) category #37 BR |
+| Tier 1 SOUL / SKILL (16 files + Bill domain-specialty SKILLs) | [Governance-Gate](wikiSkills/skills/Governance-Gate.md) category #37 BR |
+| Tier 2 procedural (5 files) | [Governance-Gate](wikiSkills/skills/Governance-Gate.md) category #37 BR |
 | Technical / platform (3 files) | Robert + Bill staffing pass; significant changes escalate to category #37 |
 | Tier 3 reference (2 files) | Bill with HBR notification |
 | Wiki navigation (Section Hubs, _Sidebar, README) | Bill following content changes |
 
-Modifications trigger Robert-owned version-mismatch propagation per [[Audit-Trail-Spec]] § 8.2 continuous integrity sweep.
+Modifications trigger Robert-owned version-mismatch propagation per [Audit-Trail-Spec](wikiSkills/skills/Audit-Trail-Spec.md) § 8.2 continuous integrity sweep.
 
 ---
 
@@ -345,22 +345,22 @@ This repository contains the canonical source for the Executive.Bots V5 platform
 
 | Executive | Role | Ethics | SOUL | SKILL |
 |---|---|---|---|---|
-| **Bill** | CEO | Aristotelian | [[agents/Bill-SOUL.md]] | [[agents/Bill-SKILL.md]] |
-| **Tom** | CFO | Kantian | [[agents/Tom-SOUL.md]] | [[agents/Tom-SKILL.md]] |
-| **James** | GC | Kantian | [[agents/James-SOUL.md]] | [[agents/James-SKILL.md]] |
-| **Patricia** | CCO | Rawlsian | [[agents/Patricia-SOUL.md]] | [[agents/Patricia-SKILL.md]] |
-| **Lisa** | COO | Aristotelian | [[agents/Lisa-SOUL.md]] | [[agents/Lisa-SKILL.md]] |
-| **Mary** | CMO/IR | Kantian | [[agents/Mary-SOUL.md]] | [[agents/Mary-SKILL.md]] |
-| **Robert** | CTO | Kantian | [[agents/Robert-SOUL.md]] | [[agents/Robert-SKILL.md]] |
-| **Edith** | TA Liaison | Kantian | [[agents/Edith-SOUL.md]] | [[agents/Edith-SKILL.md]] |
+| **Bill** | CEO | Aristotelian | [Bill-SOUL](agents/Bill-SOUL.md) | [Bill-SKILL](agents/Bill-SKILL.md) |
+| **Tom** | CFO | Kantian | [Tom-SOUL](agents/Tom-SOUL.md) | [Tom-SKILL](agents/Tom-SKILL.md) |
+| **James** | GC | Kantian | [James-SOUL](agents/James-SOUL.md) | [James-SKILL](agents/James-SKILL.md) |
+| **Patricia** | CCO | Rawlsian | [Patricia-SOUL](agents/Patricia-SOUL.md) | [Patricia-SKILL](agents/Patricia-SKILL.md) |
+| **Lisa** | COO | Aristotelian | [Lisa-SOUL](agents/Lisa-SOUL.md) | [Lisa-SKILL](agents/Lisa-SKILL.md) |
+| **Mary** | CMO/IR | Kantian | [Mary-SOUL](agents/Mary-SOUL.md) | [Mary-SKILL](agents/Mary-SKILL.md) |
+| **Robert** | CTO | Kantian | [Robert-SOUL](agents/Robert-SOUL.md) | [Robert-SKILL](agents/Robert-SKILL.md) |
+| **Edith** | TA Liaison | Kantian | [Edith-SOUL](agents/Edith-SOUL.md) | [Edith-SKILL](agents/Edith-SKILL.md) |
 
 ---
 
 ## Contact / Engagement
 
-Subscriber engagement is mediated through the Executive.Bots master engagement contract; subscriber-facing technical interactions are through the per-subscriber container's authorized interface (subscriber's HBR, DO, AA, and BGR per [[Governance-Gate]] § 1.2).
+Subscriber engagement is mediated through the Executive.Bots master engagement contract; subscriber-facing technical interactions are through the per-subscriber container's authorized interface (subscriber's HBR, DO, AA, and BGR per [Governance-Gate](wikiSkills/skills/Governance-Gate.md) § 1.2).
 
-Outside professional engagement (subscriber's outside securities counsel, PCAOB-registered auditor, Section 17A registered transfer agent) is the subscriber's responsibility coordinated through the platform's [[Subscriber-Onboarding-Playbook]] phases.
+Outside professional engagement (subscriber's outside securities counsel, PCAOB-registered auditor, Section 17A registered transfer agent) is the subscriber's responsibility coordinated through the platform's [Subscriber-Onboarding-Playbook](wikiSkills/skills/Subscriber-Onboarding-Playbook.md) phases.
 
 This wiki is a documentary reference; it is not a customer-support channel.
 
