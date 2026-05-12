@@ -132,6 +132,12 @@ npx skills add ExecutiveBots/Public --all
 | [`sales-proposal-strategist`](./sales-proposal-strategist/SKILL.md) | Proposal strategy |
 | [`branding`](./branding/SKILL.md) | Branding |
 
+## Meta & Reference
+
+| Skill | Description |
+|---|---|
+| [`skills-agent-matrix`](./skills-agent-matrix/SKILL.md) | Agent-to-skill assignment cross-reference matrix |
+
 ## Platform
 
 | Skill | Description |
