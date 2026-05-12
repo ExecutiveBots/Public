@@ -362,45 +362,43 @@ This repository contains the canonical source for the Executive.Bots V5 platform
 
 ---
 
-## Using These Files as Agent Skills
+## Install Agent Skills
 
-Each SOUL and SKILL file in this repository is a standalone markdown document designed to be installed as an agent skill in AI platforms that support custom skill/persona files (Paperclip, Claude Code, OpenCode, etc.).
+> ```bash
+> npx skills add ExecutiveBots/Public --all
+> ```
 
-### How to Get the Raw File
-
-GitHub's web UI renders markdown as HTML — **do not copy from the rendered page**. Use the raw URL instead:
-
-```
-❌ https://github.com/ExecutiveBots/Public/blob/main/agents/Bill-SKILL.md
-✅ https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md
-```
-
-**Pattern for any file:**
-```
-https://raw.githubusercontent.com/ExecutiveBots/Public/main/{path}/{filename}.md
-```
-
-### Quick Install Examples
+One command installs all 90 skills (16 agent identities & capabilities + 74 domain specialties) into your AI agent.
 
 ```bash
-# Download Bill's CEO SKILL file
-curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md
+# All skills
+npx skills add ExecutiveBots/Public --all
 
-# Download all agent SKILL files
-curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Bill-SKILL.md
-curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/Tom-SKILL.md
-curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/agents/James-SKILL.md
-# ... etc
+# Specific agent
+npx skills add ExecutiveBots/Public --skill bill-skill
 
-# Download a specific wikiSkill
-curl -O https://raw.githubusercontent.com/ExecutiveBots/Public/main/wikiSkills/skills/10-K.md
+# List available skills
+npx skills add ExecutiveBots/Public --list
 ```
 
-### What to Expect
+[Browse all skills](skills/INDEX.md) · [skills.sh leaderboard](https://skills.sh/executivebots/public)
 
-- **SOUL files** define the agent's identity, character, ethics tradition, and refusal thresholds
-- **SKILL files** define the agent's capabilities, authority scope, peer handoff protocols, and audit trail requirements
-- **wikiSkills** define domain-specific operational knowledge (SEC filings, compliance, finance, legal, marketing)
+### Raw URL (fallback)
+
+If your platform doesn't support `npx skills`, use raw GitHub URLs:
+
+```
+https://raw.githubusercontent.com/ExecutiveBots/Public/main/skills/{skill-name}/SKILL.md
+```
+
+Example: [`skills/bill-skill/SKILL.md`](https://raw.githubusercontent.com/ExecutiveBots/Public/main/skills/bill-skill/SKILL.md)
+
+### What's Included
+
+- **16 agent skills** — 8 executives × 2 files each (identity SOUL + capability SKILL)
+- **74 wikiSkills** — SEC filings, compliance, governance, finance, legal, marketing, operations
+
+[📂 Full catalog →](skills/INDEX.md)
 
 ---
 
