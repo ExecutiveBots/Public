@@ -1,5 +1,5 @@
 ---
-name: capital raising structures
+name: capital-raising-structures
 description: WikiSkill for capital raising structures
 ---
 

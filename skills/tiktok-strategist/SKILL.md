@@ -1,5 +1,5 @@
 ---
-name: TikTok Strategist
+name: tiktok-strategist
 description: WikiSkill for tiktok strategist
 ---
 

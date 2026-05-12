@@ -1,5 +1,5 @@
 ---
-name: NT 10K NT 10Q late filing
+name: nt-10k-nt-10q-late-filing
 description: WikiSkill for nt 10k nt 10q late filing
 ---
 

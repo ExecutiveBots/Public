@@ -1,5 +1,5 @@
 ---
-name: Sales Outbound Strategist
+name: sales-outbound-strategist
 description: Active Buying Signals (Highest Priority)
 ---
 

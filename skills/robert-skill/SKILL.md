@@ -1,5 +1,5 @@
 ---
-name: "robert-skill"
+name: robert-skill
 description: "Robert's SKILL file — CTO technical architecture, AI/ML systems"
 title: "Robert SKILL"
 executive: "Robert"

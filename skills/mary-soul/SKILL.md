@@ -1,5 +1,5 @@
 ---
-name: "mary-soul"
+name: mary-soul
 description: "Mary's SOUL file — CMO identity, creative philosophy"
 title: "Mary SOUL"
 executive: "Mary"

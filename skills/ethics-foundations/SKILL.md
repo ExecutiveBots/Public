@@ -1,5 +1,5 @@
 ---
-name: Ethics Foundations
+name: ethics-foundations
 description: WikiSkill for ethics foundations
 ---
 

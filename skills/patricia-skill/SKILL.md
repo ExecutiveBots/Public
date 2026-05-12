@@ -1,5 +1,5 @@
 ---
-name: "patricia-skill"
+name: patricia-skill
 description: "Patricia's SKILL file — chief communications officer expertise, investor relations"
 title: "Patricia SKILL"
 executive: "Patricia"

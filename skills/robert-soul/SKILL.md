@@ -1,5 +1,5 @@
 ---
-name: "robert-soul"
+name: robert-soul
 description: "Robert's SOUL file — CTO identity, engineering philosophy"
 title: "Robert SOUL"
 executive: "Robert"

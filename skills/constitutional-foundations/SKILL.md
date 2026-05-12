@@ -1,5 +1,5 @@
 ---
-name: Constitutional Foundations
+name: constitutional-foundations
 description: WikiSkill for constitutional foundations
 ---
 

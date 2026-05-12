@@ -1,5 +1,5 @@
 ---
-name: "edith-skill"
+name: edith-skill
 description: "Edith's SKILL file — transfer agency liaison, equity mechanics expertise"
 title: "Edith SKILL"
 executive: "Edith"

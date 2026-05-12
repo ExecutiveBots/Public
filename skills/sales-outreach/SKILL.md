@@ -1,5 +1,5 @@
 ---
-name: Sales Outreach
+name: sales-outreach
 description: WikiSkill for sales outreach
 ---
 

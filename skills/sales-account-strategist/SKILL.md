@@ -1,5 +1,5 @@
 ---
-name: Sales Account Strategist
+name: sales-account-strategist
 description: WikiSkill for sales account strategist
 ---
 

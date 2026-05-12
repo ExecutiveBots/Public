@@ -1,5 +1,5 @@
 ---
-name: marketing linkedin content creator
+name: marketing-linkedin-content-creator
 description: WikiSkill for marketing linkedin content creator
 ---
 

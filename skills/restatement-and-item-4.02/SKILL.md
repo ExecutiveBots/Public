@@ -1,5 +1,5 @@
 ---
-name: restatement and item 4.02
+name: restatement-and-item-4.02
 description: WikiSkill for restatement and item 4.02
 ---
 

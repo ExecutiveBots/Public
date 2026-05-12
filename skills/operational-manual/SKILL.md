@@ -1,5 +1,5 @@
 ---
-name: Operational Manual
+name: operational-manual
 description: System Overview
 ---
 

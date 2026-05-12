@@ -1,5 +1,5 @@
 ---
-name: HR Onboarding
+name: hr-onboarding
 description: WikiSkill for hr onboarding
 ---
 

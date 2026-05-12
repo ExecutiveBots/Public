@@ -1,5 +1,5 @@
 ---
-name: D and O insurance claims
+name: d-and-o-insurance-claims
 description: WikiSkill for d and o insurance claims
 ---
 

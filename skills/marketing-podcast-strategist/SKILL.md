@@ -1,5 +1,5 @@
 ---
-name: marketing podcast strategist
+name: marketing-podcast-strategist
 description: WikiSkill for marketing podcast strategist
 ---
 

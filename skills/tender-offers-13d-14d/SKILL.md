@@ -1,5 +1,5 @@
 ---
-name: tender offers 13D 14D
+name: tender-offers-13d-14d
 description: Person who holds in the ordinary course of business and not with the purpose or effect of changing or influencing control,
 ---
 

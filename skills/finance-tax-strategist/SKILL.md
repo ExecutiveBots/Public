@@ -1,5 +1,5 @@
 ---
-name: finance tax strategist
+name: finance-tax-strategist
 description: WikiSkill for finance tax strategist
 ---
 

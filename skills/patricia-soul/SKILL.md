@@ -1,5 +1,5 @@
 ---
-name: "patricia-soul"
+name: patricia-soul
 description: "Patricia's SOUL file — CCO identity, narrative philosophy"
 title: "Patricia SOUL"
 executive: "Patricia"

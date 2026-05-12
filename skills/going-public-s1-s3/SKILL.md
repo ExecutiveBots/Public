@@ -1,5 +1,5 @@
 ---
-name: going public S1 S3
+name: going-public-s1-s3
 description: WikiSkill for going public s1 s3
 ---
 

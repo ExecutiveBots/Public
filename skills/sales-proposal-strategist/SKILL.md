@@ -1,5 +1,5 @@
 ---
-name: Sales Proposal Strategist
+name: sales-proposal-strategist
 description: Understanding the Challenge
 ---
 

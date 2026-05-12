@@ -1,5 +1,5 @@
 ---
-name: Incident Response Matrix
+name: incident-response-matrix
 description: Severity-Classified Incident Response
 ---
 

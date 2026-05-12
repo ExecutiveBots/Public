@@ -1,5 +1,5 @@
 ---
-name: "james-skill"
+name: james-skill
 description: "James's SKILL file — general counsel legal expertise, SEC litigation"
 title: "James SKILL"
 executive: "James"

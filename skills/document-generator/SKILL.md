@@ -1,5 +1,5 @@
 ---
-name: Document Generator
+name: document-generator
 description: WikiSkill for document generator
 ---
 

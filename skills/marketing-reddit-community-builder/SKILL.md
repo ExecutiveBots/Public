@@ -1,5 +1,5 @@
 ---
-name: marketing reddit community builder
+name: marketing-reddit-community-builder
 description: WikiSkill for marketing reddit community builder
 ---
 

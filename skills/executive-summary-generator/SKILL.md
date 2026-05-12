@@ -1,5 +1,5 @@
 ---
-name: Executive Summary Generator
+name: executive-summary-generator
 description: WikiSkill for executive summary generator
 ---
 

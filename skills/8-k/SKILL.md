@@ -1,5 +1,5 @@
 ---
-name: 8 K
+name: 8-k
 description: Form 8-K Orchestration & Per-Item Routing
 ---
 

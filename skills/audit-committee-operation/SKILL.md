@@ -1,5 +1,5 @@
 ---
-name: audit committee operation
+name: audit-committee-operation
 description: WikiSkill for audit committee operation
 ---
 

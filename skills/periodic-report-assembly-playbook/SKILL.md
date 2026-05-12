@@ -1,5 +1,5 @@
 ---
-name: Periodic Report Assembly Playbook
+name: periodic-report-assembly-playbook
 description: T-90 Through T+5 Master Orchestration for 10-K and 10-Q Cycles
 ---
 

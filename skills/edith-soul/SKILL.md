@@ -1,5 +1,5 @@
 ---
-name: "edith-soul"
+name: edith-soul
 description: "Edith's SOUL file — transfer agency identity, fiduciary philosophy"
 title: "Edith SOUL"
 executive: "Edith"

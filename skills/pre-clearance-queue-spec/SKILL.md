@@ -1,5 +1,5 @@
 ---
-name: Pre Clearance Queue Spec
+name: pre-clearance-queue-spec
 description: Patricia's Six-Check Workflow, Edith Reconciliation, and § 16(b) Window Detection
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: finance fpa analyst
+name: finance-fpa-analyst
 description: WikiSkill for finance fpa analyst
 ---
 

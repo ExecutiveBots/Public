@@ -1,5 +1,5 @@
 ---
-name: MD and A construction
+name: md-and-a-construction
 description: WikiSkill for md and a construction
 ---
 

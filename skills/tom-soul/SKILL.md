@@ -1,5 +1,5 @@
 ---
-name: "tom-soul"
+name: tom-soul
 description: "Tom's SOUL file — CFO identity, risk philosophy"
 title: "Tom SOUL"
 executive: "Tom"

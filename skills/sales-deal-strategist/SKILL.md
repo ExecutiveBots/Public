@@ -1,5 +1,5 @@
 ---
-name: Sales Deal Strategist
+name: sales-deal-strategist
 description: WikiSkill for sales deal strategist
 ---
 

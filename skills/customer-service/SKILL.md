@@ -1,5 +1,5 @@
 ---
-name: Customer Service
+name: customer-service
 description: WikiSkill for customer service
 ---
 

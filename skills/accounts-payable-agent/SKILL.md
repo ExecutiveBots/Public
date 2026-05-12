@@ -1,5 +1,5 @@
 ---
-name: accounts payable agent
+name: accounts-payable-agent
 description: WikiSkill for accounts payable agent
 ---
 

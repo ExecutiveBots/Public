@@ -1,5 +1,5 @@
 ---
-name: cybersecurity incident 1.05
+name: cybersecurity-incident-1.05
 description: WikiSkill for cybersecurity incident 1.05
 ---
 

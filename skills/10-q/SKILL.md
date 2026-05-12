@@ -1,5 +1,5 @@
 ---
-name: 10 Q
+name: 10-q
 description: Form 10-Q Quarterly Periodic Report Orchestration
 ---
 

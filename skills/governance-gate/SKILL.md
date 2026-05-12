@@ -1,5 +1,5 @@
 ---
-name: Governance Gate
+name: governance-gate
 description: HBR Authorization Capture for All Material Agent Actions
 ---
 

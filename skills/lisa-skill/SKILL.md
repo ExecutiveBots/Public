@@ -1,5 +1,5 @@
 ---
-name: "lisa-skill"
+name: lisa-skill
 description: "Lisa's SKILL file — COO operational excellence, workflow optimization"
 title: "Lisa SKILL"
 executive: "Lisa"

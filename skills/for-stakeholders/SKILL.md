@@ -1,5 +1,5 @@
 ---
-name: For Stakeholders
+name: for-stakeholders
 description: WikiSkill for for stakeholders
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: finance bookkeeper controller
+name: finance-bookkeeper-controller
 description: WikiSkill for finance bookkeeper controller
 ---
 

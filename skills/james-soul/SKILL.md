@@ -1,5 +1,5 @@
 ---
-name: "james-soul"
+name: james-soul
 description: "James's SOUL file — GC identity, ethical reasoning"
 title: "James SOUL"
 executive: "James"

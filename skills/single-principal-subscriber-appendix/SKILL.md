@@ -1,5 +1,5 @@
 ---
-name: Single Principal Subscriber Appendix
+name: single-principal-subscriber-appendix
 description: WikiSkill for single principal subscriber appendix
 ---
 

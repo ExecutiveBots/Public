@@ -1,5 +1,5 @@
 ---
-name: Subscriber Onboarding Playbook
+name: subscriber-onboarding-playbook
 description: Day -14 to Day 30 Deployment Sequence
 ---
 

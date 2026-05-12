@@ -1,5 +1,5 @@
 ---
-name: Audit Trail Spec
+name: audit-trail-spec
 description: Schema and Integrity for the Seven-Year WORM Archive
 ---
 

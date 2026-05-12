@@ -1,5 +1,5 @@
 ---
-name: Twitter Engager
+name: twitter-engager
 description: WikiSkill for twitter engager
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: support finance tracker
+name: support-finance-tracker
 description: WikiSkill for support finance tracker
 ---
 

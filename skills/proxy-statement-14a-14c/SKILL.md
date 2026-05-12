@@ -1,5 +1,5 @@
 ---
-name: proxy statement 14A 14C
+name: proxy-statement-14a-14c
 description: WikiSkill for proxy statement 14a 14c
 ---
 

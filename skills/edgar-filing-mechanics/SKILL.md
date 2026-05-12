@@ -1,5 +1,5 @@
 ---
-name: EDGAR filing mechanics
+name: edgar-filing-mechanics
 description: WikiSkill for edgar filing mechanics
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: "bill-soul"
+name: bill-soul
 description: "Bill's SOUL file — core identity, values, and mission"
 title: "Bill SOUL"
 executive: "Bill"

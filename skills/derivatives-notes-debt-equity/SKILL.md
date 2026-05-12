@@ -1,5 +1,5 @@
 ---
-name: derivatives notes debt equity
+name: derivatives-notes-debt-equity
 description: freestanding:
 ---
 

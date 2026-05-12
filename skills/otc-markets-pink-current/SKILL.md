@@ -1,5 +1,5 @@
 ---
-name: OTC markets pink current
+name: otc-markets-pink-current
 description: WikiSkill for otc markets pink current
 ---
 

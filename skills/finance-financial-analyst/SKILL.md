@@ -1,5 +1,5 @@
 ---
-name: finance financial analyst
+name: finance-financial-analyst
 description: WikiSkill for finance financial analyst
 ---
 

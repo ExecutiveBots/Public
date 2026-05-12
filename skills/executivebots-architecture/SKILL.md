@@ -1,5 +1,5 @@
 ---
-name: ExecutiveBots Architecture
+name: executivebots-architecture
 description: WikiSkill for executivebots architecture
 ---
 

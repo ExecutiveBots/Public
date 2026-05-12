@@ -1,5 +1,5 @@
 ---
-name: Defense Posture
+name: defense-posture
 description: WikiSkill for defense posture
 ---
 

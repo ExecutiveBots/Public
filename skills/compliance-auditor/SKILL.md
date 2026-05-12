@@ -1,5 +1,5 @@
 ---
-name: compliance auditor
+name: compliance-auditor
 description: WikiSkill for compliance auditor
 ---
 

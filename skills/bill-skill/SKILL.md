@@ -1,5 +1,5 @@
 ---
-name: "bill-skill"
+name: bill-skill
 description: "Bill's SKILL file — Aristotelian ethics, executive leadership, U.S. reporting issuers focus"
 title: "Bill SKILL"
 executive: "Bill"

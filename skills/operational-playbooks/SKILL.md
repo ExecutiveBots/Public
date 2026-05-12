@@ -1,5 +1,5 @@
 ---
-name: Operational Playbooks
+name: operational-playbooks
 description: WikiSkill for operational playbooks
 ---
 

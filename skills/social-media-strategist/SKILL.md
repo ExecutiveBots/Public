@@ -1,5 +1,5 @@
 ---
-name: Social Media Strategist
+name: social-media-strategist
 description: WikiSkill for social media strategist
 ---
 

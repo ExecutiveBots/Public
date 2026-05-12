@@ -1,5 +1,5 @@
 ---
-name: item 402 executive compensation
+name: item-402-executive-compensation
 description: WikiSkill for item 402 executive compensation
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: AI Executives
+name: ai-executives
 description: WikiSkill for ai executives
 ---
 

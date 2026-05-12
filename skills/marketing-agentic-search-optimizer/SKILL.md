@@ -1,5 +1,5 @@
 ---
-name: marketing agentic search optimizer
+name: marketing-agentic-search-optimizer
 description: Schedule a consultation appointment. Available slots are shown in real time. Provide preferred date range and contact details.',
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: going private 13E 3
+name: going-private-13e-3
 description: WikiSkill for going private 13e 3
 ---
 

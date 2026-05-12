@@ -1,5 +1,5 @@
 ---
-name: reverse merger ASC 805 40
+name: reverse-merger-asc-805-40
 description: WikiSkill for reverse merger asc 805 40
 ---
 

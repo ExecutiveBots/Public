@@ -1,5 +1,5 @@
 ---
-name: Take Notice
+name: take-notice
 description: WikiSkill for take notice
 ---
 

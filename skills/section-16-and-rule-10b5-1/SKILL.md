@@ -1,5 +1,5 @@
 ---
-name: section 16 and rule 10b5 1
+name: section-16-and-rule-10b5-1
 description: WikiSkill for section 16 and rule 10b5 1
 ---
 

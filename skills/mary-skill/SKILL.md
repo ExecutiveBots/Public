@@ -1,5 +1,5 @@
 ---
-name: "mary-skill"
+name: mary-skill
 description: "Mary's SKILL file — chief marketing officer expertise, market positioning"
 title: "Mary SKILL"
 executive: "Mary"

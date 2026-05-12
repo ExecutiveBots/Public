@@ -1,5 +1,5 @@
 ---
-name: finance investment researcher
+name: finance-investment-researcher
 description: WikiSkill for finance investment researcher
 ---
 

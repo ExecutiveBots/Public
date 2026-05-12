@@ -1,5 +1,5 @@
 ---
-name: 10 K
+name: 10-k
 description: Form 10-K Annual Periodic Report Orchestration
 ---
 

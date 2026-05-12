@@ -1,5 +1,5 @@
 ---
-name: corporate actions FINRA 6490
+name: corporate-actions-finra-6490
 description: WikiSkill for corporate actions finra 6490
 ---
 

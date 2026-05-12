@@ -1,5 +1,5 @@
 ---
-name: Legal Compliance Checker
+name: legal-compliance-checker
 description: WikiSkill for legal compliance checker
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: "lisa-soul"
+name: lisa-soul
 description: "Lisa's SOUL file — COO identity, operational philosophy"
 title: "Lisa SOUL"
 executive: "Lisa"

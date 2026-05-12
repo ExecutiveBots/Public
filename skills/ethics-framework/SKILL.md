@@ -1,5 +1,5 @@
 ---
-name: Ethics Framework
+name: ethics-framework
 description: WikiSkill for ethics framework
 ---
 

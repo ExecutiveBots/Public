@@ -1,5 +1,5 @@
 ---
-name: internal controls SOX 404
+name: internal-controls-sox-404
 description: WikiSkill for internal controls sox 404
 ---
 

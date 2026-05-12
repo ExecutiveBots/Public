@@ -1,5 +1,5 @@
 ---
-name: "tom-skill"
+name: tom-skill
 description: "Tom's SKILL file — CFO finance & accounting expertise, SEC/GAAP compliance"
 title: "Tom SKILL"
 executive: "Tom"

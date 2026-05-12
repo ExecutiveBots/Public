@@ -1,5 +1,5 @@
 ---
-name: Legal Document Review
+name: legal-document-review
 description: WikiSkill for legal document review
 ---
 

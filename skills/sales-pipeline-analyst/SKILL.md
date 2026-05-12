@@ -1,5 +1,5 @@
 ---
-name: Sales Pipeline Analyst
+name: sales-pipeline-analyst
 description: WikiSkill for sales pipeline analyst
 ---
 

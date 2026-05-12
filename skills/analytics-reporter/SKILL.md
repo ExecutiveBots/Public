@@ -1,5 +1,5 @@
 ---
-name: Analytics Reporter
+name: analytics-reporter
 description: WikiSkill for analytics reporter
 ---
 
