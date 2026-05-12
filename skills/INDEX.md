@@ -83,9 +83,9 @@ npx skills add ExecutiveBots/Public --all
 | [`proxy-statement-14a-14c`](./proxy-statement-14a-14c/SKILL.md) | Proxy statements (14A, 14C) |
 | [`section-16-and-rule-10b5-1`](./section-16-and-rule-10b5-1/SKILL.md) | Section 16 and Rule 10b5-1 |
 | [`item-402-executive-compensation`](./item-402-executive-compensation/SKILL.md) | Executive compensation (Item 402) |
-| [`restatement-and-item-4.02`](./restatement-and-item-4.02/SKILL.md) | Restatements (Item 4.02) |
+| [`restatement-and-item-4-02`](./restatement-and-item-4-02/SKILL.md) | Restatements (Item 4.02) |
 | [`going-concern-asu-2014-15`](./going-concern-asu-2014-15/SKILL.md) | Going concern (ASU 2014-15) |
-| [`cybersecurity-incident-1.05`](./cybersecurity-incident-1.05/SKILL.md) | Cybersecurity incident disclosure (Item 1.05) |
+| [`cybersecurity-incident-1-05`](./cybersecurity-incident-1-05/SKILL.md) | Cybersecurity incident disclosure (Item 1.05) |
 | [`otc-markets-pink-current`](./otc-markets-pink-current/SKILL.md) | OTC Markets Pink Current |
 | [`d-and-o-insurance-claims`](./d-and-o-insurance-claims/SKILL.md) | D&O insurance claims |
 
