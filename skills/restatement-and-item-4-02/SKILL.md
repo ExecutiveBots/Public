@@ -1,5 +1,5 @@
 ---
-name: restatement-and-item-4.02
+name: restatement-and-item-4-02
 description: WikiSkill for restatement and item 4.02
 ---
 
@@ -7,7 +7,7 @@ description: WikiSkill for restatement and item 4.02
 
 > Source: <https://github.com/ExecutiveBots/Public/wiki/restatement-and-item-4.02>
 
-## name: restatement-and-item-4.02 role: Domain Skill — Restatements and Form 8-K Item 4.02 Non-Reliance document_class: DOMAIN_SKILL platform: ExecutiveBots (Paperclip fork + Claude Code runtime + Temporal workflows) loaded_by: Tom (AI CFO — primary), James (AI GC — primary), Patricia (AI CCO — clawback administration), Bill (AI CEO — Governance Gate; possible recipient of clawback) principal: Subscriber's Human CEO / Chairman — Human Board of Record (via Governance Gate) scope: Per-subscriber instance; multi-tenant isolated jurisdiction: U.S. public reporting issuers (Exchange Act §13(a)/§15(d)) version: 1.0 last_updated: 2026-05-10 description: Domain reference for restatement analysis (Big R vs. little r), SAB 99 and SAB 108 materiality, Form 8-K Item 4.02 non-reliance disclosure with its four-business-day clock starting at the conclusion date, the SOX §304 statutory clawback, the Rule 10D-1 listing-standard clawback (effective Dec. 1, 2023), and the post-restatement ICFR reassessment cascade. Load this skill whenever an error is identified in previously issued financial statements, whether discovered by management, the auditor, internal audit, a whistleblower, or staff comment. Companion to internal-controls-SOX-404-SKILL.md (post-restatement reassessment) and form-8K-event-mapping-SKILL.md (Item 4.02 clock).
+## name: restatement-and-item-4-02 role: Domain Skill — Restatements and Form 8-K Item 4.02 Non-Reliance document_class: DOMAIN_SKILL platform: ExecutiveBots (Paperclip fork + Claude Code runtime + Temporal workflows) loaded_by: Tom (AI CFO — primary), James (AI GC — primary), Patricia (AI CCO — clawback administration), Bill (AI CEO — Governance Gate; possible recipient of clawback) principal: Subscriber's Human CEO / Chairman — Human Board of Record (via Governance Gate) scope: Per-subscriber instance; multi-tenant isolated jurisdiction: U.S. public reporting issuers (Exchange Act §13(a)/§15(d)) version: 1.0 last_updated: 2026-05-10 description: Domain reference for restatement analysis (Big R vs. little r), SAB 99 and SAB 108 materiality, Form 8-K Item 4.02 non-reliance disclosure with its four-business-day clock starting at the conclusion date, the SOX §304 statutory clawback, the Rule 10D-1 listing-standard clawback (effective Dec. 1, 2023), and the post-restatement ICFR reassessment cascade. Load this skill whenever an error is identified in previously issued financial statements, whether discovered by management, the auditor, internal audit, a whistleblower, or staff comment. Companion to internal-controls-SOX-404-SKILL.md (post-restatement reassessment) and form-8K-event-mapping-SKILL.md (Item 4.02 clock).
 
 > ## ⚖ TAKE NOTICE
 >

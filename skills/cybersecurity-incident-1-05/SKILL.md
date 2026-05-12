@@ -1,5 +1,5 @@
 ---
-name: cybersecurity-incident-1.05
+name: cybersecurity-incident-1-05
 description: WikiSkill for cybersecurity incident 1.05
 ---
 
@@ -7,7 +7,7 @@ description: WikiSkill for cybersecurity incident 1.05
 
 > Source: <https://github.com/ExecutiveBots/Public/wiki/cybersecurity-incident-1.05>
 
-## name: cybersecurity-incident-1.05 role: Domain Skill — Cybersecurity Incident Disclosure (Form 8-K Item 1.05; Reg S-K Item 106) document_class: DOMAIN_SKILL platform: ExecutiveBots (Paperclip fork + Claude Code runtime + Temporal workflows) loaded_by: Robert (AI CTO — primary), James (AI GC — primary), Tom (AI CFO — financial impact), Patricia (AI CCO — regulatory), Bill (AI CEO — Governance Gate) principal: Subscriber's Human CEO / Chairman — Human Board of Record (via Governance Gate) scope: Per-subscriber instance; multi-tenant isolated jurisdiction: U.S. public reporting issuers (Exchange Act §13(a)/§15(d)) version: 1.0 last_updated: 2026-05-10 description: Domain reference for cybersecurity-incident disclosure under Form 8-K Item 1.05 (effective Dec. 18, 2023; SRC effective June 15, 2024) and Item 106 of Reg S-K annual program disclosure. Covers the materiality determination framework (TSC v. Northway / Basic v. Levinson applied to cyber incidents), the four-business-day clock starting at the materiality determination date, the DOJ Attorney General delay request mechanic under Item 1.05(c), Item 1C of Form 10-K, and the cross-agent assembly process when an incident is detected. Companion to robert-SKILL.md, form-8K-event-mapping-SKILL.md (Item 1.05 trigger), and incident-response-matrix.md (SEV-1 escalation routing).
+## name: cybersecurity-incident-1-05 role: Domain Skill — Cybersecurity Incident Disclosure (Form 8-K Item 1.05; Reg S-K Item 106) document_class: DOMAIN_SKILL platform: ExecutiveBots (Paperclip fork + Claude Code runtime + Temporal workflows) loaded_by: Robert (AI CTO — primary), James (AI GC — primary), Tom (AI CFO — financial impact), Patricia (AI CCO — regulatory), Bill (AI CEO — Governance Gate) principal: Subscriber's Human CEO / Chairman — Human Board of Record (via Governance Gate) scope: Per-subscriber instance; multi-tenant isolated jurisdiction: U.S. public reporting issuers (Exchange Act §13(a)/§15(d)) version: 1.0 last_updated: 2026-05-10 description: Domain reference for cybersecurity-incident disclosure under Form 8-K Item 1.05 (effective Dec. 18, 2023; SRC effective June 15, 2024) and Item 106 of Reg S-K annual program disclosure. Covers the materiality determination framework (TSC v. Northway / Basic v. Levinson applied to cyber incidents), the four-business-day clock starting at the materiality determination date, the DOJ Attorney General delay request mechanic under Item 1.05(c), Item 1C of Form 10-K, and the cross-agent assembly process when an incident is detected. Companion to robert-SKILL.md, form-8K-event-mapping-SKILL.md (Item 1.05 trigger), and incident-response-matrix.md (SEV-1 escalation routing).
 
 > ## ⚖ TAKE NOTICE
 >
