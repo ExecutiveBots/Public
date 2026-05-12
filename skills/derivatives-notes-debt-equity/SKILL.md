@@ -1,6 +1,6 @@
 ---
 name: derivatives-notes-debt-equity
-description: freestanding:
+description: Domain reference for derivative-accounting analysis of notes, debt, and equity-linked instruments under ASC 815, ASC 480, ASC 470-20, and ASC 820
 ---
 
 # derivatives notes debt equity
